@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 2 第２回（４月２０日）：RStudioについて | [2026-Z][1H609] 計算機科学入門</title>
+  <meta name="description" content=" 2 第２回（４月２０日）：RStudioについて | [2026-Z][1H609] 計算機科学入門" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 2 第２回（４月２０日）：RStudioについて | [2026-Z][1H609] 計算機科学入門" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 2 第２回（４月２０日）：RStudioについて | [2026-Z][1H609] 計算機科学入門" />
+  
+  
+  
+
+<meta name="author" content="Yi Zhou" />
+
+
+<meta name="date" content="2026-04-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="第１回４月１３日.html"/>
+<link rel="next" href="第３回４月２７日.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">計算機科学入門</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>本資料について</a></li>
+<li class="chapter" data-level="1" data-path="第１回４月１３日.html"><a href="第１回４月１３日.html"><i class="fa fa-check"></i><b>1</b> 第１回（４月１３日）</a></li>
+<li class="chapter" data-level="2" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html"><i class="fa fa-check"></i><b>2</b> 第２回（４月２０日）：RStudioについて</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E6%BA%96%E5%82%99"><i class="fa fa-check"></i><b>2.1</b> 準備</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#r%E3%82%B3%E3%83%BC%E3%83%89%E3%81%A8%E9%96%A2%E9%80%A3%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BF%9D%E5%AD%98%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E6%96%B0%E3%81%97%E3%81%84%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%BE%E3%81%99"><i class="fa fa-check"></i><b>2.1.1</b> Rコードと関連ファイルを保存するための新しいフォルダを作成します。</a></li>
+<li class="chapter" data-level="2.1.2" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#rstudio%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%97%E4%BD%9C%E6%A5%AD%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%83%91%E3%82%B9path%E3%82%92r%E3%81%AB%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%BE"><i class="fa fa-check"></i><b>2.1.2</b> RStudioを起動し、作業ディレクトリ（パス、path）をRに設定しま。</a></li>
+<li class="chapter" data-level="2.1.3" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E8%A8%AD%E5%AE%9A%E3%81%AE%E7%A2%BA%E8%AA%8D"><i class="fa fa-check"></i><b>2.1.3</b> 設定の確認</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90"><i class="fa fa-check"></i><b>2.2</b> スクリプトの作成</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E4%BF%9D%E5%AD%98"><i class="fa fa-check"></i><b>2.2.1</b> スクリプトの保存</a></li>
+<li class="chapter" data-level="2.2.2" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E7%A2%BA%E8%AA%8D"><i class="fa fa-check"></i><b>2.2.2</b> スクリプトの確認</a></li>
+<li class="chapter" data-level="2.2.3" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E6%AC%A1%E5%9B%9E%E3%81%8B%E3%82%89%E3%81%AF%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%80%E3%83%96%E3%83%AB%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%97%E3%81%BE%E3%81%99%E3%81%93%E3%81%A8%E3%81%A7%E9%96%8B%E3%81%91%E3%81%BE%E3%81%99"><i class="fa fa-check"></i><b>2.2.3</b> 次回からは、ファイルをダブルクリックしますことで開けます。</a></li>
+<li class="chapter" data-level="2.2.4" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#rstudio%E3%82%92%E7%B5%82%E4%BA%86%E3%81%97%E3%81%9F%E5%BE%8C"><i class="fa fa-check"></i><b>2.2.4</b> RStudioを終了した後</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E5%AE%9F%E8%A1%8C"><i class="fa fa-check"></i><b>2.3</b> スクリプトの実行</a></li>
+<li class="chapter" data-level="2.4" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8Bdata-types"><i class="fa fa-check"></i><b>2.4</b> データ型（Data Types）</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B%E3%81%AE%E7%A2%BA%E8%AA%8D"><i class="fa fa-check"></i><b>2.4.1</b> データ型の確認</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E4%B8%BB%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0"><i class="fa fa-check"></i><b>2.5</b> 主なデータ構造</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB-vector"><i class="fa fa-check"></i><b>2.5.1</b> ベクトル (Vector)</a></li>
+<li class="chapter" data-level="2.5.2" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E8%A6%81%E5%9B%A0factor"><i class="fa fa-check"></i><b>2.5.2</b> 要因（Factor）</a></li>
+<li class="chapter" data-level="2.5.3" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E8%A1%8C%E5%88%97-matrix"><i class="fa fa-check"></i><b>2.5.3</b> 行列 (Matrix)</a></li>
+<li class="chapter" data-level="2.5.4" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0-data-frame"><i class="fa fa-check"></i><b>2.5.4</b> データフレーム (Data Frame)</a></li>
+<li class="chapter" data-level="2.5.5" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%83%AA%E3%82%B9%E3%83%88-list"><i class="fa fa-check"></i><b>2.5.5</b> リスト (List)</a></li>
+<li class="chapter" data-level="2.5.6" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E9%85%8D%E5%88%97-array"><i class="fa fa-check"></i><b>2.5.6</b> 配列 (Array)</a></li>
+<li class="chapter" data-level="2.5.7" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0%E3%81%AE%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8"><i class="fa fa-check"></i><b>2.5.7</b> データ構造のイメージ</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8package%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><i class="fa fa-check"></i><b>2.6</b> パッケージ（package）のインストール</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#r%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%A8%E3%81%AF"><i class="fa fa-check"></i><b>2.6.1</b> Rパッケージとは？</a></li>
+<li class="chapter" data-level="2.6.2" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><i class="fa fa-check"></i><b>2.6.2</b> パッケージのインストール</a></li>
+<li class="chapter" data-level="2.6.3" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%92%E3%83%AD%E3%83%BC%E3%83%89%E3%81%99%E3%82%8B"><i class="fa fa-check"></i><b>2.6.3</b> パッケージをロードする</a></li>
+<li class="chapter" data-level="2.6.4" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E7%8F%BE%E5%9C%A8%E3%83%AD%E3%83%BC%E3%83%89%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B"><i class="fa fa-check"></i><b>2.6.4</b> 現在ロードされているパッケージを確認する</a></li>
+<li class="chapter" data-level="2.6.5" data-path="第２回４月２０日rstudioについて.html"><a href="第２回４月２０日rstudioについて.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%86%85%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B"><i class="fa fa-check"></i><b>2.6.5</b> パッケージ内の関数を一覧表示する</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html"><i class="fa fa-check"></i><b>3</b> 第３回（４月２７日）</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">[2026-Z][1H609] 計算機科学入門</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="第２回４月２０日rstudioについて" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number"> 2</span> 第２回（４月２０日）：RStudioについて<a href="第２回４月２０日rstudioについて.html#%E7%AC%AC%EF%BC%92%E5%9B%9E%EF%BC%94%E6%9C%88%EF%BC%92%EF%BC%90%E6%97%A5rstudio%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="準備" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> 準備<a href="第２回４月２０日rstudioについて.html#%E6%BA%96%E5%82%99" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="rコードと関連ファイルを保存するための新しいフォルダを作成します" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Rコードと関連ファイルを保存するための新しいフォルダを作成します。<a href="第２回４月２０日rstudioについて.html#r%E3%82%B3%E3%83%BC%E3%83%89%E3%81%A8%E9%96%A2%E9%80%A3%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BF%9D%E5%AD%98%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E6%96%B0%E3%81%97%E3%81%84%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%BE%E3%81%99" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>例えば、<code>Document</code>フォルダ内に<code>R</code>という名前のフォルダを作成します。
+<img src="1png/Picture1.png" /></p>
+</div>
+<div id="rstudioを起動し作業ディレクトリパスpathをrに設定しま" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> RStudioを起動し、作業ディレクトリ（パス、path）をRに設定しま。<a href="第２回４月２０日rstudioについて.html#rstudio%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%97%E4%BD%9C%E6%A5%AD%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%83%91%E3%82%B9path%E3%82%92r%E3%81%AB%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%BE" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="方法は3通りあります" class="section level4 unnumbered hasAnchor">
+<h4>方法は3通りあります。<a href="第２回４月２０日rstudioについて.html#%E6%96%B9%E6%B3%95%E3%81%AF3%E9%80%9A%E3%82%8A%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="setwd関数を使う" class="section level4 hasAnchor" number="2.1.2.1">
+<h4><span class="header-section-number">2.1.2.1</span> 1. <code>setwd()</code>関数を使う<a href="第２回４月２０日rstudioについて.html#setwd%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%86" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li><p><code>R</code>フォルダに移動します。
+<img src="1png/2.1.1.png" /></p></li>
+<li><p>パスを選択し、コピーします。
+<img src="1png/2.1.3.png" /></p></li>
+<li><p>RStudioを開き、コード:<code>setwd("C:\\Users\\xxx\\Documents\\R")</code>　ありますいは　<code>setwd("C:/Users/xxx/Documents/R")</code>
+を入力します</p></li>
+</ol>
+<p>注意：パスを <code>" "</code> で囲み、 <code>\</code> を <code>\\</code> または <code>/</code> に書き換えてください。
+<img src="1png/2.1.4.png" /></p>
+</div>
+<div id="session-をクリックします" class="section level4 hasAnchor" number="2.1.2.2">
+<h4><span class="header-section-number">2.1.2.2</span> 2. Session をクリックします。<a href="第２回４月２０日rstudioについて.html#session-%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%97%E3%81%BE%E3%81%99" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li>RStudioの一番上へ移動し、「<code>Session</code>」–&gt;「<code>Set Working Directory</code>」–&gt;「<code>Choose Directory</code>」をクリックします。
+<img src="1png/2.1.6.png" /></li>
+</ol>
+<p>2.Rフォルダを選択し、「<code>Open</code>」をクリックします。
+<img src="Picture3.png" /></p>
+</div>
+<div id="右下のパネルから設定します" class="section level4 hasAnchor" number="2.1.2.3">
+<h4><span class="header-section-number">2.1.2.3</span> 3. 右下のパネルから設定します。<a href="第２回４月２０日rstudioについて.html#%E5%8F%B3%E4%B8%8B%E3%81%AE%E3%83%91%E3%83%8D%E3%83%AB%E3%81%8B%E3%82%89%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%BE%E3%81%99" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li>RStudioの右下のパネルへ移動します。「<code>Home</code>」をクリックし、<code>R</code>フォルダを選択します。</li>
+</ol>
+<p><img src="1png/Picture4.png" /></p>
+<p>2.「<code>Set Working Directory</code>」をクリックします。
+<img src="1png/2.1.9.png" /></p>
+</div>
+</div>
+<div id="設定の確認" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> 設定の確認<a href="第２回４月２０日rstudioについて.html#%E8%A8%AD%E5%AE%9A%E3%81%AE%E7%A2%BA%E8%AA%8D" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>「<code>Go to Working Directory</code>」をクリックし、<code>Files</code>タブ内に<code>R</code>フォルダにいくことを確認してください。</p>
+<p><img src="1png/2.1.5.png" /></p>
+</div>
+</div>
+<div id="スクリプトの作成" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> スクリプトの作成<a href="第２回４月２０日rstudioについて.html#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p><code>File</code> –&gt; <code>New File</code> –&gt; <code>R Script</code> をクリックします。<code>Untitled1</code>というファイルが作成されます。
+<img src="1png/2.2.1.png" /></p></li>
+<li><p>ありますいは、<code>File</code> の下のボタンをクリックし、<code>R Script</code> をクリックします。<code>Untitled1</code>というファイルが作成されます。
+<img src="1png/2.2.2.png" /></p></li>
+</ol>
+<div id="スクリプトの保存" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> スクリプトの保存<a href="第２回４月２０日rstudioについて.html#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E4%BF%9D%E5%AD%98" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>フロッピーディスクのアイコンをクリックします。ファイル名を「code1」と入力し、「<code>Save</code>」ボタンをクリックします。
+<img src="1png/Picture5.png" /></p>
+</div>
+<div id="スクリプトの確認" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> スクリプトの確認<a href="第２回４月２０日rstudioについて.html#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E7%A2%BA%E8%AA%8D" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>ファイルが正常に保存されると、右下の <code>Workign directory</code> ペインに表示されます。
+<img src="1png/2.2.5.png" /></p>
+<p>また、<code>R</code>フォルダの中でもファイルを確認できます。
+<img src="1png/2.2.6.png" /></p>
+</div>
+<div id="次回からはファイルをダブルクリックしますことで開けます" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> 次回からは、ファイルをダブルクリックしますことで開けます。<a href="第２回４月２０日rstudioについて.html#%E6%AC%A1%E5%9B%9E%E3%81%8B%E3%82%89%E3%81%AF%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%80%E3%83%96%E3%83%AB%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%97%E3%81%BE%E3%81%99%E3%81%93%E3%81%A8%E3%81%A7%E9%96%8B%E3%81%91%E3%81%BE%E3%81%99" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="rstudioを終了した後" class="section level3 hasAnchor" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> RStudioを終了した後<a href="第２回４月２０日rstudioについて.html#rstudio%E3%82%92%E7%B5%82%E4%BA%86%E3%81%97%E3%81%9F%E5%BE%8C" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>注意：RStudioを終了しますと、自動的にヒストリーファイルが作成されます。
+ここには入力したコードの履歴が保存されますが、そのまま放置しておいて問題ありません。
+<img src="1png/2.2.7.png" /></p>
+</div>
+</div>
+<div id="スクリプトの実行" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> スクリプトの実行<a href="第２回４月２０日rstudioについて.html#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E5%AE%9F%E8%A1%8C" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>計算を実行してみる。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="第２回４月２０日rstudioについて.html#cb1-1" tabindex="-1"></a><span class="dv">23</span><span class="sc">+</span><span class="dv">45</span></span>
+<span id="cb1-2"><a href="第２回４月２０日rstudioについて.html#cb1-2" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span><span class="dv">3</span></span>
+<span id="cb1-3"><a href="第２回４月２０日rstudioについて.html#cb1-3" tabindex="-1"></a><span class="dv">12</span><span class="sc">/</span><span class="dv">3</span></span>
+<span id="cb1-4"><a href="第２回４月２０日rstudioについて.html#cb1-4" tabindex="-1"></a><span class="dv">2</span><span class="sc">^</span><span class="dv">3</span></span>
+<span id="cb1-5"><a href="第２回４月２０日rstudioについて.html#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="第２回４月２０日rstudioについて.html#cb1-6" tabindex="-1"></a><span class="co"># オブジェクト a に値を代入し、a を使って計算を行う</span></span>
+<span id="cb1-7"><a href="第２回４月２０日rstudioについて.html#cb1-7" tabindex="-1"></a><span class="co"># オブジェクトは Environment に保存される</span></span>
+<span id="cb1-8"><a href="第２回４月２０日rstudioについて.html#cb1-8" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb1-9"><a href="第２回４月２０日rstudioについて.html#cb1-9" tabindex="-1"></a>a <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div>
+<p>スクリプトにコードを入力し、その行にカーソルを置いて実行（Run）をクリックすると、結果が出力されます。
+もう１つの方法は、<code>Ctrl-Enter</code>（Macの場合は<code>Command-Enter</code>）を同時に押す方法です。
+<img src="1png/2.2.8.png" /></p>
+<p>複数行を実行したい場合、領域を指定して（<code>Ctrl-A</code>）、（Run）をクリックしますか、<code>Ctrl-Enter</code>で実行します。
+<img src="1png/2.2.9.png" /></p>
+</div>
+<div id="データ型data-types" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> データ型（Data Types）<a href="第２回４月２０日rstudioについて.html#%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8Bdata-types" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Numeric（数値型）: Integer（整数） と Double（実数）</li>
+<li>Character（文字型）: <code>"Hello", "Data Science", "2026"</code></li>
+<li>Logical（論理型）: <code>TRUE</code> または <code>FALSE</code></li>
+</ul>
+<div id="データ型の確認" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> データ型の確認<a href="第２回４月２０日rstudioについて.html#%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B%E3%81%AE%E7%A2%BA%E8%AA%8D" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>数値型</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="第２回４月２０日rstudioについて.html#cb2-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb2-2"><a href="第２回４月２０日rstudioについて.html#cb2-2" tabindex="-1"></a><span class="fu">mode</span>(a)</span>
+<span id="cb2-3"><a href="第２回４月２０日rstudioについて.html#cb2-3" tabindex="-1"></a><span class="fu">typeof</span>(a)</span>
+<span id="cb2-4"><a href="第２回４月２０日rstudioについて.html#cb2-4" tabindex="-1"></a><span class="fu">str</span>(a)</span></code></pre></div>
+<p>文字型</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="第２回４月２０日rstudioについて.html#cb3-1" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="st">&quot;word&quot;</span></span>
+<span id="cb3-2"><a href="第２回４月２０日rstudioについて.html#cb3-2" tabindex="-1"></a><span class="fu">mode</span>(b)</span>
+<span id="cb3-3"><a href="第２回４月２０日rstudioについて.html#cb3-3" tabindex="-1"></a><span class="fu">typeof</span>(b)</span>
+<span id="cb3-4"><a href="第２回４月２０日rstudioについて.html#cb3-4" tabindex="-1"></a><span class="fu">str</span>(b)</span></code></pre></div>
+</div>
+</div>
+<div id="主なデータ構造" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> 主なデータ構造<a href="第２回４月２０日rstudioについて.html#%E4%B8%BB%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ベクトル-vector" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> ベクトル (Vector)<a href="第２回４月２０日rstudioについて.html#%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB-vector" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>同じデータ型の値を一列に並べた、最も基本的な構造です。</p>
+<p>特徴: すべての要素が同じ型（すべて数値、またはすべて文字など）であります必要があります。</p>
+<p>値は、 <code>c()</code>関数 ( cは要素を結合しますためのc関数)を使用してベクトルに割り当てられます。丸括弧を開閉し、異なる要素をカンマで区切って配置します。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="第２回４月２０日rstudioについて.html#cb4-1" tabindex="-1"></a>vector1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">329</span>, <span class="dv">45</span>, <span class="dv">12</span>, <span class="dv">28</span>)</span>
+<span id="cb4-2"><a href="第２回４月２０日rstudioについて.html#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="第２回４月２０日rstudioについて.html#cb4-3" tabindex="-1"></a><span class="co"># 空のベクトルは次のように作成できます。</span></span>
+<span id="cb4-4"><a href="第２回４月２０日rstudioについて.html#cb4-4" tabindex="-1"></a>vecempty <span class="ot">&lt;-</span> <span class="fu">vector</span>()</span>
+<span id="cb4-5"><a href="第２回４月２０日rstudioについて.html#cb4-5" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="第２回４月２０日rstudioについて.html#cb4-6" tabindex="-1"></a><span class="co"># 長さ5の空の数値ベクトル</span></span>
+<span id="cb4-7"><a href="第２回４月２０日rstudioについて.html#cb4-7" tabindex="-1"></a>vecnumempty <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">mode=</span><span class="st">&quot;numeric&quot;</span>, <span class="at">length=</span><span class="dv">5</span>)</span>
+<span id="cb4-8"><a href="第２回４月２０日rstudioについて.html#cb4-8" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="第２回４月２０日rstudioについて.html#cb4-9" tabindex="-1"></a><span class="co"># 長さ8の空の数値ベクトル</span></span>
+<span id="cb4-10"><a href="第２回４月２０日rstudioについて.html#cb4-10" tabindex="-1"></a>veccharempty <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">mode=</span><span class="st">&quot;character&quot;</span>, <span class="at">length=</span><span class="dv">8</span>)</span>
+<span id="cb4-11"><a href="第２回４月２０日rstudioについて.html#cb4-11" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="第２回４月２０日rstudioについて.html#cb4-12" tabindex="-1"></a><span class="co"># 連続する数字のシーケンスを作成します。</span></span>
+<span id="cb4-13"><a href="第２回４月２０日rstudioについて.html#cb4-13" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="第２回４月２０日rstudioについて.html#cb4-14" tabindex="-1"></a>vecnum <span class="ot">&lt;-</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">16</span></span>
+<span id="cb4-15"><a href="第２回４月２０日rstudioについて.html#cb4-15" tabindex="-1"></a><span class="co"># 以下の略</span></span>
+<span id="cb4-16"><a href="第２回４月２０日rstudioについて.html#cb4-16" tabindex="-1"></a>vecnum <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">15</span>, <span class="dv">16</span>)</span>
+<span id="cb4-17"><a href="第２回４月２０日rstudioについて.html#cb4-17" tabindex="-1"></a><span class="co"># 注意：両端（10と16）を含む</span></span></code></pre></div>
+<div id="ベクトルには名前を付ける" class="section level4 hasAnchor" number="2.5.1.1">
+<h4><span class="header-section-number">2.5.1.1</span> ベクトルには名前を付ける<a href="第２回４月２０日rstudioについて.html#%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%AB%E3%81%AF%E5%90%8D%E5%89%8D%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="第２回４月２０日rstudioについて.html#cb5-1" tabindex="-1"></a><span class="co"># 数値ベクトルを作成する</span></span>
+<span id="cb5-2"><a href="第２回４月２０日rstudioについて.html#cb5-2" tabindex="-1"></a>vector1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">329</span>, <span class="dv">45</span>, <span class="dv">12</span>, <span class="dv">28</span>)</span>
+<span id="cb5-3"><a href="第２回４月２０日rstudioについて.html#cb5-3" tabindex="-1"></a><span class="co"># ベクトルには名前を付ける</span></span>
+<span id="cb5-4"><a href="第２回４月２０日rstudioについて.html#cb5-4" tabindex="-1"></a><span class="fu">names</span>(vector1) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;バナナ&quot;</span>, <span class="st">&quot;レモン&quot;</span>)</span>
+<span id="cb5-5"><a href="第２回４月２０日rstudioについて.html#cb5-5" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="第２回４月２０日rstudioについて.html#cb5-6" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="第２回４月２０日rstudioについて.html#cb5-7" tabindex="-1"></a><span class="co"># 既に格納されているオブジェクトを使用する</span></span>
+<span id="cb5-8"><a href="第２回４月２０日rstudioについて.html#cb5-8" tabindex="-1"></a>mynames <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;バナナ&quot;</span>, <span class="st">&quot;レモン&quot;</span>)</span>
+<span id="cb5-9"><a href="第２回４月２０日rstudioについて.html#cb5-9" tabindex="-1"></a><span class="fu">names</span>(vector1) <span class="ot">&lt;-</span> mynames</span>
+<span id="cb5-10"><a href="第２回４月２０日rstudioについて.html#cb5-10" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="第２回４月２０日rstudioについて.html#cb5-11" tabindex="-1"></a><span class="co"># ベクトルの長さ（要素数）を取得する</span></span>
+<span id="cb5-12"><a href="第２回４月２０日rstudioについて.html#cb5-12" tabindex="-1"></a><span class="fu">length</span>(vector1)</span></code></pre></div>
+</div>
+<div id="ベクトルから要素を抽出する" class="section level4 hasAnchor" number="2.5.1.2">
+<h4><span class="header-section-number">2.5.1.2</span> ベクトルから要素を抽出する<a href="第２回４月２０日rstudioについて.html#%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%8B%E3%82%89%E8%A6%81%E7%B4%A0%E3%82%92%E6%8A%BD%E5%87%BA%E3%81%99%E3%82%8B" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="第２回４月２０日rstudioについて.html#cb6-1" tabindex="-1"></a>vector1[<span class="dv">1</span>]</span>
+<span id="cb6-2"><a href="第２回４月２０日rstudioについて.html#cb6-2" tabindex="-1"></a>vector1[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span>
+<span id="cb6-3"><a href="第２回４月２０日rstudioについて.html#cb6-3" tabindex="-1"></a>vector1[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]</span>
+<span id="cb6-4"><a href="第２回４月２０日rstudioについて.html#cb6-4" tabindex="-1"></a>vector1[<span class="st">&quot;apple&quot;</span>]</span>
+<span id="cb6-5"><a href="第２回４月２０日rstudioについて.html#cb6-5" tabindex="-1"></a>vector1[<span class="fu">c</span>(<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;レモン&quot;</span>)]  </span></code></pre></div>
+<p><img src="1png/2.5.2.png" /></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="第２回４月２０日rstudioについて.html#cb7-1" tabindex="-1"></a><span class="co"># ベクトルの要素を再割り当てする</span></span>
+<span id="cb7-2"><a href="第２回４月２０日rstudioについて.html#cb7-2" tabindex="-1"></a>vector1[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="dv">31</span></span>
+<span id="cb7-3"><a href="第２回４月２０日rstudioについて.html#cb7-3" tabindex="-1"></a>vector1[<span class="st">&quot;orange&quot;</span>] <span class="ot">&lt;-</span> <span class="dv">31</span> </span>
+<span id="cb7-4"><a href="第２回４月２０日rstudioについて.html#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="第２回４月２０日rstudioについて.html#cb7-5" tabindex="-1"></a><span class="co"># ベクトルの要素を削除する</span></span>
+<span id="cb7-6"><a href="第２回４月２０日rstudioについて.html#cb7-6" tabindex="-1"></a>vector1[<span class="sc">-</span><span class="dv">3</span>]</span>
+<span id="cb7-7"><a href="第２回４月２０日rstudioについて.html#cb7-7" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="第２回４月２０日rstudioについて.html#cb7-8" tabindex="-1"></a><span class="co"># ベクトルの結合</span></span>
+<span id="cb7-9"><a href="第２回４月２０日rstudioについて.html#cb7-9" tabindex="-1"></a>v1 <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb7-10"><a href="第２回４月２０日rstudioについて.html#cb7-10" tabindex="-1"></a>v2 <span class="ot">&lt;-</span> <span class="dv">4</span><span class="sc">:</span><span class="dv">6</span></span>
+<span id="cb7-11"><a href="第２回４月２０日rstudioについて.html#cb7-11" tabindex="-1"></a>v3 <span class="ot">&lt;-</span> <span class="fu">c</span>(v1, v2)</span>
+<span id="cb7-12"><a href="第２回４月２０日rstudioについて.html#cb7-12" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="第２回４月２０日rstudioについて.html#cb7-13" tabindex="-1"></a><span class="co"># ベクトルの末尾に要素を追加することもできます</span></span>
+<span id="cb7-14"><a href="第２回４月２０日rstudioについて.html#cb7-14" tabindex="-1"></a>v3 <span class="ot">&lt;-</span> <span class="fu">c</span>(v3, <span class="dv">19</span>)</span></code></pre></div>
+<p>論理演算子</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">演算子</th>
+<th align="left">意味</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>&lt;</code></td>
+<td align="left">未満</td>
+</tr>
+<tr class="even">
+<td align="left"><code>&lt;=</code></td>
+<td align="left">以下</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>&gt;</code></td>
+<td align="left">より大きい</td>
+</tr>
+<tr class="even">
+<td align="left"><code>&gt;=</code></td>
+<td align="left">以上</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>==</code></td>
+<td align="left">等しい（ちょうど）</td>
+</tr>
+<tr class="even">
+<td align="left"><code>!=</code></td>
+<td align="left">等しくない</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!</code></td>
+<td align="left">〜ではない（否定）</td>
+</tr>
+<tr class="even">
+<td align="left"><code>x \| y</code></td>
+<td align="left">x または y</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>x &amp; y</code></td>
+<td align="left">x かつ y</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="数値ベクトルの操作" class="section level4 hasAnchor" number="2.5.1.3">
+<h4><span class="header-section-number">2.5.1.3</span> 数値ベクトルの操作<a href="第２回４月２０日rstudioについて.html#%E6%95%B0%E5%80%A4%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%AE%E6%93%8D%E4%BD%9C" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="第２回４月２０日rstudioについて.html#cb8-1" tabindex="-1"></a><span class="co"># 要素aのうち、2に等しい要素はどれですか？</span></span>
+<span id="cb8-2"><a href="第２回４月２０日rstudioについて.html#cb8-2" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb8-3"><a href="第２回４月２０日rstudioについて.html#cb8-3" tabindex="-1"></a>a <span class="sc">==</span> <span class="dv">2</span></span>
+<span id="cb8-4"><a href="第２回４月２０日rstudioについて.html#cb8-4" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="第２回４月２０日rstudioについて.html#cb8-5" tabindex="-1"></a><span class="co"># aのどの要素が2よりも優れていますか？</span></span>
+<span id="cb8-6"><a href="第２回４月２０日rstudioについて.html#cb8-6" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb8-7"><a href="第２回４月２０日rstudioについて.html#cb8-7" tabindex="-1"></a>a <span class="sc">&gt;</span> <span class="dv">2</span></span>
+<span id="cb8-8"><a href="第２回４月２０日rstudioについて.html#cb8-8" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="第２回４月２０日rstudioについて.html#cb8-9" tabindex="-1"></a><span class="co"># 条件を満たすベクトルの要素を抽出する。</span></span>
+<span id="cb8-10"><a href="第２回４月２０日rstudioについて.html#cb8-10" tabindex="-1"></a>a <span class="sc">&gt;=</span> <span class="dv">2</span></span>
+<span id="cb8-11"><a href="第２回４月２０日rstudioについて.html#cb8-11" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="第２回４月２０日rstudioについて.html#cb8-12" tabindex="-1"></a><span class="co"># 条件を満たす（TRUEの値となる）実際のサブベクトルを抽出する</span></span>
+<span id="cb8-13"><a href="第２回４月２０日rstudioについて.html#cb8-13" tabindex="-1"></a>a[a <span class="sc">&gt;=</span> <span class="dv">2</span>]</span>
+<span id="cb8-14"><a href="第２回４月２０日rstudioについて.html#cb8-14" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="第２回４月２０日rstudioについて.html#cb8-15" tabindex="-1"></a><span class="co"># 条件を満たす要素がいくつあるかを数える</span></span>
+<span id="cb8-16"><a href="第２回４月２０日rstudioについて.html#cb8-16" tabindex="-1"></a><span class="fu">length</span>(a[a <span class="sc">&gt;=</span> <span class="dv">2</span>])</span>
+<span id="cb8-17"><a href="第２回４月２０日rstudioについて.html#cb8-17" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="第２回４月２０日rstudioについて.html#cb8-18" tabindex="-1"></a><span class="co"># ベクトルに2を加えると、ベクトルの各要素に2が加算されます。</span></span>
+<span id="cb8-19"><a href="第２回４月２０日rstudioについて.html#cb8-19" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb8-20"><a href="第２回４月２０日rstudioについて.html#cb8-20" tabindex="-1"></a>a <span class="sc">+</span> <span class="dv">2</span></span>
+<span id="cb8-21"><a href="第２回４月２０日rstudioについて.html#cb8-21" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="第２回４月２０日rstudioについて.html#cb8-22" tabindex="-1"></a><span class="co"># 同じ長さのベクトル同士を掛け合わせる</span></span>
+<span id="cb8-23"><a href="第２回４月２０日rstudioについて.html#cb8-23" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
+<span id="cb8-24"><a href="第２回４月２０日rstudioについて.html#cb8-24" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">0</span>)</span>
+<span id="cb8-25"><a href="第２回４月２０日rstudioについて.html#cb8-25" tabindex="-1"></a>a <span class="sc">*</span> b</span>
+<span id="cb8-26"><a href="第２回４月２０日rstudioについて.html#cb8-26" tabindex="-1"></a></span>
+<span id="cb8-27"><a href="第２回４月２０日rstudioについて.html#cb8-27" tabindex="-1"></a><span class="co"># ベクトルを別の短いベクトルで乗算する</span></span>
+<span id="cb8-28"><a href="第２回４月２０日rstudioについて.html#cb8-28" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
+<span id="cb8-29"><a href="第２回４月２０日rstudioについて.html#cb8-29" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">0</span>)</span>
+<span id="cb8-30"><a href="第２回４月２０日rstudioについて.html#cb8-30" tabindex="-1"></a>a <span class="sc">*</span> b</span></code></pre></div>
+<p>要約統計量 関数一覧</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">関数</th>
+<th align="left">説明</th>
+<th align="left">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>mean(x)</code></td>
+<td align="left"><strong>平均値</strong> (Mean)</td>
+<td align="left">全要素の合計を要素数で割った値</td>
+</tr>
+<tr class="even">
+<td align="left"><code>median(x)</code></td>
+<td align="left"><strong>中央値</strong> (Median)</td>
+<td align="left">データを大きさ順に並べた時、中央にくる値</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>min(x)</code></td>
+<td align="left"><strong>最小値</strong> (Minimum)</td>
+<td align="left">ベクトル内の最も小さい値</td>
+</tr>
+<tr class="even">
+<td align="left"><code>max(x)</code></td>
+<td align="left"><strong>最大値</strong> (Maximum)</td>
+<td align="left">ベクトル内の最も大きい値</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>var(x)</code></td>
+<td align="left"><strong>分散</strong> (Variance)</td>
+<td align="left">データの散らばり具合を表す指標</td>
+</tr>
+<tr class="even">
+<td align="left"><code>summary(x)</code></td>
+<td align="left"><strong>要約統計量</strong> (Summary)</td>
+<td align="left">最小、最大、平均、中央値、四分位数を一括表示</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="第２回４月２０日rstudioについて.html#cb9-1" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">12</span>, <span class="dv">45</span>, <span class="dv">3</span>, <span class="dv">2</span>)</span>
+<span id="cb9-2"><a href="第２回４月２０日rstudioについて.html#cb9-2" tabindex="-1"></a><span class="fu">summary</span>(k)</span></code></pre></div>
+</div>
+<div id="ベクトルの比較" class="section level4 hasAnchor" number="2.5.1.4">
+<h4><span class="header-section-number">2.5.1.4</span> ベクトルの比較<a href="第２回４月２０日rstudioについて.html#%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%AE%E6%AF%94%E8%BC%83" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="1png/2.5.3.png" /></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="第２回４月２０日rstudioについて.html#cb10-1" tabindex="-1"></a><span class="co"># aに含まれる要素のうち、 bにも含まれるものはどれですか？</span></span>
+<span id="cb10-2"><a href="第２回４月２０日rstudioについて.html#cb10-2" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span></span>
+<span id="cb10-3"><a href="第２回４月２０日rstudioについて.html#cb10-3" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">4</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb10-4"><a href="第２回４月２０日rstudioについて.html#cb10-4" tabindex="-1"></a>a <span class="sc">%in%</span> b</span>
+<span id="cb10-5"><a href="第２回４月２０日rstudioについて.html#cb10-5" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="第２回４月２０日rstudioについて.html#cb10-6" tabindex="-1"></a><span class="co"># aの要素のうち、 bに含まれる実際の要素を取得します。</span></span>
+<span id="cb10-7"><a href="第２回４月２０日rstudioについて.html#cb10-7" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span></span>
+<span id="cb10-8"><a href="第２回４月２０日rstudioについて.html#cb10-8" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">4</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb10-9"><a href="第２回４月２０日rstudioについて.html#cb10-9" tabindex="-1"></a>a[a <span class="sc">%in%</span> b]</span>
+<span id="cb10-10"><a href="第２回４月２０日rstudioについて.html#cb10-10" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="第２回４月２０日rstudioについて.html#cb10-11" tabindex="-1"></a><span class="co"># 2つのベクトルの交点を取得します。</span></span>
+<span id="cb10-12"><a href="第２回４月２０日rstudioについて.html#cb10-12" tabindex="-1"></a><span class="fu">intersect</span>(a, b)</span>
+<span id="cb10-13"><a href="第２回４月２０日rstudioについて.html#cb10-13" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="第２回４月２０日rstudioについて.html#cb10-14" tabindex="-1"></a><span class="co"># 2つのベクトルが完全に同一かどうかを確認します</span></span>
+<span id="cb10-15"><a href="第２回４月２０日rstudioについて.html#cb10-15" tabindex="-1"></a><span class="fu">identical</span>(a, b)</span>
+<span id="cb10-16"><a href="第２回４月２０日rstudioについて.html#cb10-16" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="第２回４月２０日rstudioについて.html#cb10-17" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="第２回４月２０日rstudioについて.html#cb10-18" tabindex="-1"></a><span class="co"># 文字ベクトルは、数値ベクトルと同様に操作されます。</span></span>
+<span id="cb10-19"><a href="第２回４月２０日rstudioについて.html#cb10-19" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mRNA&quot;</span>, <span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;snoRNA&quot;</span>, <span class="st">&quot;RNA&quot;</span>, <span class="st">&quot;lincRNA&quot;</span>)</span>
+<span id="cb10-20"><a href="第２回４月２０日rstudioについて.html#cb10-20" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mRNA&quot;</span>,<span class="st">&quot;lincRNA&quot;</span>, <span class="st">&quot;tRNA&quot;</span>, <span class="st">&quot;miRNA&quot;</span>)</span>
+<span id="cb10-21"><a href="第２回４月２０日rstudioについて.html#cb10-21" tabindex="-1"></a>k <span class="sc">%in%</span> p</span>
+<span id="cb10-22"><a href="第２回４月２０日rstudioについて.html#cb10-22" tabindex="-1"></a>k[k <span class="sc">%in%</span> p]</span>
+<span id="cb10-23"><a href="第２回４月２０日rstudioについて.html#cb10-23" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="第２回４月２０日rstudioについて.html#cb10-24" tabindex="-1"></a><span class="co"># ベクトルmからexonではない要素を選択する</span></span>
+<span id="cb10-25"><a href="第２回４月２０日rstudioについて.html#cb10-25" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;exon&quot;</span>, <span class="st">&quot;intron&quot;</span>, <span class="st">&quot;exon&quot;</span>)</span>
+<span id="cb10-26"><a href="第２回４月２０日rstudioについて.html#cb10-26" tabindex="-1"></a>m <span class="sc">!=</span> <span class="st">&quot;exon&quot;</span></span>
+<span id="cb10-27"><a href="第２回４月２０日rstudioについて.html#cb10-27" tabindex="-1"></a>m[m <span class="sc">!=</span> <span class="st">&quot;exon&quot;</span>]</span></code></pre></div>
+</div>
+</div>
+<div id="要因factor" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> 要因（Factor）<a href="第２回４月２０日rstudioについて.html#%E8%A6%81%E5%9B%A0factor" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>因子とは、他のベクトルの構成要素を離散的に分類（グループ化）するために使用されるベクトルオブジェクト（1次元）です。</p>
+<p>因子は主に統計モデリングに用いられますが、グラフ作成にも役立ちます。</p>
+<p>ファクター関数を使用すると、次のようなファクターを作成できます。</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="第２回４月２０日rstudioについて.html#cb11-1" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</span>
+<span id="cb11-2"><a href="第２回４月２０日rstudioについて.html#cb11-2" tabindex="-1"></a><span class="fu">str</span>(e)</span>
+<span id="cb11-3"><a href="第２回４月２０日rstudioについて.html#cb11-3" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="第２回４月２０日rstudioについて.html#cb11-4" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="第２回４月２０日rstudioについて.html#cb11-5" tabindex="-1"></a><span class="co"># 文字ベクトルと因子の例</span></span>
+<span id="cb11-6"><a href="第２回４月２０日rstudioについて.html#cb11-6" tabindex="-1"></a><span class="co"># 要因ベクトル</span></span>
+<span id="cb11-7"><a href="第２回４月２０日rstudioについて.html#cb11-7" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</span>
+<span id="cb11-8"><a href="第２回４月２０日rstudioについて.html#cb11-8" tabindex="-1"></a><span class="co"># 文字ベクトル</span></span>
+<span id="cb11-9"><a href="第２回４月２０日rstudioについて.html#cb11-9" tabindex="-1"></a>e2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>)</span>
+<span id="cb11-10"><a href="第２回４月２０日rstudioについて.html#cb11-10" tabindex="-1"></a><span class="co"># ベクトルの構造を確認する</span></span>
+<span id="cb11-11"><a href="第２回４月２０日rstudioについて.html#cb11-11" tabindex="-1"></a><span class="fu">str</span>(e)</span>
+<span id="cb11-12"><a href="第２回４月２０日rstudioについて.html#cb11-12" tabindex="-1"></a><span class="fu">str</span>(e2)</span></code></pre></div>
+<p>因子内のグループはレベルと呼ばれます。レベルは順序付けできます。
+その後、数値ベクトルに適用されるいくつかの演算を使用できます。</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="第２回４月２０日rstudioについて.html#cb12-1" tabindex="-1"></a><span class="co"># 順序付けないベクトル:</span></span>
+<span id="cb12-2"><a href="第２回４月２０日rstudioについて.html#cb12-2" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</span>
+<span id="cb12-3"><a href="第２回４月２０日rstudioについて.html#cb12-3" tabindex="-1"></a><span class="co"># max(e) # error</span></span>
+<span id="cb12-4"><a href="第２回４月２０日rstudioについて.html#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="第２回４月２０日rstudioについて.html#cb12-5" tabindex="-1"></a><span class="co"># 順序付けたベクトル:</span></span>
+<span id="cb12-6"><a href="第２回４月２０日rstudioについて.html#cb12-6" tabindex="-1"></a>e_ord <span class="ot">&lt;-</span> <span class="fu">factor</span>(e, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;high&quot;</span>), <span class="at">ordered=</span><span class="cn">TRUE</span>)</span>
+<span id="cb12-7"><a href="第２回４月２０日rstudioについて.html#cb12-7" tabindex="-1"></a><span class="fu">max</span>(e_ord) <span class="co"># &quot;high&quot;がでる</span></span></code></pre></div>
+</div>
+<div id="行列-matrix" class="section level3 hasAnchor" number="2.5.3">
+<h3><span class="header-section-number">2.5.3</span> 行列 (Matrix)<a href="第２回４月２０日rstudioについて.html#%E8%A1%8C%E5%88%97-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>ベクトルに「行」と「列」の概念を加えた、2次元の構造です。</p>
+<p>特徴: ベクトルと同様、すべての要素が同じデータ型であります必要があります。</p>
+<div id="マトリックスの作成" class="section level4 hasAnchor" number="2.5.3.1">
+<h4><span class="header-section-number">2.5.3.1</span> マトリックスの作成<a href="第２回４月２０日rstudioについて.html#%E3%83%9E%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E6%88%90" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="第２回４月２０日rstudioについて.html#cb13-1" tabindex="-1"></a><span class="co"># rbind関数を使用してベクトルから作成します。</span></span>
+<span id="cb13-2"><a href="第２回４月２０日rstudioについて.html#cb13-2" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">44</span>)</span>
+<span id="cb13-3"><a href="第２回４月２０日rstudioについて.html#cb13-3" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">12</span>)</span>
+<span id="cb13-4"><a href="第２回４月２０日rstudioについて.html#cb13-4" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">34</span>, <span class="dv">4</span>)</span>
+<span id="cb13-5"><a href="第２回４月２０日rstudioについて.html#cb13-5" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">rbind</span>(x, y, z)</span>
+<span id="cb13-6"><a href="第２回４月２０日rstudioについて.html#cb13-6" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="第２回４月２０日rstudioについて.html#cb13-7" tabindex="-1"></a><span class="co"># cbind関数を使用したベクトルから：</span></span>
+<span id="cb13-8"><a href="第２回４月２０日rstudioについて.html#cb13-8" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>)</span>
+<span id="cb13-9"><a href="第２回４月２０日rstudioについて.html#cb13-9" tabindex="-1"></a>j <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>)</span>
+<span id="cb13-10"><a href="第２回４月２０日rstudioについて.html#cb13-10" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">cbind</span>(i, j)</span>
+<span id="cb13-11"><a href="第２回４月２０日rstudioについて.html#cb13-11" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="第２回４月２０日rstudioについて.html#cb13-12" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="第２回４月２０日rstudioについて.html#cb13-13" tabindex="-1"></a><span class="co"># 行列関数をゼロから使う：</span></span>
+<span id="cb13-14"><a href="第２回４月２０日rstudioについて.html#cb13-14" tabindex="-1"></a><span class="co"># nrow: number of rows</span></span>
+<span id="cb13-15"><a href="第２回４月２０日rstudioについて.html#cb13-15" tabindex="-1"></a><span class="co"># ncol: number of columns</span></span>
+<span id="cb13-16"><a href="第２回４月２０日rstudioについて.html#cb13-16" tabindex="-1"></a>pp <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>, <span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>), </span>
+<span id="cb13-17"><a href="第２回４月２０日rstudioについて.html#cb13-17" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">3</span>,</span>
+<span id="cb13-18"><a href="第２回４月２０日rstudioについて.html#cb13-18" tabindex="-1"></a>    <span class="at">ncol=</span><span class="dv">2</span>)</span></code></pre></div>
+</div>
+<div id="二次元物体" class="section level4 hasAnchor" number="2.5.3.2">
+<h4><span class="header-section-number">2.5.3.2</span> 二次元物体<a href="第２回４月２０日rstudioについて.html#%E4%BA%8C%E6%AC%A1%E5%85%83%E7%89%A9%E4%BD%93" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>ベクトルは要素ごとに1つのインデックスを持ちます（1次元）。
+行列は要素ごとに2つのインデックスを持ちます（2次元）。これは、要素の位置（行番号と列番号）に対応します。</p>
+<p><img src="1png/2.5.4.png" /></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="第２回４月２０日rstudioについて.html#cb14-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">44</span>)</span>
+<span id="cb14-2"><a href="第２回４月２０日rstudioについて.html#cb14-2" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">12</span>)</span>
+<span id="cb14-3"><a href="第２回４月２０日rstudioについて.html#cb14-3" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">34</span>, <span class="dv">4</span>)</span>
+<span id="cb14-4"><a href="第２回４月２０日rstudioについて.html#cb14-4" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">rbind</span>(x, y, z)</span>
+<span id="cb14-5"><a href="第２回４月２０日rstudioについて.html#cb14-5" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="第２回４月２０日rstudioについて.html#cb14-6" tabindex="-1"></a><span class="co"># 行列のすべての要素に1を加える</span></span>
+<span id="cb14-7"><a href="第２回４月２０日rstudioについて.html#cb14-7" tabindex="-1"></a>b <span class="ot">&lt;-</span> b <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb14-8"><a href="第２回４月２０日rstudioについて.html#cb14-8" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="第２回４月２０日rstudioについて.html#cb14-9" tabindex="-1"></a><span class="co"># 行列のすべての要素に3を掛ける</span></span>
+<span id="cb14-10"><a href="第２回４月２０日rstudioについて.html#cb14-10" tabindex="-1"></a>b <span class="ot">&lt;-</span> b <span class="sc">*</span> <span class="dv">3</span></span>
+<span id="cb14-11"><a href="第２回４月２０日rstudioについて.html#cb14-11" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="第２回４月２０日rstudioについて.html#cb14-12" tabindex="-1"></a><span class="co"># 行列の最初の行の各要素から2を引きます。</span></span>
+<span id="cb14-13"><a href="第２回４月２０日rstudioについて.html#cb14-13" tabindex="-1"></a>b[<span class="dv">1</span>, ] <span class="ot">&lt;-</span> b[<span class="dv">1</span>, ] <span class="sc">-</span> <span class="dv">2</span></span>
+<span id="cb14-14"><a href="第２回４月２０日rstudioについて.html#cb14-14" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="第２回４月２０日rstudioについて.html#cb14-15" tabindex="-1"></a><span class="co"># 条件を満たす要素を置換します。</span></span>
+<span id="cb14-16"><a href="第２回４月２０日rstudioについて.html#cb14-16" tabindex="-1"></a>b[ b <span class="sc">&gt;</span> <span class="dv">3</span> ] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code></pre></div>
+</div>
+</div>
+<div id="データフレーム-data-frame" class="section level3 hasAnchor" number="2.5.4">
+<h3><span class="header-section-number">2.5.4</span> データフレーム (Data Frame)<a href="第２回４月２０日rstudioについて.html#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0-data-frame" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>実務で最も多用される構造です。表形式のデータ（Excelのようなイメージ）を扱います。行列よりも汎用的です。</p>
+<p>特徴: 列ごとに異なるデータ型を持つことができます（例：1列目は名前（文字）、2列目は年齢（数値））。同じ長さでなければなりません。</p>
+<p>データフレームは列ごとに構成されます。列は変数であり、行は各変数の観測値です。</p>
+<div id="データフレームを作成する" class="section level4 hasAnchor" number="2.5.4.1">
+<h4><span class="header-section-number">2.5.4.1</span> データフレームを作成する<a href="第２回４月２０日rstudioについて.html#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><code>data.frame</code> 関数を使用する場合</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="第２回４月２０日rstudioについて.html#cb15-1" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>), </span>
+<span id="cb15-2"><a href="第２回４月２０日rstudioについて.html#cb15-2" tabindex="-1"></a>    <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</span>
+<span id="cb15-3"><a href="第２回４月２０日rstudioについて.html#cb15-3" tabindex="-1"></a>    <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>))</span>
+<span id="cb15-4"><a href="第２回４月２０日rstudioについて.html#cb15-4" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="第２回４月２０日rstudioについて.html#cb15-5" tabindex="-1"></a><span class="co"># stringsAsFactors: 文字をFactorとしてではなく、文字型として扱うことを保証します</span></span>
+<span id="cb15-6"><a href="第２回４月２０日rstudioについて.html#cb15-6" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>), </span>
+<span id="cb15-7"><a href="第２回４月２０日rstudioについて.html#cb15-7" tabindex="-1"></a>    <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</span>
+<span id="cb15-8"><a href="第２回４月２０日rstudioについて.html#cb15-8" tabindex="-1"></a>    <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>),</span>
+<span id="cb15-9"><a href="第２回４月２０日rstudioについて.html#cb15-9" tabindex="-1"></a>    <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb15-10"><a href="第２回４月２０日rstudioについて.html#cb15-10" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="第２回４月２０日rstudioについて.html#cb15-11" tabindex="-1"></a><span class="co"># 「stringsAsFactors = FALSE」が役立つ理由の例</span></span>
+<span id="cb15-12"><a href="第２回４月２０日rstudioについて.html#cb15-12" tabindex="-1"></a><span class="co"># Create a data frame with default parameters</span></span>
+<span id="cb15-13"><a href="第２回４月２０日rstudioについて.html#cb15-13" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">label=</span><span class="fu">rep</span>(<span class="st">&quot;test&quot;</span>,<span class="dv">5</span>), <span class="at">column2=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb15-14"><a href="第２回４月２０日rstudioについて.html#cb15-14" tabindex="-1"></a><span class="co"># Replace one value</span></span>
+<span id="cb15-15"><a href="第２回４月２０日rstudioについて.html#cb15-15" tabindex="-1"></a><span class="co"># df[2,1] &lt;- &quot;yes&quot;</span></span>
+<span id="cb15-16"><a href="第２回４月２０日rstudioについて.html#cb15-16" tabindex="-1"></a><span class="co"># Throws an error and doesn&#39;t replace the value !</span></span>
+<span id="cb15-17"><a href="第２回４月２０日rstudioについて.html#cb15-17" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="第２回４月２０日rstudioについて.html#cb15-18" tabindex="-1"></a><span class="co"># Create a data frame with:</span></span>
+<span id="cb15-19"><a href="第２回４月２０日rstudioについて.html#cb15-19" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">label=</span><span class="fu">rep</span>(<span class="st">&quot;test&quot;</span>,<span class="dv">5</span>), <span class="at">column2=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb15-20"><a href="第２回４月２０日rstudioについて.html#cb15-20" tabindex="-1"></a><span class="co"># Replace one value</span></span>
+<span id="cb15-21"><a href="第２回４月２０日rstudioについて.html#cb15-21" tabindex="-1"></a>df2[<span class="dv">2</span>,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;yes&quot;</span></span>
+<span id="cb15-22"><a href="第２回４月２０日rstudioについて.html#cb15-22" tabindex="-1"></a><span class="co"># Works!</span></span></code></pre></div>
+<p>行列をデータフレームに変換する：</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="第２回４月２０日rstudioについて.html#cb16-1" tabindex="-1"></a><span class="co"># create a matrix</span></span>
+<span id="cb16-2"><a href="第２回４月２０日rstudioについて.html#cb16-2" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>, <span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>), </span>
+<span id="cb16-3"><a href="第２回４月２０日rstudioについて.html#cb16-3" tabindex="-1"></a>        <span class="at">nrow=</span><span class="dv">3</span>,</span>
+<span id="cb16-4"><a href="第２回４月２０日rstudioについて.html#cb16-4" tabindex="-1"></a>        <span class="at">ncol=</span><span class="dv">2</span>)</span>
+<span id="cb16-5"><a href="第２回４月２０日rstudioについて.html#cb16-5" tabindex="-1"></a><span class="co"># convert as data frame</span></span>
+<span id="cb16-6"><a href="第２回４月２０日rstudioについて.html#cb16-6" tabindex="-1"></a>b_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(b)</span>
+<span id="cb16-7"><a href="第２回４月２０日rstudioについて.html#cb16-7" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="第２回４月２０日rstudioについて.html#cb16-8" tabindex="-1"></a><span class="co"># 行列操作と非常によく似ています。各要素は行と列のインデックスによって見つけられます。</span></span>
+<span id="cb16-9"><a href="第２回４月２０日rstudioについて.html#cb16-9" tabindex="-1"></a>b_df[<span class="dv">1</span>,<span class="dv">2</span>]</span></code></pre></div>
+</div>
+</div>
+<div id="リスト-list" class="section level3 hasAnchor" number="2.5.5">
+<h3><span class="header-section-number">2.5.5</span> リスト (List)<a href="第２回４月２０日rstudioについて.html#%E3%83%AA%E3%82%B9%E3%83%88-list" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>異なる型や、異なる構造のオブジェクトをひとまとめにできる「詰め合わせセット」です。</p>
+<p>特徴: 数値、文字、ベクトル、さらには別のリストまで、何でも入れることができます。</p>
+<p>異なるデータ型を混在できる:
+数値、文字、論理値、さらにはベクトルやデータフレーム、別のリストさえも一つのリストの中に格納できます。</p>
+<p>要素ごとに長さが違っても良い:
+「3つの数値」と「10個の文字列」を一つのリストに共存させることができます。</p>
+<p>階層構造を持てる:
+リストの中にリストを入れる（入れ子構造）ができるため、複雑なデータ構造を表現するのに適しています。</p>
+<div id="リストの作成" class="section level4 hasAnchor" number="2.5.5.1">
+<h4><span class="header-section-number">2.5.5.1</span> リストの作成<a href="第２回４月２０日rstudioについて.html#%E3%83%AA%E3%82%B9%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>list() 関数を使います。各要素に名前（タグ）を付けるのが一般的です。</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="第２回４月２０日rstudioについて.html#cb17-1" tabindex="-1"></a>my_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb17-2"><a href="第２回４月２０日rstudioについて.html#cb17-2" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span>,                      <span class="co"># 数値</span></span>
+<span id="cb17-3"><a href="第２回４月２０日rstudioについて.html#cb17-3" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">&quot;Tanaka&quot;</span>,             <span class="co"># 文字</span></span>
+<span id="cb17-4"><a href="第２回４月２０日rstudioについて.html#cb17-4" tabindex="-1"></a>  <span class="at">scores =</span> <span class="fu">c</span>(<span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">75</span>),      <span class="co"># ベクトル</span></span>
+<span id="cb17-5"><a href="第２回４月２０日rstudioについて.html#cb17-5" tabindex="-1"></a>  <span class="at">active =</span> <span class="cn">TRUE</span>                <span class="co"># 論理値</span></span>
+<span id="cb17-6"><a href="第２回４月２０日rstudioについて.html#cb17-6" tabindex="-1"></a>)</span></code></pre></div>
+</div>
+<div id="要素へのアクセス方法" class="section level4 hasAnchor" number="2.5.5.2">
+<h4><span class="header-section-number">2.5.5.2</span> 要素へのアクセス方法<a href="第２回４月２０日rstudioについて.html#%E8%A6%81%E7%B4%A0%E3%81%B8%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%96%B9%E6%B3%95" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="第２回４月２０日rstudioについて.html#cb18-1" tabindex="-1"></a>my_list<span class="sc">$</span>name</span>
+<span id="cb18-2"><a href="第２回４月２０日rstudioについて.html#cb18-2" tabindex="-1"></a>my_list[[<span class="dv">3</span>]]</span></code></pre></div>
+<p>注意点: <code>my_list[3]</code>（一重の括弧）を使うと、「3番目の要素を含んだ小さなリスト」が返ってきます。</p>
+</div>
+</div>
+<div id="配列-array" class="section level3 hasAnchor" number="2.5.6">
+<h3><span class="header-section-number">2.5.6</span> 配列 (Array)<a href="第２回４月２０日rstudioについて.html#%E9%85%8D%E5%88%97-array" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>行列をさらに多次元（3次元以上）に拡張したものです。</p>
+<p>特徴: すべて同じデータ型であります必要があります。立方体のようなデータの重なりをイメージしてください。</p>
+<p>多次元構造:
+「縦 × 横」の平面だけでなく、「奥行き」を持たせたデータの塊（立方体のようなイメージ）を作ることができます。</p>
+<p>単一のデータ型:
+ベクトルや行列と同様に、格納できるのはすべて同じデータ型（すべて数値、またはすべて文字など）である必要があります。</p>
+<p>添字（インデックス）でアクセス:
+3次元のアレイであれば、[行, 列, 次元] のように3つの数字を使ってデータを取り出します。</p>
+<div id="アレイの作成" class="section level4 hasAnchor" number="2.5.6.1">
+<h4><span class="header-section-number">2.5.6.1</span> アレイの作成<a href="第２回４月２０日rstudioについて.html#%E3%82%A2%E3%83%AC%E3%82%A4%E3%81%AE%E4%BD%9C%E6%88%90" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><code>array()</code> 関数を使います。データ本体と、各次元の大きさを指定する <code>dim</code> 引数が必要です</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="第２回４月２０日rstudioについて.html#cb19-1" tabindex="-1"></a><span class="co"># 1から12までの数字を使って、2行 × 3列 × 2層 の3次元アレイを作成</span></span>
+<span id="cb19-2"><a href="第２回４月２０日rstudioについて.html#cb19-2" tabindex="-1"></a>my_array <span class="ot">&lt;-</span> <span class="fu">array</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>))</span></code></pre></div>
+</div>
+<div id="要素へのアクセス方法-1" class="section level4 hasAnchor" number="2.5.6.2">
+<h4><span class="header-section-number">2.5.6.2</span> 要素へのアクセス方法<a href="第２回４月２０日rstudioについて.html#%E8%A6%81%E7%B4%A0%E3%81%B8%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%96%B9%E6%B3%95-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="第２回４月２０日rstudioについて.html#cb20-1" tabindex="-1"></a>my_array[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>]</span>
+<span id="cb20-2"><a href="第２回４月２０日rstudioについて.html#cb20-2" tabindex="-1"></a>my_array[, , <span class="dv">2</span>]</span></code></pre></div>
+</div>
+</div>
+<div id="データ構造のイメージ" class="section level3 hasAnchor" number="2.5.7">
+<h3><span class="header-section-number">2.5.7</span> データ構造のイメージ<a href="第２回４月２０日rstudioについて.html#%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0%E3%81%AE%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">次元</th>
+<th align="left">名称</th>
+<th align="left">特徴</th>
+<th align="left">イメージ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>1次元</strong></td>
+<td align="left"><strong>ベクトル (Vector)</strong></td>
+<td align="left">同じ型のデータの列</td>
+<td align="left">線</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>2次元</strong></td>
+<td align="left"><strong>行列 (Matrix), データフレーム (Data Frame)</strong></td>
+<td align="left">行(Row)と列(Column)の表</td>
+<td align="left">面</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>3次元以上</strong></td>
+<td align="left"><strong>アレイ (Array)</strong></td>
+<td align="left">行 × 列 × 層（奥行き）</td>
+<td align="left">立体</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="パッケージpackageのインストール" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> パッケージ（package）のインストール<a href="第２回４月２０日rstudioについて.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8package%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="rパッケージとは" class="section level3 hasAnchor" number="2.6.1">
+<h3><span class="header-section-number">2.6.1</span> Rパッケージとは？<a href="第２回４月２０日rstudioについて.html#r%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%A8%E3%81%AF" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Rの本体（Base R）だけでも多くの計算が可能でありますが、パッケージを導入しますことで、データ分析、統計モデリング、グラフ作成などの機能を大幅に拡張できる。</p>
+<p>関数の集合体: 誰かが作成した便利な関数、データ、ドキュメントが一つにまとめられている。</p>
+<p>CRAN（<a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>）: 公式のリポジトリ（保存先）には、現在数万件ものパッケージが公開されており、誰でも無料で利用できます。</p>
+</div>
+<div id="パッケージのインストール" class="section level3 hasAnchor" number="2.6.2">
+<h3><span class="header-section-number">2.6.2</span> パッケージのインストール<a href="第２回４月２０日rstudioについて.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="パッケージをロードする" class="section level3 hasAnchor" number="2.6.3">
+<h3><span class="header-section-number">2.6.3</span> パッケージをロードする<a href="第２回４月２０日rstudioについて.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%92%E3%83%AD%E3%83%BC%E3%83%89%E3%81%99%E3%82%8B" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="現在ロードされているパッケージを確認する" class="section level3 hasAnchor" number="2.6.4">
+<h3><span class="header-section-number">2.6.4</span> 現在ロードされているパッケージを確認する<a href="第２回４月２０日rstudioについて.html#%E7%8F%BE%E5%9C%A8%E3%83%AD%E3%83%BC%E3%83%89%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="パッケージ内の関数を一覧表示する" class="section level3 hasAnchor" number="2.6.5">
+<h3><span class="header-section-number">2.6.5</span> パッケージ内の関数を一覧表示する<a href="第２回４月２０日rstudioについて.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%86%85%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="第１回４月１３日.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="第３回４月２７日.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-note2.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
