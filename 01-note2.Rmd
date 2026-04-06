@@ -533,3 +533,8 @@ my_array[, , 2]
 | **2次元** | **行列 (Matrix), データフレーム (Data Frame)**  | 行(Row)と列(Column)の表 | 面 |
 | **3次元以上** | **アレイ (Array)** | 行 × 列 × 層（奥行き） | 立体 |
 
+
+
+#### 参考資料{-}
+
+https://biocorecrg.github.io/CRG_RIntroduction_2021/data-types.html
