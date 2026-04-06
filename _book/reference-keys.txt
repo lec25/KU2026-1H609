@@ -14,6 +14,10 @@ session-をクリックする
 設定の確認
 スクリプトの作成
 スクリプトの保存
+スクリプトの確認
+次回からはファイルをダブルクリックすることで開ける
+rstudioを終了した後
+スクリプトの実行
 cross
 chapters-and-sub-chapters
 captioned-figures-and-tables
@@ -31,7 +35,3 @@ pages
 metadata-for-sharing
 hello-bookdown
 a-section
-スクリプトの確認
-次回からはファイルをダブルクリックすることで開ける
-rstudioを終了した後
-スクリプトの実行
