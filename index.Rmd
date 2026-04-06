@@ -1,0 +1,20 @@
+--- 
+title: "[2026-Z][1H609] 計算機科学入門"
+author: "Yi Zhou"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+# 本資料について
+
+2026年度「計算機科学入門」前半の資料です。
+
+## 第１回（4月13日）
+
+すべての資料はBEEF+に保存してあります。詳細はBEEF+をご確認ください。
