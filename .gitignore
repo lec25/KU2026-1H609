@@ -48,7 +48,4 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-
-*.png
-1png/
 *.pptx
