@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE, fig.width = 5)
 ### Rコードと関連ファイルを保存するための新しいフォルダを作成する。
 
 例えば、`Document`フォルダ内に`R`という名前のフォルダを作成する。
-![](Picture1.png)
+![](1png/Picture1.png)
 
 ### RStudioを起動し、作業ディレクトリ（パス、path）をRに設定する。
 
@@ -18,22 +18,22 @@ knitr::opts_chunk$set(echo = TRUE, fig.width = 5)
 #### 1. `setwd()`関数を使う
   
 1. `R`フォルダに移動する
-![](2.1.1.png)
+![](1png/2.1.1.png)
 
 2. パスを選択し、コピーする。
-![](2.1.3.png)
+![](1png/2.1.3.png)
 
 3. RStudioを開き、コード:`setwd("C:\\Users\\xxx\\Documents\\R")`　あるいは　`setwd("C:/Users/xxx/Documents/R")`
 を入力する。
 
 注意：パスを `" "` で囲み、 `\` を `\\` または `/` に書き換えてください。
-![](2.1.4.png)
+![](1png/2.1.4.png)
 
 
 #### 2. Session をクリックする
 
 1. RStudioの一番上へ移動し、「`Session`」-->「`Set Working Directory`」-->「`Choose Directory`」をクリックする。
-![](2.1.6.png)
+![](1png/2.1.6.png)
 
 2.Rフォルダを選択し、「`Open`」をクリックする。![](Picture3.png)
 
@@ -42,44 +42,44 @@ knitr::opts_chunk$set(echo = TRUE, fig.width = 5)
 
 1. RStudioの右下のパネルへ移動する。「`Home`」をクリックし、`R`フォルダを選択する。
 
-![](Picture4.png)
+![](1png/Picture4.png)
 
 2.「`Set Working Directory`」をクリックする。
-![](2.1.9.png)
+![](1png/2.1.9.png)
 
 ### 設定の確認
 
 「`Go to Working Directory`」をクリックし、`Files`タブ内に`R`フォルダにいくことを確認してください。
 
-![](2.1.5.png)
+![](1png/2.1.5.png)
 
 ## スクリプトの作成
 
 1. `File` --> `New File` --> `R Script` をクリックする。`Untitled1`というファイルが作成される。
-![](2.2.1.png)
+![](1png/2.2.1.png)
 
 2. あるいは、`File` の下のボタンをクリックし、`R Script` をクリックする。`Untitled1`というファイルが作成される。
-![](2.2.2.png)
+![](1png/2.2.2.png)
 
 ### スクリプトの保存
 
 フロッピーディスクのアイコンをクリックする。ファイル名を「code1」と入力し、「`Save`」ボタンをクリックする。
-![](Picture5.png)
+![](1png/Picture5.png)
 
 ### スクリプトの確認
 
 ファイルが正常に保存されると、右下の `Workign directory` ペインに表示される。
-![](2.2.5.png)
+![](1png/2.2.5.png)
 
 また、`R`フォルダの中でもファイルを確認できる。
-![](2.2.6.png)
+![](1png/2.2.6.png)
 
 ### 次回からは、ファイルをダブルクリックすることで開ける
 
 ### RStudioを終了した後
 
 注意：RStudioを終了すると、自動的にヒストリーファイルが作成される。ここには入力したコードの履歴が保存されるが、そのまま放置しておいて問題ない。
-![](2.2.7.png)
+![](1png/2.2.7.png)
 
 ## スクリプトの実行
 
