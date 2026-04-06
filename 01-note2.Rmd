@@ -1,7 +1,8 @@
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, results = 'hide')
 ```
-# 第２回（４月２０日）：RStudioについて
+
+# 第２回（４月２０日）：RStudioでデータの操作と計算
 
 ## 準備
 
