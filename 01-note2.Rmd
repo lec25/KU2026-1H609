@@ -1,5 +1,5 @@
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, results = 'hide')
+knitr::opts_chunk$set(echo = TRUE, results = 'hide', warning = FALSE, message = FALSE)
 ```
 
 # 第２回（４月２０日）：RStudioでデータの操作と計算
@@ -310,7 +310,7 @@ m != "exon"
 m[m != "exon"]
 ```
 
-### 要因（Factor）
+### 因子（Factor）
 
 因子とは、他のベクトルの構成要素を離散的に分類（グループ化）するために使用されるベクトルオブジェクト（1次元）です。
 
@@ -534,7 +534,208 @@ my_array[, , 2]
 | **3次元以上** | **アレイ (Array)** | 行 × 列 × 層（奥行き） | 立体 |
 
 
+## 特別な値
+
+- `NULL`: 空の状態
+- `NA`: 欠損値
+- `NaN`: 非数
+- `Inf`/`-Inf`: 無限 / -無限
+
+### NULL: 空のオブジェクト
+
+`NULL` はオブジェクトであり、式や関数が未定義の値を返した場合に返されます。
+R言語では、`NULL`（大文字）は予約語であり、データ型が不明なデータをインポートした結果として生成される場合もあります。
+
+```{r}
+# データ型: NULL 型
+class(NULL) 
+
+# 長さ: 0
+length(NULL)
+
+# NULL型を確認
+x<- NULL
+is.null(x)
+
+my_list <- list(a = 1, b = 2, c = 3)
+my_list
+my_list$b <- NULL  # bを削除
+my_list
+```
+
+
+### NA：（利用不可）Rで認識される要素です。
+
+
+
+```{r}
+# ベクトル内の欠損値を見つける
+x <- c(4, 2, 7, NA)
+
+# NAを見つける
+is.na(x)
+
+# NAを削除
+na.omit(x)
+x[ !is.na(x) ]
+
+# 一部の関数は、デフォルトで、または特定の引数によって、NA（欠損値）を処理できます。
+x <- c(4, 2, 7, NA)
+
+# default arguments
+mean(x)
+
+# NAを削除して、平均値をとる
+mean(x, na.rm=TRUE)
+
+# 行列またはデータフレームでは、NA値を含まない行のみを残します。
+mydata <- matrix(c(1:10, NA, 12:2, NA, 15:20, NA), ncol=3)
+
+# NA　を含まない行だけを残す
+mydata[complete.cases(mydata), ]
+# あるいは
+na.omit(mydata)
+
+```
+
+### NaN: 数学的なエラー
+
+```{r}
+# 0を0で割る
+0 / 0 
+
+# 負の数の対数をとる
+log(-10)
+
+# NaN は NA の一種として扱われる
+is.na(NaN)  # TRUE
+is.nan(NA)  # FALSE (NAは数学的エラーではないため)
+
+```
+
+### Inf: 限界を超えた数値
+
+Inf は非常に大きな数値として扱われるため、計算を継続できるのが特徴です。
+
+```{r}
+# ゼロ除算
+10 / 0  # Inf
+
+# 無限に何かを足しても無限
+Inf + 1e10 # Inf
+
+# 無限で割るとゼロになる
+10 / Inf # 0
+
+# Inf かどうかの判定
+is.finite(10 / 0) # FALSE
+
+# これらが一つのベクトルに混ざった場合、Rは以下のように判定します。
+x <- c(1, NA, NaN, Inf)
+
+is.na(x)       # FALSE  TRUE  TRUE FALSE (NaNはNAとしてもカウントされる)
+is.nan(x)      # FALSE FALSE  TRUE FALSE
+is.infinite(x) # FALSE FALSE FALSE  TRUE
+is.finite(x)   #  TRUE FALSE FALSE FALSE (NAとNaNは「有限ではない」)
+```
+
+
+
+
+クイック比較表
+
+| 値 | 意味 | データ型 (typeof) | 長さ (length) | 主な発生理由 | 判定関数 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **NULL** | 存在しない・空 | NULL | 0 | オブジェクトの未定義、リスト要素の削除 | `is.null()` |
+| **NA** | 欠損値 (不明) | logical, integer等 | 1 | アンケートの未回答、データの読み込み漏れ | `is.na()` |
+| **NaN** | 非数 (計算不能) | double (numeric) | 1 | 0/0, 負の数の平方根など | `is.nan()` |
+| **Inf** | 無限大 | double (numeric) | 1 | 1/0, 指数関数のオーバーフロー | `is.infinite()` |
+
+
+## データのインポート、保存
+
+Rには、さまざまなファイル形式からデータをインポートするための関数やパッケージが用意されています。ここでは、Rにデータを読み込むための一般的な方法をいくつか紹介します。
+
+**データはMEATからダウンロードできます。**
+
+### インポート
+
+```{r}
+# パスを正しく設定する
+setwd("~/R")
+
+# CSVファイルをインポート
+data <- read.csv("data1.csv")
+data
+
+# Excelファイル
+# openxlsx というパッケージを依存する
+if (!require("openxlsx")) install.packages("openxlsx")　## 初回のみインストールする
+library(openxlsx)
+
+# Excelファイルをインポート
+data <- read.xlsx("data2.xlsx", sheet = 1)
+data
+```
+
+### 保存
+
+```{r}
+# パスを正しく設定する
+setwd("~/R")
+
+# CSVファイルとして保存
+data <- data.frame(participant_id = c(1, 2, 3, 4, 5, 6, 7, 8),
+                   age = c(18, 19, 18, 22, 18, 19, 19, 18),
+                   gender = c("male", "female", "male", "female", "female", "female", "male", "male"),
+                   condition = c("high", "high", "low", "high", "low", "low", "low", "high"),
+                   variable1 = c(9, 15, 9, 11, 4, 6, 4, 12))
+write.csv(data, "data3.csv")
+
+# xlsx ファイルとして保存
+# Install and load the openxlsx package
+if (!require("openxlsx")) install.packages("openxlsx")　## 初回のみインストールする
+# library(openxlsx) 　##初回のみロードする
+
+# Save data as Excel file
+write.xlsx(data, "data4.xlsx", sheet = 1)
+```
+
+成功すると、正しいディレクトリにファイルが表示されます。
+
+![](1png/2.6.1.png)
+
+さらに詳しく知りたい場合は、こちらを参照してください：https://bookdown.org/dereksonderegger/444/importing-data.html#google-sheets
+
+## 要約統計量
+
+### 要約統計
+
+
+要約統計量は、データセットの主な特徴を簡潔にまとめたものです。これには、中心傾向、ばらつき、形状などの指標が含まれます。
+
+この`summary()`関数は、データセット内の各変数に関する重要な統計情報を簡潔に概観します。最小値、第1四分位数、中央値、平均値、第3四分位数、最大値が含まれます。
+
+```{r}
+# Create a data set
+data <- data.frame(participant_id = c(1, 2, 3, 4, 5, 6, 7, 8),
+                   age = c(18, 19, 18, 22, 18, 19, 19, 18),
+                   gender = c("male", "female", "male", "female", "female", "female", "male", "male"),
+                   condition = c("high", "high", "low", "high", "low", "low", "low", "high"),
+                   variable1 = c(9, 15, 9, 11, 4, 6, 4, 12))
+
+# データセットの要約統計量を計算する
+summary(data)
+
+# 変数の要約統計量を計算する
+summary(data$variable1)
+```
+
 
 #### 参考資料{-}
 
 https://biocorecrg.github.io/CRG_RIntroduction_2021/data-types.html
+
+https://bookdown.org/dereksonderegger/444/importing-data.html#google-sheets
+
+https://bookdown.org/stefanleach/R_basic/importing-saving-and-exploring-data.html#distributions-and-summary-statistics-understanding-basic-properties-of-data
