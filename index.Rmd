@@ -17,7 +17,7 @@ github-repo: rstudio/bookdown-demo
 
 # 第１回（４月１３日）
 
-すべての資料はBEEF+に保存してあります。詳細はBEEF+をご確認ください。
+すべての資料は MEAT に保存してあります。詳細は MEAT をご確認ください。
 
 
 
