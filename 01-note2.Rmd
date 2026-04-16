@@ -1,3 +1,8 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, results = 'hide', warning = FALSE, message = FALSE)
 ```
@@ -5,6 +10,10 @@ knitr::opts_chunk$set(echo = TRUE, results = 'hide', warning = FALSE, message = 
 # 第２回（４月２０日）：RStudioでデータの操作と計算
 
 ## 準備
+
+### RStudio IDEの紹介
+
+[チートシート](1png/rstudio-ide_ja.pdf)を確認してください
 
 ### Rコードと関連ファイルを保存するための新しいフォルダを作成します。
 
@@ -416,28 +425,34 @@ b[ b > 3 ] <- NA
 `data.frame` 関数を使用する場合
 ```{r}
 
-d <- data.frame(c("Maria", "Juan", "Alba"), 
-    c(23, 25, 31),
-    c(TRUE, TRUE, FALSE))
+d <- data.frame(name = c("Maria", "Juan", "Alba"), 
+    age = c(23, 25, 31),
+    male = c(TRUE, TRUE, FALSE))
+
+d
 
 # stringsAsFactors: 文字をFactorとしてではなく、文字型として扱うことを保証します
-d <- data.frame(c("Maria", "Juan", "Alba"), 
-    c(23, 25, 31),
-    c(TRUE, TRUE, FALSE),
+d <- data.frame(name = c("Maria", "Juan", "Alba"), 
+    age = c(23, 25, 31),
+    male = c(TRUE, TRUE, FALSE),
     stringsAsFactors = FALSE)
+d
+
+# 変数をもう1つ追加します。
+d$sex <- c("男", "男", "女")
+d
 
 # 「stringsAsFactors = FALSE」が役立つ理由の例
-# Create a data frame with default parameters
 df <- data.frame(label=rep("test",5), column2=1:5)
-# Replace one value
-# df[2,1] <- "yes"
-# Throws an error and doesn't replace the value !
+# 1つの値を置き換える
+# df[2,1] <- "yes"  # エラーが発生し、値が置き換えられません。
 
 # Create a data frame with:
 df2 <- data.frame(label=rep("test",5), column2=1:5, stringsAsFactors = FALSE)
 # Replace one value
 df2[2,1] <- "yes"
 # Works!
+
 
 ```
 
@@ -652,7 +667,7 @@ is.finite(x)   #  TRUE FALSE FALSE FALSE (NAとNaNは「有限ではない」)
 | **Inf** | 無限大 | double (numeric) | 1 | 1/0, 指数関数のオーバーフロー | `is.infinite()` |
 
 
-## データのインポート、保存
+## データの読み込み、保存
 
 Rには、さまざまなファイル形式からデータをインポートするための関数やパッケージが用意されています。ここでは、Rにデータを読み込むための一般的な方法をいくつか紹介します。
 
@@ -709,8 +724,47 @@ write.xlsx(data, "data4.xlsx", sheet = 1)
 
 ## 要約統計量
 
-### 要約統計
+### 集計表（Cross-tabulation / Summary Tables）の作成
 
+```{r}
+# サンプルデータの作成
+df <- data.frame(
+  ID = 1:100,
+  Gender = sample(c("Male", "Female"), 100, replace = TRUE),
+  Score = sample(50:100, 100, replace = TRUE),
+  Score2 = sample(20:100, 100, replace = TRUE),
+  Passed = sample(c("Yes", "No"), 100, replace = TRUE)
+)
+df
+```
+
+クロス集計：2つの変数を掛け合わせる場合
+
+```{r}
+# 性別 × 合否のクロス集計
+cross_tab <- table(df$Gender, df$Passed)
+print(cross_tab)
+
+# 割合（%）で表示する場合
+prop.table(cross_tab, margin = 1) # 行方向の割合
+```
+
+
+### 平均値と分散
+
+```{r}
+# Scoreの平均値
+mean(df$Score)
+
+# Scoreの分散と標準偏差
+var(df$Score)
+sd(df$Score)
+
+#　ScoreとScore2の共分散
+cov(df$Score,df$Score2)
+```
+
+### Rによる
 
 要約統計量は、データセットの主な特徴を簡潔にまとめたものです。これには、中心傾向、ばらつき、形状などの指標が含まれます。
 
