@@ -1,0 +1,200 @@
+name,age,height_cm,weight_kgs,nationality,wage_euro,preferred_foot,body_type,crossing,finishing,heading_accuracy
+L. Messi,31,170.18,72.1,Argentina,565000,Left,Messi,86,95,70
+C. Eriksen,27,154.94,76.2,Denmark,205000,Right,Lean,88,81,52
+P. Pogba,25,190.5,83.9,France,255000,Right,Normal,80,75,75
+L. Insigne,27,162.56,59,Italy,165000,Right,Normal,86,77,56
+K. Koulibaly,27,187.96,88.9,Senegal,135000,Right,Normal,30,22,83
+V. van Dijk,27,193.04,92.1,Netherlands,215000,Right,Normal,53,52,83
+K. Mbappé,20,152.4,73,France,100000,Right,Lean,77,88,77
+S. Agüero,30,172.72,69.9,Argentina,300000,Right,Stocky,70,93,77
+M. Neuer,32,193.04,92.1,Germany,130000,Right,Normal,15,13,25
+E. Cavani,32,185.42,77.1,Uruguay,200000,Right,Lean,70,89,89
+Sergio Busquets,30,187.96,76.2,Spain,315000,Right,Lean,62,67,68
+T. Courtois,26,198.12,96.2,Belgium,240000,Left,Courtois,14,14,13
+M. ter Stegen,26,187.96,84.8,Germany,240000,Right,Normal,18,14,11
+A. Griezmann,27,175.26,73,France,145000,Left,Lean,82,89,84
+M. Salah,26,175.26,71.2,Egypt,265000,Left,PLAYER_BODY_TYPE_25,78,90,59
+P. Dybala,25,152.4,74.8,Argentina,205000,Left,Normal,82,84,68
+M. Škriniar,24,187.96,79.8,Slovakia,89000,Right,Normal,40,42,82
+Fernandinho,33,152.4,67.1,Brazil,200000,Right,Lean,68,69,66
+G. Higuaín,31,185.42,88.9,Argentina,205000,Right,Normal,68,91,79
+I. Rakitić,30,182.88,78,Croatia,260000,Right,Lean,84,79,59
+J. Vertonghen,31,187.96,86.2,Belgium,155000,Left,Normal,72,56,80
+D. Mertens,31,170.18,60.8,Belgium,135000,Right,Normal,77,86,35
+Marcelo,30,175.26,79.8,Brazil,240000,Left,Normal,90,73,75
+T. Alderweireld,30,185.42,81.2,Belgium,165000,Right,Normal,64,45,82
+Jordi Alba,29,170.18,68,Spain,250000,Left,Normal,87,73,70
+Thiago,27,175.26,69.9,Spain,140000,Right,Normal,72,69,54
+C. Immobile,29,185.42,84.8,Italy,115000,Right,Normal,55,90,81
+K. Navas,32,185.42,79.8,Costa Rica,195000,Right,Normal,11,15,11
+Isco,26,175.26,78.9,Spain,260000,Right,Normal,75,79,55
+J. Rodríguez,27,154.94,74.8,Colombia,260000,Left,Normal,90,83,62
+Casemiro,27,185.42,83.9,Brazil,240000,Right,Normal,58,64,76
+M. Icardi,26,154.94,74.8,Argentina,130000,Right,Normal,46,91,91
+Kepa,24,185.42,84.8,Spain,92000,Right,Lean,25,11,17
+H. Ziyech,25,154.94,64.9,Morocco,31000,Left,Lean,84,68,53
+Fabinho,25,187.96,78,Brazil,120000,Right,Lean,79,66,75
+A. Martial,23,182.88,76.2,France,165000,Right,Normal,76,84,69
+T. Werner,23,154.94,74.8,Germany,77000,Right,Normal,69,87,77
+N. Süle,23,195.58,97.1,Germany,84000,Right,Stocky,30,20,86
+Bruno Fernandes,24,152.4,68.9,Portugal,22000,Right,Lean,84,74,58
+Alex Telles,26,154.94,71.2,Brazil,22000,Left,Lean,89,65,74
+J. Giménez,24,185.42,79.8,Uruguay,63000,Right,Normal,47,37,81
+N. Fekir,25,172.72,74.8,France,84000,Left,Stocky,83,82,49
+D. Sánchez,22,187.96,78.9,Colombia,105000,Right,Lean,36,40,80
+Marco Asensio,23,182.88,76.2,Spain,195000,Left,Normal,82,80,57
+O. Dembélé,21,152.4,67.1,France,170000,Left,Lean,81,78,43
+Iniesta,34,170.18,68,Spain,19000,Right,Normal,77,69,54
+Z. Ibrahimović,37,195.58,94.8,Sweden,15000,Right,Normal,73,86,83
+Jorginho,27,154.94,67.1,Italy,140000,Right,Lean,75,57,56
+E. Višća,29,172.72,63,Bosnia Herzegovina,44000,Right,Lean,80,80,45
+S. Gnabry,23,175.26,74.8,Germany,85000,Right,Normal,74,81,46
+M. Kovačić,24,175.26,78,Croatia,165000,Right,Normal,73,62,42
+William Carvalho,26,187.96,83,Portugal,35000,Right,Normal,68,52,73
+Felipe,29,190.5,86.2,Brazil,22000,Right,Normal,45,39,81
+Y. Carrasco,25,154.94,73,Belgium,20000,Right,Lean,78,79,53
+Lucas Vázquez,27,172.72,69.9,Spain,205000,Right,Normal,83,72,56
+Q. Promes,27,175.26,72.1,Netherlands,28000,Right,Lean,79,86,60
+L. Goretzka,24,187.96,78.9,Germany,85000,Right,Lean,75,73,80
+A. Rabiot,23,193.04,79.8,France,91000,Left,Lean,70,69,77
+A. Romagnoli,24,187.96,78,Italy,92000,Left,Normal,36,30,77
+João Cancelo,24,182.88,73.9,Portugal,105000,Right,Lean,86,58,64
+Anderson Talisca,25,190.5,79.8,Brazil,27000,Left,Normal,78,80,77
+K. Coman,22,152.4,71.2,France,85000,Right,Lean,81,77,52
+T. Lemar,23,170.18,62.1,France,64000,Left,Lean,83,75,54
+J. Tah,23,195.58,97.1,Germany,61000,Right,Stocky,35,20,80
+M. Politano,25,170.18,67.1,Italy,61000,Left,Normal,80,74,40
+C. Lenglet,23,185.42,81.2,France,135000,Left,Lean,36,23,80
+Pau López,24,187.96,77.1,Spain,21000,Left,Lean,24,19,15
+H. Lozano,23,175.26,69.9,Mexico,24000,Right,Lean,75,77,58
+Malcom,22,172.72,73.9,Brazil,140000,Left,Normal,79,75,57
+L. Torreira,23,167.64,64,Uruguay,98000,Right,Normal,74,50,59
+Gonçalo Guedes,22,152.4,68,Portugal,36000,Right,Normal,78,75,60
+G. Lo Celso,22,175.26,69.9,Argentina,83000,Left,Lean,75,77,59
+Fabián,22,187.96,69.9,Spain,70000,Left,Lean,72,79,67
+F. de Jong,21,154.94,69.9,Netherlands,20000,Right,Lean,75,52,64
+Raphaelito Anjos,31,190.5,84.8,Brazil,32000,Right,Normal,10,8,11
+Juiano Mestres,35,154.94,82.1,Brazil,39000,Right,Normal,40,56,83
+Rosberto Dourado,31,175.26,69.9,Brazil,46000,Right,Lean,61,53,70
+Arthur,22,170.18,73,Brazil,125000,Right,Normal,70,72,58
+Rodri,22,190.5,82.1,Spain,59000,Right,Lean,63,64,75
+M. Parolo,34,182.88,74.8,Italy,59000,Right,Lean,70,70,75
+M. Kruse,30,154.94,76.2,Germany,45000,Left,Normal,81,83,63
+J. Henderson,28,182.88,79.8,England,125000,Right,Normal,81,67,65
+N. Gaitán,31,172.72,66.2,Argentina,22000,Left,Lean,80,71,54
+M. Arnautović,29,193.04,83,Austria,120000,Right,Normal,78,78,74
+S. Giovinco,32,162.56,60.8,Italy,61000,Right,Normal,72,78,34
+G. Sigurðsson,29,185.42,77.1,Iceland,125000,Right,Normal,86,77,60
+Giuliano,28,172.72,68,Brazil,59000,Right,Stocky,77,77,59
+P. Gulácsi,28,193.04,86.2,Hungary,53000,Right,Normal,16,10,23
+Luiz Gustavo,31,187.96,78,Brazil,57000,Left,Lean,63,48,72
+K. Trippier,28,152.4,72.1,England,99000,Right,Normal,91,48,73
+A. Ramsey,28,182.88,76.2,Wales,130000,Right,Lean,75,74,58
+M. Balotelli,28,187.96,88,Italy,68000,Right,Normal,68,83,67
+Marlos,30,175.26,68.9,Ukraine,1000,Left,Normal,76,79,53
+Taison,31,172.72,64,Brazil,1000,Right,Lean,73,76,56
+G. Bonaventura,29,154.94,74.8,Italy,115000,Right,Lean,82,70,70
+G. Kondogbia,26,187.96,79.8,Central African Rep.,43000,Left,Lean,65,69,75
+J. Roussillon,26,175.26,79.8,France,50000,Left,Stocky,81,64,71
+S. Zaza,27,185.42,83.9,Italy,48000,Left,Normal,52,80,79
+S. Vrsaljko,27,154.94,76.2,Croatia,57000,Right,Lean,82,44,73
+C. Kramer,28,190.5,76.2,Germany,35000,Right,Lean,61,46,58
+B. Mendy,24,185.42,84.8,France,105000,Left,Normal,87,33,65
+M. Sabitzer,24,152.4,77.1,Austria,54000,Right,Normal,70,79,56
+M. Nastasić,25,187.96,83,Serbia,36000,Left,Normal,46,30,77
+A. Plea,25,154.94,78.9,France,40000,Right,Stocky,78,82,73
+M. Ginter,25,187.96,83,Germany,30000,Right,Normal,68,55,85
+Gerard Moreno,26,154.94,77.1,Spain,45000,Left,Lean,61,78,80
+A. Doucouré,26,182.88,76.2,France,60000,Right,Lean,68,73,66
+R. Guerreiro,25,170.18,71.2,Portugal,54000,Left,Normal,85,75,52
+Ricardo Pereira,25,175.26,69.9,Portugal,64000,Right,Lean,81,62,64
+Samu Castillejo,24,182.88,67.1,Spain,86000,Left,Lean,80,76,43
+J. Brandt,22,185.42,83.9,Germany,63000,Right,Lean,77,77,42
+N. Pépé,23,182.88,73,Ivory Coast,35000,Left,Lean,69,80,57
+S. Bergwijn,21,152.4,78,Netherlands,18000,Right,Stocky,73,74,55
+A. Onana,22,187.96,93,Cameroon,14000,Right,Stocky,15,12,20
+F. Balbuena,27,187.96,84.8,Paraguay,80000,Right,Normal,33,31,82
+André Silva,23,185.42,78.9,Portugal,89000,Right,Normal,59,83,77
+Oyarzabal,21,154.94,78,Spain,29000,Left,Lean,81,78,44
+Everton Andrão,35,152.4,74.8,Brazil,34000,Right,Stocky,75,58,59
+Welington Dano,31,152.4,68.9,Brazil,34000,Left,Lean,82,51,69
+Richarlison,21,154.94,71.2,Brazil,84000,Right,Normal,69,79,75
+Odriozola,23,175.26,66.2,Spain,115000,Right,Lean,81,45,73
+Carlos Soler,22,154.94,76.2,Spain,31000,Right,Lean,79,74,56
+H. Aouar,20,175.26,69.9,France,51000,Right,Lean,68,72,54
+T. Ndombele,22,154.94,76.2,France,51000,Right,Normal,67,59,56
+M. Gómez,22,185.42,83.9,Uruguay,25000,Right,Normal,56,85,81
+Joaquín,37,152.4,74.8,Spain,24000,Right,Normal,86,80,59
+J. Mathieu,35,187.96,83.9,France,18000,Left,Normal,79,52,80
+J. Matip,27,193.04,89.8,Cameroon,99000,Right,Lean,54,36,82
+S. Aurier,26,175.26,76.2,Ivory Coast,82000,Right,Normal,83,54,75
+J. Guilavogui,28,187.96,77.1,France,49000,Right,Lean,52,49,85
+A. Oxlade-Chamberlain,25,175.26,69.9,England,94000,Right,Stocky,78,69,39
+M. Ryan,26,182.88,82.1,Australia,43000,Right,Normal,23,11,14
+V. Aboubakar,27,182.88,82.1,Cameroon,19000,Right,Normal,57,80,77
+L. Muriel,27,152.4,78.9,Colombia,24000,Right,Stocky,62,78,65
+D. Vida,29,182.88,76.2,Croatia,55000,Right,Lean,65,41,79
+Ibai Gómez,29,152.4,72.1,Spain,31000,Right,Normal,79,79,47
+Cristian Tello,27,152.4,64.9,Spain,30000,Right,Lean,78,74,47
+Ismaily,29,152.4,82.1,Brazil,1000,Left,Stocky,80,60,59
+A. Mandi,27,182.88,78,Algeria,27000,Right,Lean,78,41,83
+C. Tătăruşanu,33,195.58,86.2,Romania,25000,Right,Lean,13,15,15
+J. Murillo,26,182.88,78,Colombia,38000,Right,Normal,56,37,76
+E. Dier,25,187.96,89.8,England,73000,Right,Normal,67,52,82
+J. Butland,25,195.58,94.8,England,39000,Right,Normal,11,16,12
+S. Sorrentino,39,185.42,84.8,Italy,10000,Right,Normal,11,10,10
+W. Rooney,33,175.26,83,England,13000,Right,Stocky,73,80,75
+Moyá,34,187.96,83,Spain,26000,Right,Normal,11,11,12
+L. López,36,175.26,72.1,Argentina,23000,Right,Normal,66,85,79
+J. Mascherano,34,175.26,73,Argentina,20000,Right,Normal,63,42,66
+Raffael,33,175.26,68.9,Brazil,39000,Right,Lean,78,78,63
+Diego López,37,195.58,88.9,Spain,17000,Right,Lean,11,12,10
+Juanfran,34,154.94,71.2,Spain,53000,Right,Lean,81,54,59
+I. Denisov,34,175.26,69.9,Russia,1000,Right,Normal,66,61,63
+I. Akinfeev,32,185.42,78,Russia,1000,Right,Normal,19,13,18
+A. Gignac,33,187.96,91.2,France,70000,Right,Stocky,72,83,78
+A. Granqvist,33,193.04,83.9,Sweden,,Right,Normal,49,51,81
+Manuel Fernandes,33,175.26,74.8,Portugal,1000,Right,Normal,77,70,62
+Dante,35,187.96,84.8,Brazil,37000,Left,Normal,58,47,80
+L. Perrin,33,154.94,79.8,France,37000,Right,Normal,65,55,81
+Borja Valero,34,175.26,73,Spain,69000,Right,Normal,78,67,60
+A. Januzaj,24,185.42,76.2,Belgium,32000,Left,Lean,82,71,42
+J. Hector,28,185.42,74.8,Germany,26000,Left,Normal,79,55,71
+M. Dabbur,26,182.88,76.2,Israel,47000,Right,Normal,50,82,75
+Óliver Torres,24,175.26,63,Spain,15000,Right,Normal,73,66,52
+Y. Bounou,27,193.04,78,Morocco,26000,Left,Lean,15,14,14
+J. Hofmann,26,175.26,69.9,Germany,32000,Right,Lean,81,69,40
+Otávio,24,172.72,71.2,Brazil,15000,Right,Normal,78,67,56
+Jonny,25,170.18,69.9,Spain,59000,Right,Normal,78,43,70
+L. Dendoncker,23,187.96,88,Belgium,20000,Right,Normal,75,66,78
+R. Zobnin,25,182.88,74.8,Russia,1000,Right,Lean,69,65,70
+Ricardo Horta,24,172.72,63,Portugal,16000,Right,Lean,77,74,51
+Thiago Mendes,26,152.4,79.8,Brazil,35000,Right,Normal,67,63,59
+J. Lerma,24,152.4,69.9,Colombia,55000,Right,Lean,66,56,65
+J. Gbamin,23,185.42,83,Ivory Coast,26000,Right,Normal,69,40,71
+I. Marcone,28,182.88,83,Argentina,27000,Right,Normal,58,48,73
+D. Benedetto,28,152.4,79.8,Argentina,32000,Right,Normal,55,86,75
+M. Hitz,31,193.04,88.9,Switzerland,41000,Right,Normal,12,27,18
+N. Clyne,27,175.26,67.1,England,94000,Right,Normal,78,54,68
+A. Ljajić,27,182.88,73.9,Serbia,49000,Right,Lean,72,69,48
+J. Guðmundsson,28,152.4,77.1,Iceland,61000,Left,Normal,82,70,64
+Elkeson,29,154.94,77.1,Brazil,25000,Right,Stocky,67,75,79
+Kike García,29,185.42,78.9,Spain,32000,Right,Normal,56,78,80
+Escudero,29,175.26,72.1,Spain,20000,Left,Lean,81,56,68
+Herrerín,31,187.96,94.8,Spain,21000,Right,Normal,14,13,14
+Víctor Ruiz,30,185.42,78,Spain,35000,Left,Normal,54,37,77
+G. Medel,31,170.18,64.9,Chile,50000,Right,Stocky,50,31,68
+Y. Belhanda,29,152.4,74.8,Morocco,65000,Right,Normal,79,74,67
+Hugo Mallo,27,175.26,72.1,Spain,26000,Right,Normal,83,28,65
+Borja García,28,175.26,72.1,Spain,35000,Right,Normal,70,77,53
+W. Khazri,28,175.26,82.1,Tunisia,41000,Right,Stocky,79,79,54
+P. Jones,27,185.42,71.2,England,110000,Right,Normal,60,44,78
+A. Finnbogason,30,182.88,79.8,Iceland,35000,Right,Normal,37,84,67
+Vinícius Júnior,18,175.26,73,Brazil,70000,Right,Lean,71,70,50
+Junior Firpo,22,182.88,74.8,Spain,17000,Left,Normal,77,66,74
+E. Belözoğlu,38,170.18,72.1,Turkey,23000,Left,Stocky,80,68,43
+Fernando Torres,34,185.42,78.9,Spain,9000,Right,Normal,68,76,77
+B. Schweinsteiger,34,182.88,78.9,Germany,10000,Right,Normal,76,69,75
+B. Yılmaz,33,187.96,77.1,Turkey,59000,Right,Lean,68,82,72
+M. Gómez,33,187.96,88.9,Germany,44000,Right,Normal,60,80,82
+A. Young,33,175.26,64.9,England,110000,Right,Lean,83,64,57

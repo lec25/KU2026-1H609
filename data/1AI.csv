@@ -1,0 +1,200 @@
+Student_ID,Age,Major,Primary_AI_Tool,Task_Frequency_Daily,Main_Usage_Case,GPA_Baseline,GPA_Post_AI,Time_Saved_Hours_Weekly,AI_Ethics_Concern,Career_Confidence_Score
+STU-6019,23,Software Engineering,Gemini Pro,1,Code Debugging,2.62,2.62,9,Medium,3
+STU-6962,22,Modern History,GitHub Copilot,3,Essay Drafting,3.99,4,7,Medium,4
+STU-2338,18,Data Science,Perplexity,2,Literature Review,2.57,2.57,15,High,7
+STU-1380,19,Biology,Claude 3.5,5,Essay Drafting,2.67,2.87,12,Low,5
+STU-1837,19,Biology,ChatGPT-4o,10,Code Debugging,3.65,3.85,5,High,9
+STU-0052,19,Software Engineering,ChatGPT-4o,4,Essay Drafting,3.21,3.41,8,Medium,4
+STU-4953,19,Business Administration,GitHub Copilot,1,Exam Prep,3.87,3.97,7,Low,1
+STU-1723,20,Fine Arts,Perplexity,3,Exam Prep,3.18,3.08,2,Medium,9
+STU-5100,20,Fine Arts,ChatGPT-4o,1,Literature Review,3.25,3.35,13,Medium,8
+STU-7291,19,Fine Arts,GitHub Copilot,5,Exam Prep,3.43,3.33,10,Medium,3
+STU-9918,20,Fine Arts,GitHub Copilot,2,Essay Drafting,3.32,3.42,8,High,4
+STU-1753,24,Software Engineering,Claude 3.5,4,Essay Drafting,2.93,3.23,6,Low,10
+STU-6394,23,Modern History,ChatGPT-4o,1,Code Debugging,3.55,3.75,6,Low,4
+STU-1374,18,Biology,GitHub Copilot,5,Essay Drafting,3.9,4,14,Low,3
+STU-1277,18,Fine Arts,Claude 3.5,4,Exam Prep,3.88,3.88,5,Low,5
+STU-5643,23,Data Science,GitHub Copilot,4,Brainstorming,3.99,4,15,High,9
+STU-3711,21,Modern History,ChatGPT-4o,4,Code Debugging,3.32,3.32,5,Low,9
+STU-9571,20,Business Administration,Perplexity,5,Code Debugging,2.66,2.7600000000000002,13,High,5
+STU-6603,23,Biology,GitHub Copilot,10,Code Debugging,3.14,3.14,2,High,10
+STU-4838,19,Biology,GitHub Copilot,1,Essay Drafting,3.54,3.64,6,High,3
+STU-4860,21,Software Engineering,GitHub Copilot,5,Brainstorming,2.56,2.46,3,High,1
+STU-0499,19,Biology,Gemini Pro,10,Brainstorming,3.03,3.03,2,Low,5
+STU-4002,22,Software Engineering,ChatGPT-4o,3,Code Debugging,3.45,3.6500000000000004,7,High,8
+STU-5578,21,Biology,GitHub Copilot,4,Brainstorming,3.04,3.24,10,Medium,2
+STU-9514,23,Business Administration,Gemini Pro,2,Brainstorming,2.99,3.1900000000000004,13,Low,7
+STU-8919,23,Modern History,Claude 3.5,3,Brainstorming,3.28,3.1799999999999997,4,Medium,5
+STU-0115,22,Business Administration,Claude 3.5,5,Essay Drafting,2.79,2.89,5,Medium,1
+STU-5610,22,Data Science,GitHub Copilot,3,Code Debugging,3.41,3.31,2,Low,5
+STU-1960,20,Fine Arts,GitHub Copilot,1,Exam Prep,3.67,3.67,11,High,2
+STU-1431,23,Modern History,Gemini Pro,8,Literature Review,2.76,2.6599999999999997,14,High,4
+STU-6178,24,Biology,Gemini Pro,4,Code Debugging,3.08,3.18,4,Low,8
+STU-5367,18,Business Administration,ChatGPT-4o,1,Brainstorming,3.57,3.67,3,High,4
+STU-2322,20,Business Administration,Claude 3.5,10,Brainstorming,2.9,3.1,13,Low,6
+STU-8378,21,Biology,Gemini Pro,3,Literature Review,3.47,3.47,12,Medium,8
+STU-4921,23,Data Science,Gemini Pro,3,Code Debugging,3.04,3.24,9,Low,9
+STU-1914,22,Business Administration,Claude 3.5,4,Code Debugging,3.27,3.17,11,High,7
+STU-5032,21,Software Engineering,Claude 3.5,9,Brainstorming,2.56,2.86,15,Medium,4
+STU-6816,24,Biology,GitHub Copilot,6,Essay Drafting,2.89,3.19,11,Low,1
+STU-3832,22,Biology,GitHub Copilot,8,Code Debugging,3.82,3.7199999999999998,11,Medium,9
+STU-1539,23,Business Administration,Gemini Pro,4,Brainstorming,3.99,4,2,Low,3
+STU-4811,22,Fine Arts,Claude 3.5,3,Code Debugging,3.46,3.76,3,Medium,8
+STU-1992,20,Fine Arts,GitHub Copilot,5,Essay Drafting,2.89,2.79,7,High,7
+STU-5235,20,Business Administration,GitHub Copilot,7,Code Debugging,2.99,3.1900000000000004,3,Low,3
+STU-7720,21,Biology,GitHub Copilot,10,Literature Review,2.84,2.84,5,Low,4
+STU-8242,23,Business Administration,Gemini Pro,8,Exam Prep,2.77,2.67,12,Low,2
+STU-6491,25,Business Administration,ChatGPT-4o,6,Essay Drafting,2.88,2.98,6,Low,8
+STU-9757,23,Software Engineering,Gemini Pro,2,Exam Prep,3.5,3.4,4,High,7
+STU-6891,22,Business Administration,Perplexity,7,Brainstorming,3.92,4,14,High,1
+STU-2000,25,Fine Arts,Perplexity,5,Exam Prep,3.82,4,5,High,5
+STU-1936,20,Software Engineering,Perplexity,2,Essay Drafting,3.58,3.68,12,Medium,5
+STU-0497,20,Modern History,Perplexity,6,Literature Review,3.87,3.77,4,Low,1
+STU-4779,22,Biology,Perplexity,2,Literature Review,3.96,3.96,12,Medium,10
+STU-5245,20,Software Engineering,Gemini Pro,1,Brainstorming,3.51,3.8099999999999996,12,Low,2
+STU-1346,19,Data Science,Perplexity,5,Essay Drafting,3.55,3.8499999999999996,5,High,6
+STU-6672,21,Business Administration,Perplexity,2,Brainstorming,2.64,2.94,11,High,10
+STU-0732,21,Biology,GitHub Copilot,5,Literature Review,3.17,3.27,7,Low,5
+STU-9888,19,Software Engineering,GitHub Copilot,2,Literature Review,2.5,2.6,3,Low,6
+STU-1040,22,Fine Arts,GitHub Copilot,4,Literature Review,2.81,3.11,13,Low,3
+STU-1540,23,Data Science,GitHub Copilot,1,Exam Prep,3.93,4,6,Low,9
+STU-5873,18,Data Science,GitHub Copilot,6,Brainstorming,2.61,2.51,15,High,6
+STU-4321,18,Data Science,Gemini Pro,8,Brainstorming,3.89,4,11,Medium,2
+STU-9472,20,Biology,Perplexity,7,Code Debugging,2.98,2.88,7,Low,9
+STU-5793,24,Fine Arts,Perplexity,2,Code Debugging,3.93,3.83,4,High,10
+STU-7017,24,Modern History,Perplexity,6,Essay Drafting,2.78,2.98,11,Low,5
+STU-3405,25,Modern History,GitHub Copilot,4,Essay Drafting,3.5,3.4,9,Medium,1
+STU-6036,24,Software Engineering,ChatGPT-4o,5,Essay Drafting,3.31,3.41,12,Medium,10
+STU-0449,21,Business Administration,Gemini Pro,3,Code Debugging,2.73,2.73,12,Low,6
+STU-8756,18,Business Administration,GitHub Copilot,7,Literature Review,3.12,3.42,12,High,2
+STU-7976,21,Data Science,ChatGPT-4o,6,Exam Prep,3.83,4,9,Low,8
+STU-3826,20,Data Science,Claude 3.5,8,Code Debugging,2.88,3.1799999999999997,15,Medium,9
+STU-2035,25,Biology,ChatGPT-4o,3,Literature Review,3.15,3.35,11,High,1
+STU-2123,25,Biology,Perplexity,2,Brainstorming,3.61,3.71,11,High,10
+STU-7860,20,Biology,Claude 3.5,2,Exam Prep,3.28,3.5799999999999996,9,High,8
+STU-0300,24,Modern History,ChatGPT-4o,7,Brainstorming,3.89,3.79,6,Low,3
+STU-7958,25,Fine Arts,Gemini Pro,3,Essay Drafting,3.32,3.32,11,Low,10
+STU-3046,18,Software Engineering,Gemini Pro,2,Exam Prep,3.18,3.18,8,Medium,7
+STU-6674,22,Data Science,GitHub Copilot,9,Essay Drafting,3.15,3.4499999999999997,5,Medium,2
+STU-5728,23,Data Science,GitHub Copilot,9,Brainstorming,3.45,3.6500000000000004,7,High,7
+STU-5466,23,Software Engineering,Perplexity,6,Brainstorming,3.87,3.87,5,Medium,6
+STU-5790,22,Software Engineering,Gemini Pro,5,Exam Prep,2.55,2.4499999999999997,2,Low,2
+STU-3538,18,Biology,GitHub Copilot,6,Brainstorming,3.49,3.39,15,Medium,4
+STU-1284,25,Biology,ChatGPT-4o,1,Essay Drafting,3.69,3.89,13,Medium,8
+STU-9579,22,Modern History,ChatGPT-4o,5,Essay Drafting,3.76,3.6599999999999997,5,Low,5
+STU-3437,22,Biology,ChatGPT-4o,1,Literature Review,2.63,2.83,13,Medium,4
+STU-0540,24,Software Engineering,Gemini Pro,7,Exam Prep,3.53,3.53,6,High,7
+STU-1820,25,Business Administration,Gemini Pro,5,Essay Drafting,3.55,3.4499999999999997,12,High,8
+STU-1640,23,Business Administration,Perplexity,4,Essay Drafting,2.99,2.89,7,High,5
+STU-8373,25,Biology,Claude 3.5,4,Brainstorming,3.14,3.44,11,Low,6
+STU-9429,19,Business Administration,GitHub Copilot,8,Code Debugging,3.03,3.3299999999999996,9,Medium,9
+STU-6001,20,Software Engineering,ChatGPT-4o,4,Exam Prep,3.88,3.98,2,High,1
+STU-1013,24,Software Engineering,GitHub Copilot,10,Exam Prep,2.7,2.6,8,Low,9
+STU-6248,23,Business Administration,GitHub Copilot,3,Literature Review,2.96,3.06,4,Medium,1
+STU-7084,24,Business Administration,GitHub Copilot,6,Brainstorming,2.95,3.1500000000000004,14,Medium,4
+STU-1697,25,Modern History,Gemini Pro,8,Essay Drafting,3.57,3.67,9,High,10
+STU-0044,22,Data Science,Perplexity,9,Essay Drafting,3.1,3.3000000000000003,14,Low,8
+STU-4260,21,Data Science,Perplexity,3,Literature Review,2.62,2.62,15,High,5
+STU-8617,19,Software Engineering,Perplexity,9,Essay Drafting,2.6,2.6,9,High,5
+STU-4498,19,Business Administration,ChatGPT-4o,3,Essay Drafting,3.16,3.16,4,Low,10
+STU-3474,18,Business Administration,Claude 3.5,9,Brainstorming,3.64,3.8400000000000003,6,Low,3
+STU-4598,18,Fine Arts,GitHub Copilot,6,Essay Drafting,2.97,2.87,6,Low,6
+STU-9772,25,Software Engineering,GitHub Copilot,6,Code Debugging,3.2,3.3000000000000003,13,Low,8
+STU-0639,20,Fine Arts,Gemini Pro,3,Exam Prep,2.83,3.13,8,Medium,7
+STU-1212,19,Fine Arts,Claude 3.5,9,Essay Drafting,2.52,2.82,4,Medium,5
+STU-4755,18,Fine Arts,Perplexity,6,Exam Prep,2.73,2.73,12,Medium,1
+STU-0394,23,Fine Arts,ChatGPT-4o,5,Literature Review,2.51,2.71,11,High,6
+STU-8657,25,Software Engineering,Claude 3.5,9,Code Debugging,3.74,3.64,5,Low,7
+STU-4730,24,Biology,ChatGPT-4o,1,Exam Prep,3.92,4,14,Medium,9
+STU-7342,23,Fine Arts,Claude 3.5,1,Code Debugging,3.36,3.36,10,Low,2
+STU-8240,22,Business Administration,Perplexity,7,Essay Drafting,2.58,2.58,4,Medium,2
+STU-2244,19,Business Administration,Claude 3.5,4,Code Debugging,3.03,3.03,12,Low,7
+STU-2773,20,Fine Arts,Claude 3.5,3,Code Debugging,3.27,3.27,2,Medium,9
+STU-5232,18,Modern History,Claude 3.5,4,Essay Drafting,2.98,3.08,9,Low,1
+STU-7529,23,Fine Arts,Perplexity,10,Exam Prep,2.97,3.1700000000000004,2,Low,9
+STU-0323,21,Software Engineering,Claude 3.5,8,Exam Prep,3.14,3.24,4,Low,10
+STU-0067,18,Modern History,Gemini Pro,2,Code Debugging,3.82,3.92,13,Medium,9
+STU-7378,21,Fine Arts,Gemini Pro,3,Exam Prep,3.4,3.4,9,Low,3
+STU-5842,18,Business Administration,GitHub Copilot,7,Brainstorming,3.77,3.87,12,Low,5
+STU-5122,19,Business Administration,Gemini Pro,1,Code Debugging,3.41,3.31,6,Medium,1
+STU-0858,24,Fine Arts,Claude 3.5,1,Code Debugging,3.59,3.59,13,Low,7
+STU-6480,24,Biology,ChatGPT-4o,8,Code Debugging,2.78,2.78,2,High,8
+STU-2481,21,Business Administration,Gemini Pro,9,Literature Review,3,3,10,Low,3
+STU-3177,18,Modern History,Perplexity,5,Brainstorming,3.24,3.4400000000000004,8,High,5
+STU-7542,25,Fine Arts,Claude 3.5,3,Brainstorming,2.94,3.2399999999999998,7,Medium,1
+STU-7241,22,Data Science,Perplexity,8,Essay Drafting,3.84,3.7399999999999998,9,Medium,2
+STU-3013,25,Fine Arts,Claude 3.5,2,Brainstorming,3.47,3.77,9,High,3
+STU-5231,19,Modern History,Claude 3.5,3,Code Debugging,3.6,3.6,12,High,6
+STU-4656,25,Fine Arts,Gemini Pro,1,Code Debugging,3.77,4,13,High,8
+STU-1962,20,Fine Arts,Perplexity,8,Literature Review,3.15,3.15,9,Medium,7
+STU-4054,24,Business Administration,Perplexity,7,Essay Drafting,3.17,3.37,10,Low,5
+STU-9226,19,Biology,Claude 3.5,6,Essay Drafting,2.57,2.4699999999999998,3,Low,10
+STU-6530,21,Software Engineering,GitHub Copilot,10,Code Debugging,3.31,3.21,8,Medium,3
+STU-6518,21,Data Science,Perplexity,9,Exam Prep,3.05,3.15,6,Medium,6
+STU-6932,25,Modern History,Perplexity,5,Essay Drafting,3.64,3.74,9,High,10
+STU-8015,24,Software Engineering,Claude 3.5,10,Literature Review,3.45,3.75,12,Medium,8
+STU-5360,18,Software Engineering,Gemini Pro,8,Exam Prep,3.48,3.48,3,Medium,5
+STU-0939,20,Business Administration,Gemini Pro,6,Code Debugging,3.84,3.7399999999999998,7,Medium,9
+STU-4486,23,Data Science,GitHub Copilot,10,Code Debugging,2.88,3.08,15,Medium,9
+STU-9676,23,Fine Arts,Gemini Pro,5,Literature Review,3.6,3.5,9,High,7
+STU-7489,24,Biology,Claude 3.5,2,Essay Drafting,2.86,3.1599999999999997,11,Medium,6
+STU-0197,21,Software Engineering,ChatGPT-4o,5,Code Debugging,3.93,4,7,Medium,1
+STU-9474,23,Biology,ChatGPT-4o,8,Literature Review,2.98,3.08,2,Medium,1
+STU-5543,20,Software Engineering,GitHub Copilot,2,Exam Prep,3.53,3.4299999999999997,11,Low,2
+STU-2779,23,Biology,ChatGPT-4o,3,Exam Prep,3.58,3.7800000000000002,5,High,6
+STU-5537,22,Business Administration,Claude 3.5,10,Exam Prep,2.97,2.87,14,Low,9
+STU-9364,25,Business Administration,Perplexity,4,Essay Drafting,3.87,4,5,Low,7
+STU-2974,19,Software Engineering,ChatGPT-4o,1,Code Debugging,3.51,3.51,13,High,8
+STU-8851,22,Biology,GitHub Copilot,4,Exam Prep,3.73,4,14,High,8
+STU-3184,23,Data Science,Perplexity,5,Exam Prep,3.58,3.7800000000000002,13,High,1
+STU-0817,21,Fine Arts,Perplexity,10,Literature Review,3.23,3.53,5,High,7
+STU-9692,25,Biology,Perplexity,7,Essay Drafting,3.97,4,4,High,2
+STU-8789,24,Biology,GitHub Copilot,1,Exam Prep,2.66,2.66,8,Low,2
+STU-5266,18,Fine Arts,Claude 3.5,4,Essay Drafting,2.52,2.42,5,High,3
+STU-6823,23,Modern History,ChatGPT-4o,10,Exam Prep,3.78,3.6799999999999997,7,High,3
+STU-0461,23,Biology,Claude 3.5,9,Brainstorming,2.82,2.7199999999999998,3,Medium,3
+STU-9793,21,Modern History,Gemini Pro,5,Brainstorming,3.86,4,7,Low,2
+STU-5652,18,Business Administration,ChatGPT-4o,5,Literature Review,3.86,3.76,4,High,10
+STU-8432,19,Data Science,GitHub Copilot,8,Exam Prep,2.82,2.7199999999999998,10,Low,8
+STU-5053,18,Software Engineering,GitHub Copilot,5,Exam Prep,2.6,2.7,9,High,6
+STU-5342,21,Modern History,Claude 3.5,3,Literature Review,3.15,3.35,11,Low,6
+STU-3925,18,Software Engineering,Gemini Pro,7,Literature Review,3.23,3.33,3,Medium,2
+STU-6282,24,Fine Arts,ChatGPT-4o,8,Literature Review,3.32,3.52,14,Low,2
+STU-5921,21,Business Administration,ChatGPT-4o,2,Brainstorming,3.33,3.5300000000000002,15,High,9
+STU-9763,20,Data Science,Claude 3.5,3,Brainstorming,2.64,2.54,10,Low,7
+STU-4769,21,Software Engineering,GitHub Copilot,10,Literature Review,2.69,2.89,14,Medium,7
+STU-9609,25,Biology,Gemini Pro,1,Literature Review,2.86,2.96,3,Low,6
+STU-8845,25,Business Administration,ChatGPT-4o,6,Essay Drafting,3.94,4,5,High,7
+STU-1938,25,Modern History,Perplexity,5,Brainstorming,3.35,3.35,3,Low,8
+STU-3321,19,Biology,ChatGPT-4o,9,Exam Prep,3.76,3.86,3,Low,7
+STU-0188,19,Data Science,GitHub Copilot,2,Essay Drafting,3.1,3.1,15,High,9
+STU-3868,22,Fine Arts,ChatGPT-4o,2,Brainstorming,3.41,3.6100000000000003,12,Low,2
+STU-6365,22,Modern History,ChatGPT-4o,9,Exam Prep,3.25,3.55,13,Low,6
+STU-5980,19,Fine Arts,GitHub Copilot,1,Brainstorming,2.86,2.76,14,Medium,10
+STU-2366,18,Software Engineering,GitHub Copilot,5,Code Debugging,2.54,2.44,9,Medium,4
+STU-3512,20,Biology,ChatGPT-4o,10,Literature Review,3.79,4,6,High,9
+STU-2113,21,Modern History,Perplexity,8,Brainstorming,3.48,3.68,12,Low,7
+STU-6742,22,Data Science,Gemini Pro,5,Exam Prep,3.4,3.6,15,Medium,2
+STU-3372,23,Software Engineering,Claude 3.5,3,Code Debugging,3.25,3.45,14,Low,2
+STU-2699,20,Modern History,ChatGPT-4o,9,Literature Review,2.88,2.98,2,Low,4
+STU-1030,19,Fine Arts,ChatGPT-4o,8,Brainstorming,3.04,2.94,15,High,9
+STU-0310,23,Business Administration,Claude 3.5,2,Exam Prep,2.91,2.81,13,Low,7
+STU-8773,18,Software Engineering,Gemini Pro,9,Code Debugging,3.03,3.23,8,High,5
+STU-7039,20,Modern History,Gemini Pro,2,Brainstorming,3.24,3.3400000000000003,10,Low,6
+STU-0536,20,Business Administration,GitHub Copilot,10,Code Debugging,2.64,2.74,14,Low,7
+STU-8214,21,Biology,ChatGPT-4o,1,Literature Review,2.77,2.67,9,Low,2
+STU-8035,21,Data Science,Claude 3.5,9,Exam Prep,3.09,3.09,12,Medium,1
+STU-0347,25,Software Engineering,Claude 3.5,3,Exam Prep,3.26,3.46,9,Medium,9
+STU-6903,23,Modern History,Perplexity,4,Brainstorming,2.9,3,11,Medium,8
+STU-3571,18,Business Administration,ChatGPT-4o,9,Code Debugging,3.71,3.61,2,Medium,6
+STU-1675,23,Modern History,ChatGPT-4o,8,Brainstorming,2.91,2.81,14,High,8
+STU-9558,24,Biology,Perplexity,6,Literature Review,2.58,2.68,15,Medium,8
+STU-7146,19,Biology,ChatGPT-4o,10,Brainstorming,3.34,3.6399999999999997,5,High,6
+STU-5721,25,Data Science,Perplexity,3,Brainstorming,2.84,3.1399999999999997,7,Low,6
+STU-4158,21,Biology,ChatGPT-4o,7,Exam Prep,2.67,2.9699999999999998,15,Low,6
+STU-8441,18,Fine Arts,Gemini Pro,5,Brainstorming,3.69,3.79,6,Low,10
+STU-9127,19,Business Administration,ChatGPT-4o,8,Brainstorming,3.4,3.4,13,High,7
+STU-7587,21,Fine Arts,GitHub Copilot,2,Literature Review,2.92,2.82,13,Low,5
+STU-3332,18,Data Science,Perplexity,1,Literature Review,2.75,2.65,14,High,3
+STU-9454,22,Software Engineering,Claude 3.5,10,Exam Prep,3.08,3.18,7,High,5
+STU-0589,22,Business Administration,Perplexity,3,Exam Prep,3.55,3.55,11,Medium,7
