@@ -44,7 +44,7 @@ inf-限界を超えた数値
 集計表cross-tabulation-summary-tablesの作成
 平均値と分散
 rによる
-第３回４月２７日
+第３回４月２７日データの可視化
 パッケージpackageのインストール
 rパッケージとは
 パッケージのインストール
@@ -59,10 +59,8 @@ rパッケージとは
 円グラフ-pie-plot
 箱ひげ図-boxplot
 ヒストグラム-histogram
-ggplot
 高度的なグラフggplot
 散布図-scatter-plot-1
 折れ線グラフ-line-plot-1
 箱ひげ図-boxplot-1
-section
 ヒストグラム-histogram-1
