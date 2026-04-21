@@ -4,7 +4,7 @@ editor_options:
   chunk_output_type: console
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, results = 'hide', warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
 # 第２回（４月２０日）：RStudioでデータの操作と計算
@@ -22,9 +22,9 @@ knitr::opts_chunk$set(echo = TRUE, results = 'hide', warning = FALSE, message = 
 
 ### RStudioを起動し、作業ディレクトリ（パス、path）をRに設定しま。
 
-#### 方法は3通りあります。{-}
+**方法は3通りあります。**
 
-#### 1. `setwd()`関数を使う
+**方法１． `setwd()`関数を使う**
   
 1. `R`フォルダに移動します。
 ![](1png/2.1.1.png)
@@ -39,16 +39,16 @@ knitr::opts_chunk$set(echo = TRUE, results = 'hide', warning = FALSE, message = 
 ![](1png/2.1.4.png)
 
 
-#### 2. Session をクリックします。
+**方法２． Session をクリックします。**
 
 1. RStudioの一番上へ移動し、「`Session`」-->「`Set Working Directory`」-->「`Choose Directory`」をクリックします。
 ![](1png/2.1.6.png)
 
-2.Rフォルダを選択し、「`Open`」をクリックします。
-![](Picture3.png)
+2. Rフォルダを選択し、「`Open`」をクリックします。
+![](1png/Picture3.png)
 
 
-#### 3. 右下のパネルから設定します。
+**方法３．右下のパネルから設定します。**
 
 1. RStudioの右下のパネルへ移動します。「`Home`」をクリックし、`R`フォルダを選択します。
 
@@ -56,6 +56,7 @@ knitr::opts_chunk$set(echo = TRUE, results = 'hide', warning = FALSE, message = 
 
 2.「`Set Working Directory`」をクリックします。
 ![](1png/2.1.9.png)
+
 
 ### 設定の確認
 
@@ -78,7 +79,7 @@ knitr::opts_chunk$set(echo = TRUE, results = 'hide', warning = FALSE, message = 
 
 ### スクリプトの確認
 
-ファイルが正常に保存されると、右下の `Workign directory` ペインに表示されます。
+ファイルが正常に保存されると、右下の `Working directory` ペインに表示されます。
 ![](1png/2.2.5.png)
 
 また、`R`フォルダの中でもファイルを確認できます。
@@ -690,7 +691,8 @@ library(openxlsx)
 
 # Excelファイルをインポート
 data <- read.xlsx("data2.xlsx", sheet = 1)
-data
+## データの先頭部分を確認する
+head(data) 
 ```
 
 ### 保存
@@ -699,18 +701,21 @@ data
 # パスを正しく設定する
 setwd("~/R")
 
-# CSVファイルとして保存
+# サンプルデータを作成する
 data <- data.frame(participant_id = c(1, 2, 3, 4, 5, 6, 7, 8),
                    age = c(18, 19, 18, 22, 18, 19, 19, 18),
                    gender = c("male", "female", "male", "female", "female", "female", "male", "male"),
                    condition = c("high", "high", "low", "high", "low", "low", "low", "high"),
                    variable1 = c(9, 15, 9, 11, 4, 6, 4, 12))
+
+# CSVファイルとして保存
 write.csv(data, "data3.csv")
 
 # xlsx ファイルとして保存
+
 # Install and load the openxlsx package
 if (!require("openxlsx")) install.packages("openxlsx")　## 初回のみインストールする
-# library(openxlsx) 　##初回のみロードする
+library(openxlsx) 　##初回のみロードする
 
 # Save data as Excel file
 write.xlsx(data, "data4.xlsx", sheet = 1)

@@ -23,7 +23,7 @@
 <meta name="author" content="Yi Zhou" />
 
 
-<meta name="date" content="2026-04-16" />
+<meta name="date" content="2026-04-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -188,7 +188,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.8" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E8%A6%81%E7%B4%84%E7%B5%B1%E8%A8%88%E9%87%8F"><i class="fa fa-check"></i><b>2.8</b> 要約統計量</a>
 <ul>
-<li class="chapter" data-level="2.8.1" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E8%A6%81%E7%B4%84%E7%B5%B1%E8%A8%88"><i class="fa fa-check"></i><b>2.8.1</b> 要約統計</a></li>
+<li class="chapter" data-level="2.8.1" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E9%9B%86%E8%A8%88%E8%A1%A8cross-tabulation-summary-tables%E3%81%AE%E4%BD%9C%E6%88%90"><i class="fa fa-check"></i><b>2.8.1</b> 集計表（Cross-tabulation / Summary Tables）の作成</a></li>
+<li class="chapter" data-level="2.8.2" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E5%B9%B3%E5%9D%87%E5%80%A4%E3%81%A8%E5%88%86%E6%95%A3"><i class="fa fa-check"></i><b>2.8.2</b> 平均値と分散</a></li>
+<li class="chapter" data-level="2.8.3" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#r%E3%81%AB%E3%82%88%E3%82%8B"><i class="fa fa-check"></i><b>2.8.3</b> Rによる</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html"><i class="fa fa-check"></i><b>3</b> 第３回（４月２７日）</a>
@@ -198,8 +200,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1.1" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#r%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%A8%E3%81%AF"><i class="fa fa-check"></i><b>3.1.1</b> Rパッケージとは？</a></li>
 <li class="chapter" data-level="3.1.2" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><i class="fa fa-check"></i><b>3.1.2</b> パッケージのインストール</a></li>
 <li class="chapter" data-level="3.1.3" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%92%E3%83%AD%E3%83%BC%E3%83%89%E3%81%99%E3%82%8B"><i class="fa fa-check"></i><b>3.1.3</b> パッケージをロードする</a></li>
-<li class="chapter" data-level="3.1.4" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E7%8F%BE%E5%9C%A8%E3%83%AD%E3%83%BC%E3%83%89%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B"><i class="fa fa-check"></i><b>3.1.4</b> 現在ロードされているパッケージを確認する</a></li>
-<li class="chapter" data-level="3.1.5" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%86%85%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B"><i class="fa fa-check"></i><b>3.1.5</b> パッケージ内の関数を一覧表示する</a></li>
+<li class="chapter" data-level="3.1.4" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%86%85%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B"><i class="fa fa-check"></i><b>3.1.4</b> パッケージ内の関数を一覧表示する</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E6%8F%8F%E3%81%8D%E6%96%B9"><i class="fa fa-check"></i><b>3.2</b> 基本的なグラフの描き方</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E6%BA%96%E5%82%99%E7%AC%AC%EF%BC%92%E5%9B%9E%E3%82%92%E5%8F%82%E7%85%A7"><i class="fa fa-check"></i><b>3.2.1</b> 準備（第２回を参照）</a></li>
+<li class="chapter" data-level="3.2.2" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF"><i class="fa fa-check"></i><b>3.2.2</b> データの読み込み</a></li>
+<li class="chapter" data-level="3.2.3" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E6%95%A3%E5%B8%83%E5%9B%B3-scatter-plot"><i class="fa fa-check"></i><b>3.2.3</b> 散布図 (Scatter plot)</a></li>
+<li class="chapter" data-level="3.2.4" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E6%8A%98%E3%82%8C%E7%B7%9A%E3%82%B0%E3%83%A9%E3%83%95-line-plot"><i class="fa fa-check"></i><b>3.2.4</b> 折れ線グラフ (Line plot)</a></li>
+<li class="chapter" data-level="3.2.5" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E6%A3%92%E3%82%B0%E3%83%A9%E3%83%95-bar-plot"><i class="fa fa-check"></i><b>3.2.5</b> 棒グラフ (Bar plot)</a></li>
+<li class="chapter" data-level="3.2.6" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E5%86%86%E3%82%B0%E3%83%A9%E3%83%95-pie-plot"><i class="fa fa-check"></i><b>3.2.6</b> 円グラフ (Pie plot)</a></li>
+<li class="chapter" data-level="3.2.7" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E7%AE%B1%E3%81%B2%E3%81%92%E5%9B%B3-boxplot"><i class="fa fa-check"></i><b>3.2.7</b> 箱ひげ図 (Boxplot)</a></li>
+<li class="chapter" data-level="3.2.8" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0-histogram"><i class="fa fa-check"></i><b>3.2.8</b> ヒストグラム (Histogram)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E9%AB%98%E5%BA%A6%E7%9A%84%E3%81%AA%E3%82%B0%E3%83%A9%E3%83%95ggplot"><i class="fa fa-check"></i><b>3.3</b> 高度的なグラフ：GGPLOT</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E6%95%A3%E5%B8%83%E5%9B%B3-scatter-plot-1"><i class="fa fa-check"></i><b>3.3.1</b> 散布図 (Scatter plot)</a></li>
+<li class="chapter" data-level="3.3.2" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E6%8A%98%E3%82%8C%E7%B7%9A%E3%82%B0%E3%83%A9%E3%83%95-line-plot-1"><i class="fa fa-check"></i><b>3.3.2</b> 折れ線グラフ (Line plot)</a></li>
+<li class="chapter" data-level="3.3.3" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E7%AE%B1%E3%81%B2%E3%81%92%E5%9B%B3-boxplot-1"><i class="fa fa-check"></i><b>3.3.3</b> 箱ひげ図 (Boxplot)</a></li>
+<li class="chapter" data-level="3.3.4" data-path="第３回４月２７日.html"><a href="第３回４月２７日.html#%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0-histogram-1"><i class="fa fa-check"></i><b>3.3.4</b> ヒストグラム (Histogram)</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -234,15 +253,315 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="パッケージのインストール" class="section level3 hasAnchor" number="3.1.2">
 <h3><span class="header-section-number">3.1.2</span> パッケージのインストール<a href="第３回４月２７日.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>方法１．コマンド</p>
+<p>RStudioのコンソール（コマンド入力画面）で、以下のコマンドを実行します。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="第３回４月２７日.html#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>) 　<span class="do">## 初回のみインストールする</span></span></code></pre></div>
+<ul>
+<li><p>注意点: パッケージ名は必ず ダブルクォーテーション “” で囲んでください。</p></li>
+<li><p>実行後: インストールが始まると、進行状況が表示されます。完了するまで数秒〜数十秒待ちましょう。</p></li>
+</ul>
+<p>方法２．手動</p>
+<p><img src="2png/p1.png" /></p>
 </div>
 <div id="パッケージをロードする" class="section level3 hasAnchor" number="3.1.3">
 <h3><span class="header-section-number">3.1.3</span> パッケージをロードする<a href="第３回４月２７日.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%92%E3%83%AD%E3%83%BC%E3%83%89%E3%81%99%E3%82%8B" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>インストールしただけでは、まだその機能は使えません。プログラムの中で使う前に、毎回ロードする必要があります。</p>
+<p>方法１．コマンド</p>
+<p>RStudioのコンソール（コマンド入力画面）で、以下のコマンドを実行します。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="第３回４月２７日.html#cb2-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<p>方法２．手動</p>
+<p><img src="2png/p2.png" /></p>
+<p>パッケージ名の横にあるチェックボックスにチェックが入っている（Checked）状態は、そのパッケージが現在のセッションに正常にロード（読み込み）されていることを意味します。</p>
 </div>
-<div id="現在ロードされているパッケージを確認する" class="section level3 hasAnchor" number="3.1.4">
-<h3><span class="header-section-number">3.1.4</span> 現在ロードされているパッケージを確認する<a href="第３回４月２７日.html#%E7%8F%BE%E5%9C%A8%E3%83%AD%E3%83%BC%E3%83%89%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="パッケージ内の関数を一覧表示する" class="section level3 hasAnchor" number="3.1.4">
+<h3><span class="header-section-number">3.1.4</span> パッケージ内の関数を一覧表示する<a href="第３回４月２７日.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%86%85%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>RStudioの「Packages」タブに表示されているパッケージ名（青色のリンク）をクリックすると、そのパッケージに含まれるすべての関数やデータのヘルプ一覧が表示されます。</p>
+<p><img src="2png/p3.png" /></p>
 </div>
-<div id="パッケージ内の関数を一覧表示する" class="section level3 hasAnchor" number="3.1.5">
-<h3><span class="header-section-number">3.1.5</span> パッケージ内の関数を一覧表示する<a href="第３回４月２７日.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%86%85%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="基本的なグラフの描き方" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> 基本的なグラフの描き方<a href="第３回４月２７日.html#%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E6%8F%8F%E3%81%8D%E6%96%B9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Rにおいて、最も基本的かつ汎用的なグラフ作成関数は plot() です。これ一つで、データの型に合わせて散布図や折れ線グラフなどを自動的に描き分けてくれます。</p>
+<div id="準備第２回を参照" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> 準備（第２回を参照）<a href="第３回４月２７日.html#%E6%BA%96%E5%82%99%E7%AC%AC%EF%BC%92%E5%9B%9E%E3%82%92%E5%8F%82%E7%85%A7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>以下の準備を行ってください。</p>
+<ul>
+<li><p>PCの<code>Documents</code>フォルダ内に、作業用として<code>R</code>という名前のフォルダを作成します。</p></li>
+<li><p>RStudioで作業ディレクトリ（Working Directory）を正しく設定します。</p></li>
+<li><p><code>plot.R</code>という名前で新しいRスクリプトを作成し、先ほど作成した<code>R</code>フォルダ内に保存します。</p></li>
+<li><p>RStudioでそのスクリプトを開きます。</p></li>
+</ul>
+<p><strong>正しく設定されると、次のような表示になります。</strong></p>
+<p><img src="2png/p4.png" /></p>
+</div>
+<div id="データの読み込み" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> データの読み込み<a href="第３回４月２７日.html#%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>MEATから「data1.csv」をダウンロードして、先ほど作成した<code>R</code>フォルダの中に保存します。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="第３回４月２７日.html#cb3-1" tabindex="-1"></a><span class="co"># パスを正しく設定する</span></span>
+<span id="cb3-2"><a href="第３回４月２７日.html#cb3-2" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/R&quot;</span>)</span>
+<span id="cb3-3"><a href="第３回４月２７日.html#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="第３回４月２７日.html#cb3-4" tabindex="-1"></a>data1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data1.csv&quot;</span>)</span>
+<span id="cb3-5"><a href="第３回４月２７日.html#cb3-5" tabindex="-1"></a>data1</span></code></pre></div>
+<pre><code>##    ID Birthweight Age Age.group SBP
+## 1   1         135   3         a  89
+## 2   2         120   4         b  90
+## 3   3         100   3         a  83
+## 4   4         105   2         a  77
+## 5   5         130   4         b  92
+## 6   6         125   5         b  98
+## 7   7         125   2         a  82
+## 8   8         105   3         a  85
+## 9   9         120   5         b  96
+## 10 10          95   4         b  95</code></pre>
+</div>
+<div id="散布図-scatter-plot" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> 散布図 (Scatter plot)<a href="第３回４月２７日.html#%E6%95%A3%E5%B8%83%E5%9B%B3-scatter-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><code>data1</code>の「出生体重（<code>Birthweight</code>）」と「収縮期血圧（<code>SBP</code>）」の関係を可視化するための散布図を作成します。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="第３回４月２７日.html#cb5-1" tabindex="-1"></a><span class="fu">plot</span>(data1<span class="sc">$</span>Birthweight, data1<span class="sc">$</span>SBP)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" alt="" width="672" /></p>
+<p>引数（オプション）を追加するだけで簡単に変更できます。</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="第３回４月２７日.html#cb6-1" tabindex="-1"></a><span class="fu">plot</span>(data1<span class="sc">$</span>Birthweight, data1<span class="sc">$</span>SBP, </span>
+<span id="cb6-2"><a href="第３回４月２７日.html#cb6-2" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">17</span>,              <span class="co"># 点の形状 (17は塗りつぶし三角)</span></span>
+<span id="cb6-3"><a href="第３回４月２７日.html#cb6-3" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">&quot;darkgreen&quot;</span>,     <span class="co"># 点の色</span></span>
+<span id="cb6-4"><a href="第３回４月２７日.html#cb6-4" tabindex="-1"></a>     <span class="at">cex =</span> <span class="fl">1.5</span>,             <span class="co"># 点のサイズ (1.5倍)</span></span>
+<span id="cb6-5"><a href="第３回４月２７日.html#cb6-5" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;出生体重 (g)&quot;</span>,  <span class="co"># X軸ラベル</span></span>
+<span id="cb6-6"><a href="第３回４月２７日.html#cb6-6" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">&quot;収縮期血圧 (mmHg)&quot;</span> <span class="co"># Y軸ラベル</span></span>
+<span id="cb6-7"><a href="第３回４月２７日.html#cb6-7" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-5-1.png" alt="" width="672" /></p>
+<p><strong>1. 点の形状 (Shape / pch)</strong></p>
+<p>Rの標準機能では、<code>pch</code>（Plotting Character）という引数に 0から25 の数字を指定することで形状を変えられます。</p>
+<ul>
+<li><p>0～14: 枠線のみの記号</p></li>
+<li><p>15～20: 塗りつぶされた記号（よく使われます）</p></li>
+<li><p>21～25: 外枠の色（col）と塗りつぶしの色（bg）を別々に指定できる記号</p></li>
+</ul>
+<p><img src="2png/p5.png" /></p>
+<p><strong>2. 点の色 (Color / col)</strong></p>
+<p>色は、名前（文字列）または16進数のカラーコードで指定します。</p>
+<ul>
+<li><p>色の名前で指定: <code>"red"</code>, <code>"blue"</code>, <code>"darkgreen"</code>,<code>"steelblue"</code> など（Rには657種類の色名が登録されています）。</p></li>
+<li><p>カラーコードで指定: <code>"#FF5733"</code> のように指定することで、より細かい色調整が可能です。</p></li>
+</ul>
+</div>
+<div id="折れ線グラフ-line-plot" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> 折れ線グラフ (Line plot)<a href="第３回４月２７日.html#%E6%8A%98%E3%82%8C%E7%B7%9A%E3%82%B0%E3%83%A9%E3%83%95-line-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>標準の <code>plot()</code> 関数で <code>type = "l"</code>（Lineの頭文字）を指定します。</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="第３回４月２７日.html#cb7-1" tabindex="-1"></a><span class="fu">plot</span>(data1<span class="sc">$</span>ID, data1<span class="sc">$</span>Birthweight, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-6-1.png" alt="" width="672" /></p>
+<p>折れ線の色、太さ、ラベル、タイトルの設定、およびX軸の目盛り（ティック）の変更を加えます。</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="第３回４月２７日.html#cb8-1" tabindex="-1"></a><span class="co"># 1. グラフの作成（基本設定とラベル、色、太さ）</span></span>
+<span id="cb8-2"><a href="第３回４月２７日.html#cb8-2" tabindex="-1"></a><span class="fu">plot</span>(data1<span class="sc">$</span>ID, data1<span class="sc">$</span>Birthweight, </span>
+<span id="cb8-3"><a href="第３回４月２７日.html#cb8-3" tabindex="-1"></a>     <span class="at">type =</span> <span class="st">&quot;l&quot;</span>,                    <span class="co"># 折れ線グラフ</span></span>
+<span id="cb8-4"><a href="第３回４月２７日.html#cb8-4" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">&quot;steelblue&quot;</span>,             <span class="co"># 線の色</span></span>
+<span id="cb8-5"><a href="第３回４月２７日.html#cb8-5" tabindex="-1"></a>     <span class="at">lwd =</span> <span class="dv">2</span>,                       <span class="co"># 線の太さ</span></span>
+<span id="cb8-6"><a href="第３回４月２７日.html#cb8-6" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;個人ID&quot;</span>,               <span class="co"># X軸ラベル</span></span>
+<span id="cb8-7"><a href="第３回４月２７日.html#cb8-7" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">&quot;出生体重 (g)&quot;</span>,         <span class="co"># Y軸ラベル</span></span>
+<span id="cb8-8"><a href="第３回４月２７日.html#cb8-8" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">&quot;IDごとの出生体重&quot;</span>,  <span class="co"># グラフタイトル</span></span>
+<span id="cb8-9"><a href="第３回４月２７日.html#cb8-9" tabindex="-1"></a>     <span class="at">xaxt =</span> <span class="st">&quot;n&quot;</span>                     <span class="co"># デフォルトのX軸目盛りを一旦非表示にする</span></span>
+<span id="cb8-10"><a href="第３回４月２７日.html#cb8-10" tabindex="-1"></a>)</span>
+<span id="cb8-11"><a href="第３回４月２７日.html#cb8-11" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="第３回４月２７日.html#cb8-12" tabindex="-1"></a><span class="co"># 2. X軸の目盛りを c(1:10) に設定</span></span>
+<span id="cb8-13"><a href="第３回４月２７日.html#cb8-13" tabindex="-1"></a><span class="fu">axis</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">at =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-7-1.png" alt="" width="672" /></p>
+</div>
+<div id="棒グラフ-bar-plot" class="section level3 hasAnchor" number="3.2.5">
+<h3><span class="header-section-number">3.2.5</span> 棒グラフ (Bar plot)<a href="第３回４月２７日.html#%E6%A3%92%E3%82%B0%E3%83%A9%E3%83%95-bar-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><code>barplot()</code> 関数を使用して、個別のIDごとの出生体重を棒グラフにします。</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="第３回４月２７日.html#cb9-1" tabindex="-1"></a><span class="co"># 棒グラフの作成</span></span>
+<span id="cb9-2"><a href="第３回４月２７日.html#cb9-2" tabindex="-1"></a><span class="fu">barplot</span>(data1<span class="sc">$</span>Birthweight)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" alt="" width="672" /></p>
+<p>グラフをより「読みやすく（Readable）」するためには、情報の整理、視認性の向上、そして色の使い方がポイントになります。</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="第３回４月２７日.html#cb10-1" tabindex="-1"></a><span class="fu">barplot</span>(data1<span class="sc">$</span>Birthweight, </span>
+<span id="cb10-2"><a href="第３回４月２７日.html#cb10-2" tabindex="-1"></a>        <span class="at">names.arg =</span> data1<span class="sc">$</span>ID,    <span class="co"># X軸のラベルにIDを指定</span></span>
+<span id="cb10-3"><a href="第３回４月２７日.html#cb10-3" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">&quot;skyblue&quot;</span>,         <span class="co"># 棒の色</span></span>
+<span id="cb10-4"><a href="第３回４月２７日.html#cb10-4" tabindex="-1"></a>        <span class="at">border =</span> <span class="st">&quot;white&quot;</span>,        <span class="co"># 棒の枠線を白にするとスッキリします</span></span>
+<span id="cb10-5"><a href="第３回４月２７日.html#cb10-5" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">&quot;IDごとの出生体重&quot;</span>, <span class="co"># タイトル</span></span>
+<span id="cb10-6"><a href="第３回４月２７日.html#cb10-6" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">&quot;個人ID&quot;</span>,         <span class="co"># X軸ラベル</span></span>
+<span id="cb10-7"><a href="第３回４月２７日.html#cb10-7" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;出生体重 (g)&quot;</span>,    <span class="co"># Y軸ラベル</span></span>
+<span id="cb10-8"><a href="第３回４月２７日.html#cb10-8" tabindex="-1"></a>        <span class="at">las =</span> <span class="dv">1</span>,                  <span class="co"># 軸の数値を水平に表示</span></span>
+<span id="cb10-9"><a href="第３回４月２７日.html#cb10-9" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">150</span>)        <span class="co"># Y軸の範囲を指定して、タイトルとの重なりを防ぐ</span></span>
+<span id="cb10-10"><a href="第３回４月２７日.html#cb10-10" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-9-1.png" alt="" width="672" /></p>
+</div>
+<div id="円グラフ-pie-plot" class="section level3 hasAnchor" number="3.2.6">
+<h3><span class="header-section-number">3.2.6</span> 円グラフ (Pie plot)<a href="第３回４月２７日.html#%E5%86%86%E3%82%B0%E3%83%A9%E3%83%95-pie-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>統計学的には、項目が多い場合は棒グラフの方が比較しやすいとされますが、全体における各年代の<strong>シェア（比率）</strong>を一目で見せたい場合には円グラフが有効です。</p>
+<p><code>pie()</code> 関数を使用します。まず <code>table()</code> 関数で年代ごとの頻度を集計する必要があります。</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="第３回４月２７日.html#cb11-1" tabindex="-1"></a><span class="co"># 年代ごとの人数を集計</span></span>
+<span id="cb11-2"><a href="第３回４月２７日.html#cb11-2" tabindex="-1"></a>age_counts <span class="ot">&lt;-</span> <span class="fu">table</span>(data1<span class="sc">$</span>Age.group)</span>
+<span id="cb11-3"><a href="第３回４月２７日.html#cb11-3" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="第３回４月２７日.html#cb11-4" tabindex="-1"></a><span class="co"># 円グラフの作成</span></span>
+<span id="cb11-5"><a href="第３回４月２７日.html#cb11-5" tabindex="-1"></a><span class="fu">pie</span>(age_counts,</span>
+<span id="cb11-6"><a href="第３回４月２７日.html#cb11-6" tabindex="-1"></a>    <span class="at">main =</span> <span class="st">&quot;年齢グループ別の割合&quot;</span>,</span>
+<span id="cb11-7"><a href="第３回４月２７日.html#cb11-7" tabindex="-1"></a>    <span class="at">col =</span> <span class="fu">terrain.colors</span>(<span class="fu">length</span>(age_counts)), <span class="co"># 自動で色分け</span></span>
+<span id="cb11-8"><a href="第３回４月２７日.html#cb11-8" tabindex="-1"></a>    <span class="at">clockwise =</span> <span class="cn">TRUE</span>)                         <span class="co"># 時計回りに配置</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-10-1.png" alt="" width="672" /></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="第３回４月２７日.html#cb12-1" tabindex="-1"></a><span class="co"># 年代ごとの人数を集計</span></span>
+<span id="cb12-2"><a href="第３回４月２７日.html#cb12-2" tabindex="-1"></a>age_counts <span class="ot">&lt;-</span> <span class="fu">table</span>(data1<span class="sc">$</span>Age)</span>
+<span id="cb12-3"><a href="第３回４月２７日.html#cb12-3" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="第３回４月２７日.html#cb12-4" tabindex="-1"></a><span class="co"># 円グラフの作成</span></span>
+<span id="cb12-5"><a href="第３回４月２７日.html#cb12-5" tabindex="-1"></a><span class="fu">pie</span>(age_counts,</span>
+<span id="cb12-6"><a href="第３回４月２７日.html#cb12-6" tabindex="-1"></a>    <span class="at">main =</span> <span class="st">&quot;年齢別の割合&quot;</span>,</span>
+<span id="cb12-7"><a href="第３回４月２７日.html#cb12-7" tabindex="-1"></a>    <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;skyblue&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;pink&quot;</span>), <span class="co"># 配色の設定</span></span>
+<span id="cb12-8"><a href="第３回４月２７日.html#cb12-8" tabindex="-1"></a>    <span class="at">clockwise =</span> <span class="cn">TRUE</span>)                         <span class="co"># 時計回りに配置</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-10-2.png" alt="" width="672" /></p>
+<p>ラベルに％を追加する方法: <code>table()</code> で集計した度数から<code>％</code>を算出し、<code>paste()</code> 関数で文字として結合します。</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="第３回４月２７日.html#cb13-1" tabindex="-1"></a><span class="co"># 1. データの集計（例：年代別）</span></span>
+<span id="cb13-2"><a href="第３回４月２７日.html#cb13-2" tabindex="-1"></a>age_counts <span class="ot">&lt;-</span> <span class="fu">table</span>(data1<span class="sc">$</span>Age)</span>
+<span id="cb13-3"><a href="第３回４月２７日.html#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="第３回４月２７日.html#cb13-4" tabindex="-1"></a><span class="co"># 2. パーセンテージの計算（小数点第1位まで）</span></span>
+<span id="cb13-5"><a href="第３回４月２７日.html#cb13-5" tabindex="-1"></a>pct <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> age_counts <span class="sc">/</span> <span class="fu">sum</span>(age_counts), <span class="dv">1</span>)</span>
+<span id="cb13-6"><a href="第３回４月２７日.html#cb13-6" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="第３回４月２７日.html#cb13-7" tabindex="-1"></a><span class="co"># 3. ラベルの作成（「項目名: 00%」という形式）</span></span>
+<span id="cb13-8"><a href="第３回４月２７日.html#cb13-8" tabindex="-1"></a><span class="co"># 例: &quot;20代: 25.5%&quot;</span></span>
+<span id="cb13-9"><a href="第３回４月２７日.html#cb13-9" tabindex="-1"></a>labels <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="fu">names</span>(age_counts), <span class="st">&quot;: &quot;</span>, pct, <span class="st">&quot;%&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb13-10"><a href="第３回４月２７日.html#cb13-10" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="第３回４月２７日.html#cb13-11" tabindex="-1"></a><span class="co"># 4. 円グラフの描画</span></span>
+<span id="cb13-12"><a href="第３回４月２７日.html#cb13-12" tabindex="-1"></a><span class="fu">pie</span>(age_counts, </span>
+<span id="cb13-13"><a href="第３回４月２７日.html#cb13-13" tabindex="-1"></a>    <span class="at">labels =</span> labels,           <span class="co"># 作成したラベルを指定</span></span>
+<span id="cb13-14"><a href="第３回４月２７日.html#cb13-14" tabindex="-1"></a>    <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;skyblue&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;pink&quot;</span>), <span class="co"># 配色の設定</span></span>
+<span id="cb13-15"><a href="第３回４月２７日.html#cb13-15" tabindex="-1"></a>    <span class="at">main =</span> <span class="st">&quot;年代別の構成割合&quot;</span>,</span>
+<span id="cb13-16"><a href="第３回４月２７日.html#cb13-16" tabindex="-1"></a>    <span class="at">clockwise =</span> <span class="cn">TRUE</span>)          <span class="co"># 時計回りに配置</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" alt="" width="672" /></p>
+<p>統計・Rユーザーに人気のカラーツール: <a href="https://colorbrewer2.org/#type=qualitative&amp;scheme=Set1&amp;n=3">https://colorbrewer2.org/#type=qualitative&amp;scheme=Set1&amp;n=3</a></p>
+</div>
+<div id="箱ひげ図-boxplot" class="section level3 hasAnchor" number="3.2.7">
+<h3><span class="header-section-number">3.2.7</span> 箱ひげ図 (Boxplot)<a href="第３回４月２７日.html#%E7%AE%B1%E3%81%B2%E3%81%92%E5%9B%B3-boxplot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>データの分布や外れ値を一目で確認するのに最も適した<strong>箱ひげ図（Boxplot）</strong>を作成します。</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="第３回４月２７日.html#cb14-1" tabindex="-1"></a><span class="co"># 箱ひげ図の作成</span></span>
+<span id="cb14-2"><a href="第３回４月２７日.html#cb14-2" tabindex="-1"></a><span class="fu">boxplot</span>(data1<span class="sc">$</span>Birthweight)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-12-1.png" alt="" width="672" /></p>
+<p>標準機能でも、引数を追加することでかなり細かく制御できます。</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="第３回４月２７日.html#cb15-1" tabindex="-1"></a><span class="co"># 1. 元のデータから「Birthweight」列のみを取り出し、新しい変数「Birthweight.out」に代入（バックアップ）</span></span>
+<span id="cb15-2"><a href="第３回４月２７日.html#cb15-2" tabindex="-1"></a>Birthweight.out <span class="ot">&lt;-</span> data1<span class="sc">$</span>Birthweight</span>
+<span id="cb15-3"><a href="第３回４月２７日.html#cb15-3" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="第３回４月２７日.html#cb15-4" tabindex="-1"></a><span class="co"># 2. 作成した変数「Birthweight.out」の中身を表示して、現在のデータを確認</span></span>
+<span id="cb15-5"><a href="第３回４月２７日.html#cb15-5" tabindex="-1"></a>Birthweight.out</span></code></pre></div>
+<pre><code>##  [1] 135 120 100 105 130 125 125 105 120  95</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="第３回４月２７日.html#cb17-1" tabindex="-1"></a><span class="co"># 3. 10番目のデータ（要素）を「25」という極端に小さな値に書き換える（外れ値の作成）</span></span>
+<span id="cb17-2"><a href="第３回４月２７日.html#cb17-2" tabindex="-1"></a>Birthweight.out[<span class="dv">10</span>] <span class="ot">&lt;-</span> <span class="dv">55</span></span>
+<span id="cb17-3"><a href="第３回４月２７日.html#cb17-3" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="第３回４月２７日.html#cb17-4" tabindex="-1"></a><span class="co"># 4. データを確認</span></span>
+<span id="cb17-5"><a href="第３回４月２７日.html#cb17-5" tabindex="-1"></a>Birthweight.out</span></code></pre></div>
+<pre><code>##  [1] 135 120 100 105 130 125 125 105 120  55</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="第３回４月２７日.html#cb19-1" tabindex="-1"></a><span class="fu">boxplot</span>(Birthweight.out,</span>
+<span id="cb19-2"><a href="第３回４月２７日.html#cb19-2" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">&quot;性別ごとの出生体重分布(外れ値の確認)&quot;</span>,</span>
+<span id="cb19-3"><a href="第３回４月２７日.html#cb19-3" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">&quot;性別&quot;</span>,</span>
+<span id="cb19-4"><a href="第３回４月２７日.html#cb19-4" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;出生体重 (g)&quot;</span>,</span>
+<span id="cb19-5"><a href="第３回４月２７日.html#cb19-5" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="co"># グループごとに色を変える</span></span>
+<span id="cb19-6"><a href="第３回４月２７日.html#cb19-6" tabindex="-1"></a>        <span class="at">border =</span> <span class="st">&quot;darkslategray&quot;</span>,     <span class="co"># 枠線の色</span></span>
+<span id="cb19-7"><a href="第３回４月２７日.html#cb19-7" tabindex="-1"></a>        <span class="co"># notch = TRUE,                 # 中央値の信頼区間（くびれ）を表示</span></span>
+<span id="cb19-8"><a href="第３回４月２７日.html#cb19-8" tabindex="-1"></a>        <span class="co"># varwidth = TRUE,              # サンプル数に応じて箱の幅を変える</span></span>
+<span id="cb19-9"><a href="第３回４月２７日.html#cb19-9" tabindex="-1"></a>        <span class="at">las =</span> <span class="dv">1</span>,                      <span class="co"># 軸の数値を水平にする</span></span>
+<span id="cb19-10"><a href="第３回４月２７日.html#cb19-10" tabindex="-1"></a>        <span class="at">outcol =</span> <span class="st">&quot;red&quot;</span>,   <span class="co"># 外れ値の「色」を赤にする </span></span>
+<span id="cb19-11"><a href="第３回４月２７日.html#cb19-11" tabindex="-1"></a>        <span class="at">outpch =</span> <span class="dv">16</span>       <span class="co"># 外れ値の「形」を塗りつぶしの丸にする</span></span>
+<span id="cb19-12"><a href="第３回４月２７日.html#cb19-12" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" alt="" width="672" /></p>
+</div>
+<div id="ヒストグラム-histogram" class="section level3 hasAnchor" number="3.2.8">
+<h3><span class="header-section-number">3.2.8</span> ヒストグラム (Histogram)<a href="第３回４月２７日.html#%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0-histogram" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><code>hist()</code> 関数を使用します。</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="第３回４月２７日.html#cb20-1" tabindex="-1"></a><span class="co"># 基本的なヒストグラム</span></span>
+<span id="cb20-2"><a href="第３回４月２７日.html#cb20-2" tabindex="-1"></a><span class="fu">hist</span>(data1<span class="sc">$</span>Birthweight)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-14-1.png" alt="" width="672" /></p>
+<p>標準機能でも、引数を追加することでかなり細かく制御できます。</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="第３回４月２７日.html#cb21-1" tabindex="-1"></a><span class="fu">hist</span>(data1<span class="sc">$</span>Birthweight,</span>
+<span id="cb21-2"><a href="第３回４月２７日.html#cb21-2" tabindex="-1"></a><span class="at">main =</span> <span class="st">&quot;出生体重の分布（ヒストグラム）&quot;</span>,</span>
+<span id="cb21-3"><a href="第３回４月２７日.html#cb21-3" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;出生体重 (g)&quot;</span>,</span>
+<span id="cb21-4"><a href="第３回４月２７日.html#cb21-4" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">&quot;頻度&quot;</span>,</span>
+<span id="cb21-5"><a href="第３回４月２７日.html#cb21-5" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">&quot;skyblue&quot;</span>,      <span class="co"># 棒の色</span></span>
+<span id="cb21-6"><a href="第３回４月２７日.html#cb21-6" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">&quot;white&quot;</span>     <span class="co"># 棒の枠線の色</span></span>
+<span id="cb21-7"><a href="第３回４月２７日.html#cb21-7" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-15-1.png" alt="" width="672" /></p>
+</div>
+</div>
+<div id="高度的なグラフggplot" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> 高度的なグラフ：GGPLOT<a href="第３回４月２７日.html#%E9%AB%98%E5%BA%A6%E7%9A%84%E3%81%AA%E3%82%B0%E3%83%A9%E3%83%95ggplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>ggplot2</code> は、Rで統計グラフを作成するための最も強力で人気のあるパッケージです。「Grammar of Graphics（グラフの文法）」という設計思想に基づいており、図の要素（データ、軸、色、図形など）を<strong>レイヤー（層）</strong>のように重ねていくことで、複雑なグラフも直感的に作成できます。</p>
+<p><strong>ggplot2 の基本構造</strong></p>
+<p>ggplot2 のコードは、基本的に以下の3つの要素を積み重ねて記述します。</p>
+<ul>
+<li><p>データ (Data): どのデータフレームを使うか。</p></li>
+<li><p>属性 (Aesthetics - aes): X軸、Y軸、色 (color)、形 (shape) などにどの変数わり当てるか。</p></li>
+<li><p>図形 (Geometries - geom): 散布図 (geom_point)、棒グラフ (geom_bar)、折れ線グラフ (geom_line) など、どの形で描くか。</p></li>
+</ul>
+<div id="散布図-scatter-plot-1" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> 散布図 (Scatter plot)<a href="第３回４月２７日.html#%E6%95%A3%E5%B8%83%E5%9B%B3-scatter-plot-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="第３回４月２７日.html#cb22-1" tabindex="-1"></a><span class="co"># 1. ggplot2ライブラリを読み込む（未インストールの場合は install.packages(&quot;ggplot2&quot;) が必要）</span></span>
+<span id="cb22-2"><a href="第３回４月２７日.html#cb22-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb22-3"><a href="第３回４月２７日.html#cb22-3" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="第３回４月２７日.html#cb22-4" tabindex="-1"></a><span class="co"># 2. ggplotの基本設定：使用するデータ(data1)と、軸・色の割り当て(aes)を指定</span></span>
+<span id="cb22-5"><a href="第３回４月２７日.html#cb22-5" tabindex="-1"></a><span class="co"># x軸にID、y軸に出生体重、色と点の形をAge.group(a/b)で分ける設定</span></span>
+<span id="cb22-6"><a href="第３回４月２７日.html#cb22-6" tabindex="-1"></a><span class="fu">ggplot</span>(data1, <span class="fu">aes</span>(<span class="at">x =</span> ID, <span class="at">y =</span> Birthweight, <span class="at">color =</span> Age.group, <span class="at">shape =</span> Age.group)) <span class="sc">+</span></span>
+<span id="cb22-7"><a href="第３回４月２７日.html#cb22-7" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span>  <span class="co"># 散布図の「点」を描画。sizeで点の大きさを調整（4は少し大きめで見やすい）</span></span>
+<span id="cb22-8"><a href="第３回４月２７日.html#cb22-8" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span> <span class="ot">=</span> <span class="st">&quot;steelblue&quot;</span>, <span class="st">&quot;b&quot;</span> <span class="ot">=</span> <span class="st">&quot;orange&quot;</span>)) <span class="sc">+</span> <span class="co"># 色を手動で指定</span></span>
+<span id="cb22-9"><a href="第３回４月２７日.html#cb22-9" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;年齢グループ別の出生体重散布図&quot;</span>, <span class="co"># グラフの各ラベル</span></span>
+<span id="cb22-10"><a href="第３回４月２７日.html#cb22-10" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;個人ID&quot;</span>,</span>
+<span id="cb22-11"><a href="第３回４月２７日.html#cb22-11" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;出生体重 (g)&quot;</span>,</span>
+<span id="cb22-12"><a href="第３回４月２７日.html#cb22-12" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;年齢グループ&quot;</span>,    <span class="co"># 色の凡例タイトル</span></span>
+<span id="cb22-13"><a href="第３回４月２７日.html#cb22-13" tabindex="-1"></a>       <span class="at">shape =</span> <span class="st">&quot;年齢グループ&quot;</span>) <span class="sc">+</span>  <span class="co"># 形の凡例タイトル</span></span>
+<span id="cb22-14"><a href="第３回４月２７日.html#cb22-14" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="co"># グラフの背景テーマを「minimal（シンプル）」に設定してスッキリさせる</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" alt="" width="672" /></p>
+</div>
+<div id="折れ線グラフ-line-plot-1" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> 折れ線グラフ (Line plot)<a href="第３回４月２７日.html#%E6%8A%98%E3%82%8C%E7%B7%9A%E3%82%B0%E3%83%A9%E3%83%95-line-plot-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="第３回４月２７日.html#cb23-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb23-2"><a href="第３回４月２７日.html#cb23-2" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="第３回４月２７日.html#cb23-3" tabindex="-1"></a><span class="co"># IDごとの推移をAge.group(a/b)で色分けして表示</span></span>
+<span id="cb23-4"><a href="第３回４月２７日.html#cb23-4" tabindex="-1"></a><span class="fu">ggplot</span>(data1, <span class="fu">aes</span>(<span class="at">x =</span> ID, <span class="at">y =</span> Birthweight, <span class="at">color =</span> Age.group, <span class="at">group =</span> Age.group)) <span class="sc">+</span></span>
+<span id="cb23-5"><a href="第３回４月２７日.html#cb23-5" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span>                  <span class="co"># 折れ線</span></span>
+<span id="cb23-6"><a href="第３回４月２７日.html#cb23-6" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span>                 <span class="co"># データ点</span></span>
+<span id="cb23-7"><a href="第３回４月２７日.html#cb23-7" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Set1&quot;</span>) <span class="sc">+</span> <span class="co"># 配色設定</span></span>
+<span id="cb23-8"><a href="第３回４月２７日.html#cb23-8" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;年齢グループ別の出生体重&quot;</span>,</span>
+<span id="cb23-9"><a href="第３回４月２７日.html#cb23-9" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;個人ID&quot;</span>, <span class="at">y =</span> <span class="st">&quot;出生体重 (g)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb23-10"><a href="第３回４月２７日.html#cb23-10" tabindex="-1"></a>  <span class="fu">theme_bw</span>()                             <span class="co"># 白背景テーマ</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-17-1.png" alt="" width="672" /></p>
+</div>
+<div id="箱ひげ図-boxplot-1" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> 箱ひげ図 (Boxplot)<a href="第３回４月２７日.html#%E7%AE%B1%E3%81%B2%E3%81%92%E5%9B%B3-boxplot-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="第３回４月２７日.html#cb24-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb24-2"><a href="第３回４月２７日.html#cb24-2" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="第３回４月２７日.html#cb24-3" tabindex="-1"></a><span class="co"># Age.group(aとb)ごとに出生体重を比較する箱ひげ図</span></span>
+<span id="cb24-4"><a href="第３回４月２７日.html#cb24-4" tabindex="-1"></a><span class="fu">ggplot</span>(data1, <span class="fu">aes</span>(<span class="at">x =</span> Age.group, <span class="at">y =</span> Birthweight, <span class="at">fill =</span> Age.group)) <span class="sc">+</span></span>
+<span id="cb24-5"><a href="第３回４月２７日.html#cb24-5" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outlier.color =</span> <span class="st">&quot;red&quot;</span>, <span class="at">outlier.shape =</span> <span class="dv">18</span>, <span class="at">outlier.size =</span> <span class="dv">3</span>) <span class="sc">+</span> <span class="co"># 箱ひげ図の描画（外れ値を赤色・ひし形で表示）</span></span>
+<span id="cb24-6"><a href="第３回４月２７日.html#cb24-6" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> <span class="co"># 実際のデータ点（ドット）を重ねて分布をより詳細に見せる</span></span>
+<span id="cb24-7"><a href="第３回４月２７日.html#cb24-7" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Pastel1&quot;</span>) <span class="sc">+</span> <span class="co"># 配色設定</span></span>
+<span id="cb24-8"><a href="第３回４月２７日.html#cb24-8" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;年齢グループ別の出生体重分布&quot;</span>, <span class="co"># グラフの各ラベルを日本語に設定</span></span>
+<span id="cb24-9"><a href="第３回４月２７日.html#cb24-9" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;a群とb群の比較&quot;</span>,</span>
+<span id="cb24-10"><a href="第３回４月２７日.html#cb24-10" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;年齢グループ&quot;</span>,</span>
+<span id="cb24-11"><a href="第３回４月２７日.html#cb24-11" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;出生体重 (g)&quot;</span>,</span>
+<span id="cb24-12"><a href="第３回４月２７日.html#cb24-12" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">&quot;グループ&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-18-1.png" alt="" width="672" /></p>
+</div>
+<div id="ヒストグラム-histogram-1" class="section level3 hasAnchor" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> ヒストグラム (Histogram)<a href="第３回４月２７日.html#%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0-histogram-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>1. 色で塗り分ける方法（重ね合わせ）</strong></p>
+<p>2つのグループを同じグラフ内で比較する際に便利です。</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="第３回４月２７日.html#cb25-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb25-2"><a href="第３回４月２７日.html#cb25-2" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="第３回４月２７日.html#cb25-3" tabindex="-1"></a><span class="fu">ggplot</span>(data1, <span class="fu">aes</span>(<span class="at">x =</span> Birthweight, <span class="at">fill =</span> Age.group)) <span class="sc">+</span></span>
+<span id="cb25-4"><a href="第３回４月２７日.html#cb25-4" tabindex="-1"></a>  <span class="co"># alphaで透明度を調整して、重なり部分を見やすくする</span></span>
+<span id="cb25-5"><a href="第３回４月２７日.html#cb25-5" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">position =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">bins =</span> <span class="dv">10</span>, <span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb25-6"><a href="第３回４月２７日.html#cb25-6" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span> <span class="ot">=</span> <span class="st">&quot;steelblue&quot;</span>, <span class="st">&quot;b&quot;</span> <span class="ot">=</span> <span class="st">&quot;orange&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb25-7"><a href="第３回４月２７日.html#cb25-7" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;年齢グループ別の出生体重分布&quot;</span>,</span>
+<span id="cb25-8"><a href="第３回４月２７日.html#cb25-8" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;出生体重 (g)&quot;</span>,</span>
+<span id="cb25-9"><a href="第３回４月２７日.html#cb25-9" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;頻度&quot;</span>,</span>
+<span id="cb25-10"><a href="第３回４月２７日.html#cb25-10" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">&quot;グループ&quot;</span>) <span class="sc">+</span></span>
+<span id="cb25-11"><a href="第３回４月２７日.html#cb25-11" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-19-1.png" alt="" width="672" /></p>
+<p><strong>2. 画面を分割する方法（ファセット）</strong></p>
+<p>グループ数が多い場合や、重なりが複雑で見にくい場合に非常に有効です。臨床データの解析で最も推奨される表示形式の一つです。</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="第３回４月２７日.html#cb26-1" tabindex="-1"></a><span class="fu">ggplot</span>(data1, <span class="fu">aes</span>(<span class="at">x =</span> Birthweight, <span class="at">fill =</span> Age.group)) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="第３回４月２７日.html#cb26-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">10</span>, <span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-3"><a href="第３回４月２７日.html#cb26-3" tabindex="-1"></a>  <span class="co"># グループごとにグラフを横に並べる</span></span>
+<span id="cb26-4"><a href="第３回４月２７日.html#cb26-4" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Age.group) <span class="sc">+</span> </span>
+<span id="cb26-5"><a href="第３回４月２７日.html#cb26-5" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Pastel1&quot;</span>) <span class="sc">+</span> <span class="co"># 配色設定</span></span>
+<span id="cb26-6"><a href="第３回４月２７日.html#cb26-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;年齢グループ別ヒストグラム（分割表示）&quot;</span>, <span class="co"># グラフの各ラベル</span></span>
+<span id="cb26-7"><a href="第３回４月２７日.html#cb26-7" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;出生体重 (g)&quot;</span>,</span>
+<span id="cb26-8"><a href="第３回４月２７日.html#cb26-8" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;頻度&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-9"><a href="第３回４月２７日.html#cb26-9" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb26-10"><a href="第３回４月２７日.html#cb26-10" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="co"># 分割しているので凡例を消すとスッキリします</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-20-1.png" alt="" width="672" /></p>
 
 </div>
 </div>
