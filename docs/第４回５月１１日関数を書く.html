@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 4 第４回（５月１１日）：関数を書く | [2026-Z][1H609] 計算機科学入門</title>
+  <meta name="description" content=" 4 第４回（５月１１日）：関数を書く | [2026-Z][1H609] 計算機科学入門" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 4 第４回（５月１１日）：関数を書く | [2026-Z][1H609] 計算機科学入門" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 4 第４回（５月１１日）：関数を書く | [2026-Z][1H609] 計算機科学入門" />
+  
+  
+  
+
+<meta name="author" content="Yi Zhou" />
+
+
+<meta name="date" content="2026-05-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="第３回４月２７日データの可視化.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">計算機科学入門</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>本資料について</a></li>
+<li class="chapter" data-level="1" data-path="第１回４月１３日.html"><a href="第１回４月１３日.html"><i class="fa fa-check"></i><b>1</b> 第１回（４月１３日）</a></li>
+<li class="chapter" data-level="2" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html"><i class="fa fa-check"></i><b>2</b> 第２回（４月２０日）：RStudioでデータの操作と計算</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E6%BA%96%E5%82%99"><i class="fa fa-check"></i><b>2.1</b> 準備</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#rstudio-ide%E3%81%AE%E7%B4%B9%E4%BB%8B"><i class="fa fa-check"></i><b>2.1.1</b> RStudio IDEの紹介</a></li>
+<li class="chapter" data-level="2.1.2" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#r%E3%82%B3%E3%83%BC%E3%83%89%E3%81%A8%E9%96%A2%E9%80%A3%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BF%9D%E5%AD%98%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E6%96%B0%E3%81%97%E3%81%84%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%BE%E3%81%99"><i class="fa fa-check"></i><b>2.1.2</b> Rコードと関連ファイルを保存するための新しいフォルダを作成します。</a></li>
+<li class="chapter" data-level="2.1.3" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#rstudio%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%97%E4%BD%9C%E6%A5%AD%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%83%91%E3%82%B9path%E3%82%92r%E3%81%AB%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%BE"><i class="fa fa-check"></i><b>2.1.3</b> RStudioを起動し、作業ディレクトリ（パス、path）をRに設定しま。</a></li>
+<li class="chapter" data-level="2.1.4" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E8%A8%AD%E5%AE%9A%E3%81%AE%E7%A2%BA%E8%AA%8D"><i class="fa fa-check"></i><b>2.1.4</b> 設定の確認</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90"><i class="fa fa-check"></i><b>2.2</b> スクリプトの作成</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E4%BF%9D%E5%AD%98"><i class="fa fa-check"></i><b>2.2.1</b> スクリプトの保存</a></li>
+<li class="chapter" data-level="2.2.2" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E7%A2%BA%E8%AA%8D"><i class="fa fa-check"></i><b>2.2.2</b> スクリプトの確認</a></li>
+<li class="chapter" data-level="2.2.3" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E6%AC%A1%E5%9B%9E%E3%81%8B%E3%82%89%E3%81%AF%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%80%E3%83%96%E3%83%AB%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%97%E3%81%BE%E3%81%99%E3%81%93%E3%81%A8%E3%81%A7%E9%96%8B%E3%81%91%E3%81%BE%E3%81%99"><i class="fa fa-check"></i><b>2.2.3</b> 次回からは、ファイルをダブルクリックしますことで開けます。</a></li>
+<li class="chapter" data-level="2.2.4" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#rstudio%E3%82%92%E7%B5%82%E4%BA%86%E3%81%97%E3%81%9F%E5%BE%8C"><i class="fa fa-check"></i><b>2.2.4</b> RStudioを終了した後</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E5%AE%9F%E8%A1%8C"><i class="fa fa-check"></i><b>2.3</b> スクリプトの実行</a></li>
+<li class="chapter" data-level="2.4" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8Bdata-types"><i class="fa fa-check"></i><b>2.4</b> データ型（Data Types）</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B%E3%81%AE%E7%A2%BA%E8%AA%8D"><i class="fa fa-check"></i><b>2.4.1</b> データ型の確認</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E4%B8%BB%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0"><i class="fa fa-check"></i><b>2.5</b> 主なデータ構造</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB-vector"><i class="fa fa-check"></i><b>2.5.1</b> ベクトル (Vector)</a></li>
+<li class="chapter" data-level="2.5.2" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E5%9B%A0%E5%AD%90factor"><i class="fa fa-check"></i><b>2.5.2</b> 因子（Factor）</a></li>
+<li class="chapter" data-level="2.5.3" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E8%A1%8C%E5%88%97-matrix"><i class="fa fa-check"></i><b>2.5.3</b> 行列 (Matrix)</a></li>
+<li class="chapter" data-level="2.5.4" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0-data-frame"><i class="fa fa-check"></i><b>2.5.4</b> データフレーム (Data Frame)</a></li>
+<li class="chapter" data-level="2.5.5" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E3%83%AA%E3%82%B9%E3%83%88-list"><i class="fa fa-check"></i><b>2.5.5</b> リスト (List)</a></li>
+<li class="chapter" data-level="2.5.6" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E9%85%8D%E5%88%97-array"><i class="fa fa-check"></i><b>2.5.6</b> 配列 (Array)</a></li>
+<li class="chapter" data-level="2.5.7" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0%E3%81%AE%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8"><i class="fa fa-check"></i><b>2.5.7</b> データ構造のイメージ</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E7%89%B9%E5%88%A5%E3%81%AA%E5%80%A4"><i class="fa fa-check"></i><b>2.6</b> 特別な値</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#null-%E7%A9%BA%E3%81%AE%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88"><i class="fa fa-check"></i><b>2.6.1</b> NULL: 空のオブジェクト</a></li>
+<li class="chapter" data-level="2.6.2" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#na%E5%88%A9%E7%94%A8%E4%B8%8D%E5%8F%AFr%E3%81%A7%E8%AA%8D%E8%AD%98%E3%81%95%E3%82%8C%E3%82%8B%E8%A6%81%E7%B4%A0%E3%81%A7%E3%81%99"><i class="fa fa-check"></i><b>2.6.2</b> NA：（利用不可）Rで認識される要素です。</a></li>
+<li class="chapter" data-level="2.6.3" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#nan-%E6%95%B0%E5%AD%A6%E7%9A%84%E3%81%AA%E3%82%A8%E3%83%A9%E3%83%BC"><i class="fa fa-check"></i><b>2.6.3</b> NaN: 数学的なエラー</a></li>
+<li class="chapter" data-level="2.6.4" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#inf-%E9%99%90%E7%95%8C%E3%82%92%E8%B6%85%E3%81%88%E3%81%9F%E6%95%B0%E5%80%A4"><i class="fa fa-check"></i><b>2.6.4</b> Inf: 限界を超えた数値</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF%E4%BF%9D%E5%AD%98"><i class="fa fa-check"></i><b>2.7</b> データの読み込み、保存</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88"><i class="fa fa-check"></i><b>2.7.1</b> インポート</a></li>
+<li class="chapter" data-level="2.7.2" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E4%BF%9D%E5%AD%98"><i class="fa fa-check"></i><b>2.7.2</b> 保存</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E8%A6%81%E7%B4%84%E7%B5%B1%E8%A8%88%E9%87%8F"><i class="fa fa-check"></i><b>2.8</b> 要約統計量</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E9%9B%86%E8%A8%88%E8%A1%A8cross-tabulation-summary-tables%E3%81%AE%E4%BD%9C%E6%88%90"><i class="fa fa-check"></i><b>2.8.1</b> 集計表（Cross-tabulation / Summary Tables）の作成</a></li>
+<li class="chapter" data-level="2.8.2" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#%E5%B9%B3%E5%9D%87%E5%80%A4%E3%81%A8%E5%88%86%E6%95%A3"><i class="fa fa-check"></i><b>2.8.2</b> 平均値と分散</a></li>
+<li class="chapter" data-level="2.8.3" data-path="第２回４月２０日rstudioでデータの操作と計算.html"><a href="第２回４月２０日rstudioでデータの操作と計算.html#r%E3%81%AB%E3%82%88%E3%82%8B"><i class="fa fa-check"></i><b>2.8.3</b> Rによる</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html"><i class="fa fa-check"></i><b>3</b> 第３回（４月２７日）：データの可視化</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8package%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><i class="fa fa-check"></i><b>3.1</b> パッケージ（package）のインストール</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#r%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%A8%E3%81%AF"><i class="fa fa-check"></i><b>3.1.1</b> Rパッケージとは？</a></li>
+<li class="chapter" data-level="3.1.2" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><i class="fa fa-check"></i><b>3.1.2</b> パッケージのインストール</a></li>
+<li class="chapter" data-level="3.1.3" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%92%E3%83%AD%E3%83%BC%E3%83%89%E3%81%99%E3%82%8B"><i class="fa fa-check"></i><b>3.1.3</b> パッケージをロードする</a></li>
+<li class="chapter" data-level="3.1.4" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%86%85%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B"><i class="fa fa-check"></i><b>3.1.4</b> パッケージ内の関数を一覧表示する</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E6%8F%8F%E3%81%8D%E6%96%B9"><i class="fa fa-check"></i><b>3.2</b> 基本的なグラフの描き方</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E6%BA%96%E5%82%99%E7%AC%AC%EF%BC%92%E5%9B%9E%E3%82%92%E5%8F%82%E7%85%A7"><i class="fa fa-check"></i><b>3.2.1</b> 準備（第２回を参照）</a></li>
+<li class="chapter" data-level="3.2.2" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF"><i class="fa fa-check"></i><b>3.2.2</b> データの読み込み</a></li>
+<li class="chapter" data-level="3.2.3" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E6%95%A3%E5%B8%83%E5%9B%B3-scatter-plot"><i class="fa fa-check"></i><b>3.2.3</b> 散布図 (Scatter plot)</a></li>
+<li class="chapter" data-level="3.2.4" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E6%8A%98%E3%82%8C%E7%B7%9A%E3%82%B0%E3%83%A9%E3%83%95-line-plot"><i class="fa fa-check"></i><b>3.2.4</b> 折れ線グラフ (Line plot)</a></li>
+<li class="chapter" data-level="3.2.5" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E6%A3%92%E3%82%B0%E3%83%A9%E3%83%95-bar-plot"><i class="fa fa-check"></i><b>3.2.5</b> 棒グラフ (Bar plot)</a></li>
+<li class="chapter" data-level="3.2.6" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E5%86%86%E3%82%B0%E3%83%A9%E3%83%95-pie-plot"><i class="fa fa-check"></i><b>3.2.6</b> 円グラフ (Pie plot)</a></li>
+<li class="chapter" data-level="3.2.7" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E7%AE%B1%E3%81%B2%E3%81%92%E5%9B%B3-boxplot"><i class="fa fa-check"></i><b>3.2.7</b> 箱ひげ図 (Boxplot)</a></li>
+<li class="chapter" data-level="3.2.8" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0-histogram"><i class="fa fa-check"></i><b>3.2.8</b> ヒストグラム (Histogram)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E9%AB%98%E5%BA%A6%E7%9A%84%E3%81%AA%E3%82%B0%E3%83%A9%E3%83%95ggplot"><i class="fa fa-check"></i><b>3.3</b> 高度的なグラフ：GGPLOT</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E6%95%A3%E5%B8%83%E5%9B%B3-scatter-plot-1"><i class="fa fa-check"></i><b>3.3.1</b> 散布図 (Scatter plot)</a></li>
+<li class="chapter" data-level="3.3.2" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E6%8A%98%E3%82%8C%E7%B7%9A%E3%82%B0%E3%83%A9%E3%83%95-line-plot-1"><i class="fa fa-check"></i><b>3.3.2</b> 折れ線グラフ (Line plot)</a></li>
+<li class="chapter" data-level="3.3.3" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E7%AE%B1%E3%81%B2%E3%81%92%E5%9B%B3-boxplot-1"><i class="fa fa-check"></i><b>3.3.3</b> 箱ひげ図 (Boxplot)</a></li>
+<li class="chapter" data-level="3.3.4" data-path="第３回４月２７日データの可視化.html"><a href="第３回４月２７日データの可視化.html#%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0-histogram-1"><i class="fa fa-check"></i><b>3.3.4</b> ヒストグラム (Histogram)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="第４回５月１１日関数を書く.html"><a href="第４回５月１１日関数を書く.html"><i class="fa fa-check"></i><b>4</b> 第４回（５月１１日）：関数を書く</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="第４回５月１１日関数を書く.html"><a href="第４回５月１１日関数を書く.html#%E9%96%A2%E6%95%B0%E3%81%A8%E3%81%9D%E3%81%AE%E5%BC%95%E6%95%B0"><i class="fa fa-check"></i><b>4.1</b> 関数とその引数</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="第４回５月１１日関数を書く.html"><a href="第４回５月１１日関数を書く.html#%E9%96%A2%E6%95%B0%E3%81%A8%E3%81%AF"><i class="fa fa-check"></i><b>4.1.1</b> 関数とは？</a></li>
+<li class="chapter" data-level="4.1.2" data-path="第４回５月１１日関数を書く.html"><a href="第４回５月１１日関数を書く.html#%E5%9F%BA%E6%9C%AC%E6%A9%9F%E8%83%BD"><i class="fa fa-check"></i><b>4.1.2</b> 基本機能</a></li>
+<li class="chapter" data-level="4.1.3" data-path="第４回５月１１日関数を書く.html"><a href="第４回５月１１日関数を書く.html#%E9%96%A2%E6%95%B0%E3%81%AE%E5%BC%95%E6%95%B0%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%83%98%E3%83%AB%E3%83%97%E3%82%92%E6%B1%82%E3%82%81%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99"><i class="fa fa-check"></i><b>4.1.3</b> 関数の引数に関するヘルプを求めています</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="第４回５月１１日関数を書く.html"><a href="第４回５月１１日関数を書く.html#%E5%88%B6%E5%BE%A1%E3%83%95%E3%83%AD%E3%83%BC"><i class="fa fa-check"></i><b>4.2</b> 制御フロー</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="第４回５月１１日関数を書く.html"><a href="第４回５月１１日関数を書く.html#%E9%81%B8%E6%8A%9E%E8%82%A2if-else"><i class="fa fa-check"></i><b>4.2.1</b> 選択肢（if else）</a></li>
+<li class="chapter" data-level="4.2.2" data-path="第４回５月１１日関数を書く.html"><a href="第４回５月１１日関数を書く.html#%E3%83%AB%E3%83%BC%E3%83%97-loop"><i class="fa fa-check"></i><b>4.2.2</b> ループ (loop)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="第４回５月１１日関数を書く.html"><a href="第４回５月１１日関数を書く.html#%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%AE%9A%E7%BE%A9%E9%96%A2%E6%95%B0"><i class="fa fa-check"></i><b>4.3</b> ユーザー定義関数</a></li>
+<li class="chapter" data-level="4.4" data-path="第４回５月１１日関数を書く.html"><a href="第４回５月１１日関数を書く.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%A8%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AApackage"><i class="fa fa-check"></i><b>4.4</b> パッケージとライブラリ（package）</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">[2026-Z][1H609] 計算機科学入門</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="第４回５月１１日関数を書く" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number"> 4</span> 第４回（５月１１日）：関数を書く<a href="第４回５月１１日関数を書く.html#%E7%AC%AC%EF%BC%94%E5%9B%9E%EF%BC%95%E6%9C%88%EF%BC%91%EF%BC%91%E6%97%A5%E9%96%A2%E6%95%B0%E3%82%92%E6%9B%B8%E3%81%8F" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="関数とその引数" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> 関数とその引数<a href="第４回５月１１日関数を書く.html#%E9%96%A2%E6%95%B0%E3%81%A8%E3%81%9D%E3%81%AE%E5%BC%95%E6%95%B0" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="関数とは" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> 関数とは？<a href="第４回５月１１日関数を書く.html#%E9%96%A2%E6%95%B0%E3%81%A8%E3%81%AF" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Rの重要な機能の一つに関数があります。関数は、特定のタスクを実行する「自己完結型」のコードモジュールです。関数は通常、何らかのデータ構造（値、ベクトル、データフレームなど）を受け取り、それを処理して結果を返します。</p>
+<p>関数の一般的な表記方法は、関数名の後に括弧を付けるというものです。</p>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="第４回５月１１日関数を書く.html#cb199-1" tabindex="-1"></a><span class="fu">function_name</span>(input)</span></code></pre></div>
+<p>入力は引数と呼ばれ、以下のようなものが含まれます。</p>
+<ol style="list-style-type: decimal">
+<li>関数がタスクを実行する対象となる物理オブジェクト（任意のデータ構造）</li>
+<li>関数の動作方法を変更する仕様（例：オプション）</li>
+</ol>
+<p>すべての関数が引数を取るわけではありません。例えば、</p>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="第４回５月１１日関数を書く.html#cb200-1" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;C:/Users/zhouy/Documents/KU2026Computer/KU2026-1H609&quot;</code></pre>
+<p>ただし、ほとんどの関数は複数の引数を取ることができます。関数を呼び出す際に必須引数を指定しない場合、エラーが発生するか、関数はデフォルト値を使用するようにフォールバックします。</p>
+<p>デフォルト値は、関数作成者が「標準的なケースでは十分」と判断した標準値です。例えば、グラフで使用するシンボルなどがこれに該当します。ただし、特定の値を使用したい場合は、引数を任意の値に変更してください。</p>
+</div>
+<div id="基本機能" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> 基本機能<a href="第４回５月１１日関数を書く.html#%E5%9F%BA%E6%9C%AC%E6%A9%9F%E8%83%BD" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>これまでのレッスンでは、基本的な関数の例をいくつか使用しました。例えば<code>getwd()</code>、<code>c()</code>などです <code>factor()</code>。
+これらの関数はRの組み込み機能の一部として利用可能であり、以下ではこれらの基本関数をさらにいくつか探っていきます。</p>
+<p>外部パッケージやライブラリから関数を取得したり、独自の関数を作成したりすることもできます。これら両方については、後ほど詳しく見ていきましょう。</p>
+<p><code>c()</code>以前、データをベクトルに結合するために使用した関数をもう一度見てみましょう。
+この関数が受け取る引数は、数値、文字、または文字列の集合（カンマで区切る）です。
+この<code>c()</code>関数は、数値または文字を結合して単一のベクトルを作成する処理を実行します。
+また、この関数を使用して、既存のベクトルに要素を追加することもできます。</p>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="第４回５月１１日関数を書く.html#cb202-1" tabindex="-1"></a>glengths <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>)</span>
+<span id="cb202-2"><a href="第４回５月１１日関数を書く.html#cb202-2" tabindex="-1"></a>glengths <span class="ot">&lt;-</span> <span class="fu">c</span>(glengths, <span class="dv">90</span>) <span class="co"># adding at the end </span></span>
+<span id="cb202-3"><a href="第４回５月１１日関数を書く.html#cb202-3" tabindex="-1"></a>glengths <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">30</span>, glengths) <span class="co"># adding at the beginning</span></span>
+<span id="cb202-4"><a href="第４回５月１１日関数を書く.html#cb202-4" tabindex="-1"></a>glengths</span></code></pre></div>
+<pre><code>## [1] 30 10 90</code></pre>
+<p>ここで行われているのは、元のベクトル<code>glengths</code>（3つの要素を含む）の両端にそれぞれ別の要素を追加することです。これを何度も繰り返すことで、ベクトルやデータセットを作成できます。</p>
+<p>Rは統計計算に使用されるため、多くの基本関数には数学演算が含まれています。
+例えば、関数 が挙げられます<code>sqrt()</code>。
+入力/引数は数値でなければならず、出力はその数値の平方根です。
+81の平方根を求めてみましょう。</p>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="第４回５月１１日関数を書く.html#cb204-1" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">81</span>)</span></code></pre></div>
+<pre><code>## [1] 9</code></pre>
+<p>では、単一の値ではなく値のベクトルに対して関数を呼び出した場合（例えば、関数を実行した場合）はどうなるでしょうか？</p>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="第４回５月１１日関数を書く.html#cb206-1" tabindex="-1"></a><span class="fu">sqrt</span>(glengths)</span></code></pre></div>
+<pre><code>## [1] 5.477226 3.162278 9.486833</code></pre>
+<p>この場合、タスクはベクトルの各個々の値に対して実行され<code>glengths</code>、それぞれの結果が表示されました。</p>
+<p>別の関数を試してみましょう。今回は、オプション（関数の動作を変更する引数）の一部を変更できる関数を使用します。例えば、次のようになります<code>round</code>。</p>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="第４回５月１１日関数を書く.html#cb208-1" tabindex="-1"></a><span class="fu">round</span>(<span class="fl">3.14159</span>)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>結果を見ると、 となります<code>3</code>。これは、デフォルトでは最も近い整数に丸められるためです。有効数字の桁数を変えたい場合はどうすればよいでしょうか？</p>
+</div>
+<div id="関数の引数に関するヘルプを求めています" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> 関数の引数に関するヘルプを求めています<a href="第４回５月１１日関数を書く.html#%E9%96%A2%E6%95%B0%E3%81%AE%E5%BC%95%E6%95%B0%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%83%98%E3%83%AB%E3%83%97%E3%82%92%E6%B1%82%E3%82%81%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>この情報を確認する最良の方法は、?関数名の後に を付けて を使用することです。そうすると、RStudio の右下パネルにヘルプ マニュアルが開き、関数の説明、使用方法、引数、詳細、および例が表示されます。</p>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="第４回５月１１日関数を書く.html#cb210-1" tabindex="-1"></a>?round</span></code></pre></div>
+<p>あるいは、関数には精通しているが、引数の名前を思い出す必要がある場合は、以下を使用できます。</p>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="第４回５月１１日関数を書く.html#cb211-1" tabindex="-1"></a><span class="fu">args</span>(round)</span></code></pre></div>
+<pre><code>## function (x, digits = 0, ...) 
+## NULL</code></pre>
+<p>さらに便利なのがこの<code>example()</code>機能です。これを使うと、オンラインヘルプのサンプルセクションを実行して、コマンド実行時の動作を正確に確認できます。では、次の例で試してみましょう<code>round()</code>。</p>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="第４回５月１１日関数を書く.html#cb213-1" tabindex="-1"></a><span class="fu">example</span>(<span class="st">&quot;round&quot;</span>)</span></code></pre></div>
+<pre><code>## 
+## round&gt; round(.5 + -2:4) # IEEE / IEC rounding: -2  0  0  2  2  4  4
+## [1] -2  0  0  2  2  4  4
+## 
+## round&gt; ## (this is *good* behaviour -- do *NOT* report it as bug !)
+## round&gt; 
+## round&gt; ( x1 &lt;- seq(-2, 4, by = .5) )
+##  [1] -2.0 -1.5 -1.0 -0.5  0.0  0.5  1.0  1.5  2.0  2.5  3.0  3.5  4.0
+## 
+## round&gt; round(x1) #-- IEEE / IEC rounding !
+##  [1] -2 -2 -1  0  0  0  1  2  2  2  3  4  4
+## 
+## round&gt; x1[trunc(x1) != floor(x1)]
+## [1] -1.5 -0.5
+## 
+## round&gt; x1[round(x1) != floor(x1 + .5)]
+## [1] -1.5  0.5  2.5
+## 
+## round&gt; (non.int &lt;- ceiling(x1) != floor(x1))
+##  [1] FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE
+## 
+## round&gt; x2 &lt;- pi * 100^(-1:3)
+## 
+## round&gt; round(x2, 3)
+## [1]       0.031       3.142     314.159   31415.927 3141592.654
+## 
+## round&gt; signif(x2, 3)
+## [1] 3.14e-02 3.14e+00 3.14e+02 3.14e+04 3.14e+06</code></pre>
+<p>この例では、引数を追加することで返される桁数を変更できます。<code>digits=2</code>または、必要な桁数を入力してください。</p>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="第４回５月１１日関数を書く.html#cb215-1" tabindex="-1"></a><span class="fu">round</span>(<span class="fl">3.14159</span>, <span class="at">digits=</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 3.14</code></pre>
+</div>
+</div>
+<div id="制御フロー" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> 制御フロー<a href="第４回５月１１日関数を書く.html#%E5%88%B6%E5%BE%A1%E3%83%95%E3%83%AD%E3%83%BC" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>制御フローには、主に2つのツールがあります。それは、選択肢とループです。選択肢は、<code>if</code>ステートメントや<code>switch()</code>呼び出しのように、入力に応じて異なるコードを実行できるようにします。ループは、やのように<code>for</code>、<code>while</code>通常はオプションを変更しながらコードを繰り返し実行できるようにします。</p>
+<div id="選択肢if-else" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> 選択肢（if else）<a href="第４回５月１１日関数を書く.html#%E9%81%B8%E6%8A%9E%E8%82%A2if-else" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Rにおけるif文の基本形式は以下のとおりです。</p>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="第４回５月１１日関数を書く.html#cb217-1" tabindex="-1"></a><span class="cf">if</span> (condition) true_action</span>
+<span id="cb217-2"><a href="第４回５月１１日関数を書く.html#cb217-2" tabindex="-1"></a><span class="cf">if</span> (condition) true_action <span class="cf">else</span> false_action</span></code></pre></div>
+<p><code>condition</code>が <code>TRUE</code>の場合、<code>true_action</code>が評価されます。<code>condition</code>が <code>FALSE</code>の場合、オプション<code>false_action</code>が評価されます。</p>
+<p>通常、アクションは以下に含まれる複合ステートメントです。</p>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="第４回５月１１日関数を書く.html#cb218-1" tabindex="-1"></a>grade <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb218-2"><a href="第４回５月１１日関数を書く.html#cb218-2" tabindex="-1"></a>  <span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">90</span>) {</span>
+<span id="cb218-3"><a href="第４回５月１１日関数を書く.html#cb218-3" tabindex="-1"></a>    <span class="st">&quot;A&quot;</span></span>
+<span id="cb218-4"><a href="第４回５月１１日関数を書く.html#cb218-4" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">80</span>) {</span>
+<span id="cb218-5"><a href="第４回５月１１日関数を書く.html#cb218-5" tabindex="-1"></a>    <span class="st">&quot;B&quot;</span></span>
+<span id="cb218-6"><a href="第４回５月１１日関数を書く.html#cb218-6" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">50</span>) {</span>
+<span id="cb218-7"><a href="第４回５月１１日関数を書く.html#cb218-7" tabindex="-1"></a>    <span class="st">&quot;C&quot;</span></span>
+<span id="cb218-8"><a href="第４回５月１１日関数を書く.html#cb218-8" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb218-9"><a href="第４回５月１１日関数を書く.html#cb218-9" tabindex="-1"></a>    <span class="st">&quot;F&quot;</span></span>
+<span id="cb218-10"><a href="第４回５月１１日関数を書く.html#cb218-10" tabindex="-1"></a>  }</span>
+<span id="cb218-11"><a href="第４回５月１１日関数を書く.html#cb218-11" tabindex="-1"></a>}</span></code></pre></div>
+<p><code>if</code>結果を割り当てることができる値を返します。</p>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="第４回５月１１日関数を書く.html#cb219-1" tabindex="-1"></a>x1 <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="cn">TRUE</span>) <span class="dv">1</span> <span class="cf">else</span> <span class="dv">2</span></span>
+<span id="cb219-2"><a href="第４回５月１１日関数を書く.html#cb219-2" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="cn">FALSE</span>) <span class="dv">1</span> <span class="cf">else</span> <span class="dv">2</span></span>
+<span id="cb219-3"><a href="第４回５月１１日関数を書く.html#cb219-3" tabindex="-1"></a></span>
+<span id="cb219-4"><a href="第４回５月１１日関数を書く.html#cb219-4" tabindex="-1"></a><span class="fu">c</span>(x1, x2)</span></code></pre></div>
+<pre><code>## [1] 1 2</code></pre>
+<p>（式全体が1行に収まる場合にのみ、ステートメントの結果を代入することをお勧めします<code>if</code>。そうでない場合は、読みにくくなる傾向があります。）</p>
+<p>else 文を使用せずに単一引数形式を使用すると、条件が <code>NULL</code> の場合、<code>if</code>は目に見えない形で返します。</p>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="第４回５月１１日関数を書く.html#cb221-1" tabindex="-1"></a>greet <span class="ot">&lt;-</span> <span class="cf">function</span>(name, <span class="at">birthday =</span> <span class="cn">FALSE</span>) {</span>
+<span id="cb221-2"><a href="第４回５月１１日関数を書く.html#cb221-2" tabindex="-1"></a>  <span class="fu">paste0</span>(</span>
+<span id="cb221-3"><a href="第４回５月１１日関数を書く.html#cb221-3" tabindex="-1"></a>    <span class="st">&quot;Hi &quot;</span>, name,</span>
+<span id="cb221-4"><a href="第４回５月１１日関数を書く.html#cb221-4" tabindex="-1"></a>    <span class="cf">if</span> (birthday) <span class="st">&quot; and HAPPY BIRTHDAY&quot;</span></span>
+<span id="cb221-5"><a href="第４回５月１１日関数を書く.html#cb221-5" tabindex="-1"></a>  )</span>
+<span id="cb221-6"><a href="第４回５月１１日関数を書く.html#cb221-6" tabindex="-1"></a>}</span>
+<span id="cb221-7"><a href="第４回５月１１日関数を書く.html#cb221-7" tabindex="-1"></a><span class="fu">greet</span>(<span class="st">&quot;Maria&quot;</span>, <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Hi Maria&quot;</code></pre>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="第４回５月１１日関数を書く.html#cb223-1" tabindex="-1"></a><span class="fu">greet</span>(<span class="st">&quot;Jaime&quot;</span>, <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Hi Jaime and HAPPY BIRTHDAY&quot;</code></pre>
+</div>
+<div id="ループ-loop" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> ループ (loop)<a href="第４回５月１１日関数を書く.html#%E3%83%AB%E3%83%BC%E3%83%97-loop" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><code>for</code>ループは、ベクトル内の要素を反復処理するために使用されます。ループの基本的な形式は次のとおりです。</p>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="第４回５月１１日関数を書く.html#cb225-1" tabindex="-1"></a><span class="cf">for</span> (item <span class="cf">in</span> vector) perform_action</span></code></pre></div>
+<p><code>vector</code>の各項目に対して、<code>item</code>が一度呼び出され、その都度<code>perform_action</code>の値が更新されます。</p>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="第４回５月１１日関数を書く.html#cb226-1" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) {</span>
+<span id="cb226-2"><a href="第４回５月１１日関数を書く.html#cb226-2" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb226-3"><a href="第４回５月１１日関数を書く.html#cb226-3" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3</code></pre>
+<p>（インデックスのベクトルを反復処理する場合、<code>i</code>、<code>j</code>、<code>k</code> などの非常に短い変数名を使用するのが一般的です。）</p>
+<p>注：現在の環境に<code>for</code>値を割り当て<code>item</code>、同じ名前の既存の変数を上書きします。</p>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="第４回５月１１日関数を書く.html#cb228-1" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb228-2"><a href="第４回５月１１日関数を書く.html#cb228-2" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) {}</span>
+<span id="cb228-3"><a href="第４回５月１１日関数を書く.html#cb228-3" tabindex="-1"></a>i</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>ループを早期に終了させる方法は2つありますfor。</p>
+<ul>
+<li><code>next</code> 現在のイテレーションを終了します。</li>
+<li><code>break</code> ループ全体から抜け出す <code>for</code>。</li>
+</ul>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="第４回５月１１日関数を書く.html#cb230-1" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb230-2"><a href="第４回５月１１日関数を書く.html#cb230-2" tabindex="-1"></a>  <span class="cf">if</span> (i <span class="sc">&lt;</span> <span class="dv">3</span>) </span>
+<span id="cb230-3"><a href="第４回５月１１日関数を書く.html#cb230-3" tabindex="-1"></a>    <span class="cf">next</span></span>
+<span id="cb230-4"><a href="第４回５月１１日関数を書く.html#cb230-4" tabindex="-1"></a></span>
+<span id="cb230-5"><a href="第４回５月１１日関数を書く.html#cb230-5" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb230-6"><a href="第４回５月１１日関数を書く.html#cb230-6" tabindex="-1"></a>  </span>
+<span id="cb230-7"><a href="第４回５月１１日関数を書く.html#cb230-7" tabindex="-1"></a>  <span class="cf">if</span> (i <span class="sc">&gt;=</span> <span class="dv">5</span>)</span>
+<span id="cb230-8"><a href="第４回５月１１日関数を書く.html#cb230-8" tabindex="-1"></a>    <span class="cf">break</span></span>
+<span id="cb230-9"><a href="第４回５月１１日関数を書く.html#cb230-9" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] 3
+## [1] 4
+## [1] 5</code></pre>
+<div id="関連ツール" class="section level4 hasAnchor" number="4.2.2.1">
+<h4><span class="header-section-number">4.2.2.1</span> 関連ツール<a href="第４回５月１１日関数を書く.html#%E9%96%A2%E9%80%A3%E3%83%84%E3%83%BC%E3%83%AB" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>forループは、反復処理したい値のセットが事前にわかっている場合に便利です。わからない場合は、より柔軟な仕様を持つ関連ツールが2つあります。</p>
+<ul>
+<li><p><code>while(condition) action</code>: 実行<code>action</code>中<code>condition</code>は<code>TRUE</code>です。</p></li>
+<li><p><code>repeat(action)</code>:<code>action</code>永遠に繰り返されます (つまり、 に遭遇するまで<code>break</code>)。</p></li>
+</ul>
+<p>Rには、他の言語にあるような構文に相当するものはありません<code>do {action} while (condition)</code>。</p>
+<p><code>for</code>ループを書き換えて を使用することもできます<code>while</code>し、<code>while</code>ループを書き換えて を使用することもできますrepeatが、その逆は成り立ちません。つまり、<code>while</code>は よりも柔軟性が高く<code>for</code>、<code>repeat</code>は よりも柔軟性が高いということです。ただし、問題に対しては最も柔軟性の低い解決策を用いるのが良い習慣なので、可能な限り<code>while</code>を使用するようにしてください。</p>
+</div>
+</div>
+</div>
+<div id="ユーザー定義関数" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> ユーザー定義関数<a href="第４回５月１１日関数を書く.html#%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%AE%9A%E7%BE%A9%E9%96%A2%E6%95%B0" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Rの大きな強みの一つは、ユーザーが関数を追加できることです。時には、小さなタスク（または一連のタスク）を何度も繰り返さなければならない場合があります。このような状況では、独自のカスタム関数を作成すると便利です。関数の構造は以下のとおりです。</p>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="第４回５月１１日関数を書く.html#cb232-1" tabindex="-1"></a>name_of_function <span class="ot">&lt;-</span> <span class="cf">function</span>(argument1, argument2) {</span>
+<span id="cb232-2"><a href="第４回５月１１日関数を書く.html#cb232-2" tabindex="-1"></a>    statements or code that does something</span>
+<span id="cb232-3"><a href="第４回５月１１日関数を書く.html#cb232-3" tabindex="-1"></a>    <span class="fu">return</span>(something)</span>
+<span id="cb232-4"><a href="第４回５月１１日関数を書く.html#cb232-4" tabindex="-1"></a>}</span></code></pre></div>
+<ul>
+<li>まず、関数に名前を付けます。</li>
+<li>そして、それに値を割り当てます。その値とは関数のことです。</li>
+</ul>
+<p>関数を定義する際には、必要な引数（関数の動作を変更するための入力値やオプション）のリストを指定し、中括弧で囲んで、それらの引数に対して実行されるタスクを記述します。引数は、スカラー、行列、データフレーム、ベクトル、論理値など、どのような型のオブジェクトでも構いません。引数が何であるかを明示的に定義する必要はありません。</p>
+<p>最後に、関数からオブジェクトの値を「返す」ことができます。つまり、その値をグローバル環境に渡すということです。関数の重要な点は、関数内で作成されたオブジェクトは関数の環境にローカルであり、関数の外には存在しないということです。</p>
+<p>簡単な関数を作成してみましょう。この関数は数値を入力として受け取り、その二乗値を返します。</p>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="第４回５月１１日関数を書く.html#cb233-1" tabindex="-1"></a>square_it <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb233-2"><a href="第４回５月１１日関数を書く.html#cb233-2" tabindex="-1"></a>    square <span class="ot">&lt;-</span> x <span class="sc">*</span> x</span>
+<span id="cb233-3"><a href="第４回５月１１日関数を書く.html#cb233-3" tabindex="-1"></a>    <span class="fu">return</span>(square)</span>
+<span id="cb233-4"><a href="第４回５月１１日関数を書く.html#cb233-4" tabindex="-1"></a>}</span></code></pre></div>
+<p>これで、他の関数と同じようにこの関数を使用できます。関数の名前を入力し、括弧の中に数値を指定します<code>x</code>。</p>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="第４回５月１１日関数を書く.html#cb234-1" tabindex="-1"></a><span class="fu">square_it</span>(<span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] 25</code></pre>
+<p>とても簡単ですよね？この例では、実行したコードは1行だけでしたが、理論的には、ユーザーに「返したい」最終結果を得るために、何行ものコードを使うことも可能です。関数の作成に関しては、ここではほんの表面をなぞったにすぎません！これについては後のレッスンで改めて取り上げますが、興味があれば、この例を参考にした<a href="https://www.r-bloggers.com/2014/06/how-to-write-and-debug-an-r-function/">R-bloggersのサイト</a> でより詳しい情報を見つけることができます。</p>
+</div>
+<div id="パッケージとライブラリpackage" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> パッケージとライブラリ（package）<a href="第４回５月１１日関数を書く.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%A8%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AApackage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>パッケージとは、特定の機能を追加するために作成された、Rの関数、データ、コンパイル済みコードを明確な形式でまとめたものです。ユーザー提供のパッケージは1万以上あり、現在も増え続けています。</p>
+<p>Rのソースコードの一部とみなされ、Rのインストール時に自動的に利用できる標準（または基本）パッケージのセットがあります。基本パッケージには、Rが動作するために必要な基本関数が含まれており、データセットに対して標準的な統計関数やグラフ関数を実行できます。例えば、これまで例で使用してきたすべての関数がこれに該当します。</p>
+<p>R においてパッケージが格納されているディレクトリはライブラリと呼ばれます。パッケージとライブラリという用語は同義語として使われることがあり、コミュニティ内でこの問題を解決するために議論が行われてきました。関数を使ってパッケージをロードするのはやや直感に反する<code>library()</code>ため、混乱が生じる可能性があることはお分かりいただけるでしょう。</p>
+<p>現在のRセッションで読み込まれているライブラリを確認するには、コンソールに以下を入力してください。</p>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="第４回５月１１日関数を書く.html#cb236-1" tabindex="-1"></a><span class="fu">sessionInfo</span>() <span class="co">#Print version information about R, the OS and attached or loaded packages</span></span></code></pre></div>
+<pre><code>## R version 4.5.0 (2025-04-11 ucrt)
+## Platform: x86_64-w64-mingw32/x64
+## Running under: Windows 11 x64 (build 26200)
+## 
+## Matrix products: default
+##   LAPACK version 3.12.1
+## 
+## locale:
+## [1] LC_COLLATE=Japanese_Japan.utf8  LC_CTYPE=Japanese_Japan.utf8    LC_MONETARY=Japanese_Japan.utf8 LC_NUMERIC=C                    LC_TIME=Japanese_Japan.utf8    
+## 
+## time zone: Asia/Tokyo
+## tzcode source: internal
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] ggplot2_4.0.2    openxlsx_4.2.8.1
+## 
+## loaded via a namespace (and not attached):
+##  [1] gtable_0.3.6       jsonlite_2.0.0     dplyr_1.2.0        compiler_4.5.0     promises_1.5.0     tidyselect_1.2.1   Rcpp_1.1.1         zip_2.3.3          later_1.4.8       
+## [10] jquerylib_0.1.4    scales_1.4.0       yaml_2.3.12        fastmap_1.2.0      mime_0.13          R6_2.6.1           labeling_0.4.3     generics_0.1.4     knitr_1.51        
+## [19] tibble_3.3.1       bookdown_0.46      bslib_0.10.0       pillar_1.11.1      RColorBrewer_1.1-3 rlang_1.1.7        cachem_1.1.0       stringi_1.8.7      httpuv_1.6.16     
+## [28] xfun_0.56          sass_0.4.10        S7_0.2.1           otel_0.2.0         cli_3.6.5          withr_3.0.2        magrittr_2.0.4     digest_0.6.39      grid_4.5.0        
+## [37] rstudioapi_0.18.0  lifecycle_1.0.5    servr_0.32         vctrs_0.7.1        evaluate_1.0.5     glue_1.8.0         farver_2.1.2       rsconnect_1.7.0    rmarkdown_2.30    
+## [46] tools_4.5.0        pkgconfig_2.0.3    htmltools_0.5.9</code></pre>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="第４回５月１１日関数を書く.html#cb238-1" tabindex="-1"></a><span class="co"># OR</span></span>
+<span id="cb238-2"><a href="第４回５月１１日関数を書く.html#cb238-2" tabindex="-1"></a></span>
+<span id="cb238-3"><a href="第４回５月１１日関数を書く.html#cb238-3" tabindex="-1"></a><span class="fu">search</span>() <span class="co">#Gives a list of attached packages</span></span></code></pre></div>
+<pre><code>##  [1] &quot;.GlobalEnv&quot;        &quot;package:ggplot2&quot;   &quot;package:openxlsx&quot;  &quot;tools:rstudio&quot;     &quot;package:stats&quot;     &quot;package:graphics&quot;  &quot;package:grDevices&quot; &quot;package:utils&quot;     &quot;package:datasets&quot; 
+## [10] &quot;package:methods&quot;   &quot;Autoloads&quot;         &quot;package:base&quot;</code></pre>
+<p>このワークショップでは、標準基本パッケージの関数をご紹介しました。しかし、Rを使い込むにつれて、多種多様な機能を提供するRパッケージが豊富に存在することに気づくでしょう。追加のパッケージを使用するには、インストールが必要です。多くのパッケージは、CRANまたはBioconductorリポジトリからインストールできます。</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="第３回４月２７日データの可視化.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
