@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> 1 第１回（４月１３日） | [2026-Z][1H609] 計算機科学入門</title>
-  <meta name="description" content=" 1 第１回（４月１３日） | [2026-Z][1H609] 計算機科学入門" />
+  <title> 5 第５回（５月１８日）：Markdown と Rmarkdown と 表の作成 | [2026-Z][1H609] 計算機科学入門</title>
+  <meta name="description" content=" 5 第５回（５月１８日）：Markdown と Rmarkdown と 表の作成 | [2026-Z][1H609] 計算機科学入門" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content=" 1 第１回（４月１３日） | [2026-Z][1H609] 計算機科学入門" />
+  <meta property="og:title" content=" 5 第５回（５月１８日）：Markdown と Rmarkdown と 表の作成 | [2026-Z][1H609] 計算機科学入門" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content=" 1 第１回（４月１３日） | [2026-Z][1H609] 計算機科学入門" />
+  <meta name="twitter:title" content=" 5 第５回（５月１８日）：Markdown と Rmarkdown と 表の作成 | [2026-Z][1H609] 計算機科学入門" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="第２回４月２０日rstudioでデータの操作と計算.html"/>
+<link rel="prev" href="第４回５月１１日関数を書く.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -266,18 +266,571 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="第１回４月１３日" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number"> 1</span> 第１回（４月１３日）<a href="第１回４月１３日.html#%E7%AC%AC%EF%BC%91%E5%9B%9E%EF%BC%94%E6%9C%88%EF%BC%91%EF%BC%93%E6%97%A5" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>すべての資料は MEAT に保存してあります。詳細は MEAT をご確認ください。</p>
+<div id="第５回５月１８日markdown-と-rmarkdown-と-表の作成" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number"> 5</span> 第５回（５月１８日）：Markdown と Rmarkdown と 表の作成<a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#%E7%AC%AC%EF%BC%95%E5%9B%9E%EF%BC%95%E6%9C%88%EF%BC%91%EF%BC%98%E6%97%A5markdown-%E3%81%A8-rmarkdown-%E3%81%A8-%E8%A1%A8%E3%81%AE%E4%BD%9C%E6%88%90" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="markdownとは" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Markdownとは<a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#markdown%E3%81%A8%E3%81%AF" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Markdown（マークダウン）は文章を記述するための記法（マークアップ言語）の一つです。</p>
+<p>Markdown（マークダウン）とは、メールを記述する時のように書きやすくて読みやすいプレーンテキストをある程度見栄えのするHTML文書へ変換できるフォーマットとしてジョン・グルーバーによって開発されました。</p>
+<p>以下の特徴があります。</p>
+<ul>
+<li>簡単で覚えやすい記述</li>
+<li>文章の構造を明示できる</li>
+<li>Markdownそのままでも理解できる</li>
+<li>対応アプリを使うことでより快適に読み書きできる</li>
+<li>拡張子は「.md」</li>
+</ul>
+<p>Markdownで記述した文章はただのテキストなのでパーサ※によってHTMLに変換します。
+このとき、利用するパーサによって出力されるHTMLは若干異なります。
+また、利用しているcssによって見栄えも変わります。</p>
+<p>※注釈 パーサとは構造化された文書を解析し、別の構文に変換するプログラム</p>
+<p>こちらを参照してください：<a href="https://qiita.com/Hase-pro/items/16379a0c83f2725e3a11">https://qiita.com/Hase-pro/items/16379a0c83f2725e3a11</a></p>
+</div>
+<div id="rmarkdownとは" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Rmarkdownとは<a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#rmarkdown%E3%81%A8%E3%81%AF" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>こちらを参照してください</p>
+<p>[R Markdown入門]
+(<a href="https://kazutan.github.io/kazutanR/Rmd_intro.html#%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E4%BD%9C%E6%88%90%E3%81%AE%E3%83%90%E3%83%AA%E3%82%A8%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" class="uri">https://kazutan.github.io/kazutanR/Rmd_intro.html#%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E4%BD%9C%E6%88%90%E3%81%AE%E3%83%90%E3%83%AA%E3%82%A8%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3</a>)</p>
+</div>
+<div id="表の作成" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> 表の作成<a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#%E8%A1%A8%E3%81%AE%E4%BD%9C%E6%88%90" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>記述統計や推定結果を示す際には、図表が用いられることが多くあります。図については、<code>ggplot2</code>が最も広く利用されているパッケージです<code>（Base R</code>も依然として高い人気があります）。一方、表の作成については、現時点では主に二つの選択肢があります。一つは、長年利用されてきた<code>knitr</code>パッケージの<code>kable()</code>（=<code>kbl()</code>）と<code>kableExtra</code>パッケージを組み合わせる方法、もう一つは近年注目を集めているgtパッケージです。</p>
+<p><code>gt</code>は“Grammar of Tables”の略であり、“Grammar of Graphics”を具現化した<code>ggplot2</code>の考え方に影響を受けています。つまり、一つの表を複数の要素に分解し、それぞれのレイヤーを積み重ねながら表を構築していくイメージです。<code>ggplot2</code>の考え方や使い方に慣れている読者であれば、<code>gt</code>にも比較的容易に慣れることができるでしょう。</p>
+<p>ただし、<code>gt</code>は現在も開発途上にあり、PDF出力との相性は、現時点（2025年1月15日；<code>gt version 0.11.1</code>）では必ずしも十分とは言えません。そのため、表をPDF形式で出力する場合には、<code>knitr</code>の<code>kable()</code>と<code>kableExtra</code>を組み合わせる方法を推奨します。</p>
+<p>また、以前はgt単体の機能は<code>kable()</code> + <code>kableExtra</code>と比較して限定的でしたが、近年では<code>gtExtras</code>の登場により、多くの機能を同様に実現できるようになっています。</p>
+<p><code>gt</code>パッケージはいずれもHTML出力とLaTeX出力の両方に対応していますが、ここではHTML出力を中心に紹介します。LaTeX出力についても、引数を追加することで比較的容易に利用できるため、詳細は各パッケージの公式ドキュメントやヴィネット等を参照してください。</p>
+<div id="表の出力" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> 表の出力<a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#%E8%A1%A8%E3%81%AE%E5%87%BA%E5%8A%9B" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>それではまず、実習に使用するパッケージとデータを読み込でおこう。</p>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#cb240-1" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tidyverse, gt, gtExtras, DT)</span>
+<span id="cb240-2"><a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#cb240-2" tabindex="-1"></a></span>
+<span id="cb240-3"><a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#cb240-3" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data</span><span class="sc">\\</span><span class="st">countries_desc1.csv&quot;</span>)</span>
+<span id="cb240-4"><a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#cb240-4" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data</span><span class="sc">\\</span><span class="st">countries_desc2.csv&quot;</span>)</span>
+<span id="cb240-5"><a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#cb240-5" tabindex="-1"></a>df3 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data</span><span class="sc">\\</span><span class="st">countries_desc3.csv&quot;</span>)</span>
+<span id="cb240-6"><a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#cb240-6" tabindex="-1"></a>df4 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data</span><span class="sc">\\</span><span class="st">countries_ppp.csv&quot;</span>)</span>
+<span id="cb240-7"><a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#cb240-7" tabindex="-1"></a>df5 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data</span><span class="sc">\\</span><span class="st">package_download.csv&quot;</span>)</span></code></pre></div>
+<p>これまで使ってきたdf1を使ってHTML形式の表を出力してみよう。使用する関数は<code>gt()</code>であり、<code>data.frame</code>または<code>tibble</code>オブジェクト名が第1引数です。</p>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#cb241-1" tabindex="-1"></a>df1 <span class="sc">|&gt;</span></span>
+<span id="cb241-2"><a href="第５回５月１８日markdown-と-rmarkdown-と-表の作成.html#cb241-2" tabindex="-1"></a>    <span class="fu">gt</span>()</span></code></pre></div>
+<div id="mrvccxoglt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mrvccxoglt table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+#mrvccxoglt thead, #mrvccxoglt tbody, #mrvccxoglt tfoot, #mrvccxoglt tr, #mrvccxoglt td, #mrvccxoglt th {
+  border-style: none;
+}
+
+#mrvccxoglt p {
+  margin: 0;
+  padding: 0;
+}
+
+#mrvccxoglt .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#mrvccxoglt .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#mrvccxoglt .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mrvccxoglt .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mrvccxoglt .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mrvccxoglt .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mrvccxoglt .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mrvccxoglt .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#mrvccxoglt .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#mrvccxoglt .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#mrvccxoglt .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#mrvccxoglt .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#mrvccxoglt .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#mrvccxoglt .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#mrvccxoglt .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mrvccxoglt .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#mrvccxoglt .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#mrvccxoglt .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#mrvccxoglt .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mrvccxoglt .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mrvccxoglt .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#mrvccxoglt .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#mrvccxoglt .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mrvccxoglt .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#mrvccxoglt .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mrvccxoglt .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mrvccxoglt .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mrvccxoglt .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#mrvccxoglt .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mrvccxoglt .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#mrvccxoglt .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mrvccxoglt .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mrvccxoglt .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mrvccxoglt .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mrvccxoglt .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mrvccxoglt .gt_left {
+  text-align: left;
+}
+
+#mrvccxoglt .gt_center {
+  text-align: center;
+}
+
+#mrvccxoglt .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#mrvccxoglt .gt_font_normal {
+  font-weight: normal;
+}
+
+#mrvccxoglt .gt_font_bold {
+  font-weight: bold;
+}
+
+#mrvccxoglt .gt_font_italic {
+  font-style: italic;
+}
+
+#mrvccxoglt .gt_super {
+  font-size: 65%;
+}
+
+#mrvccxoglt .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#mrvccxoglt .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mrvccxoglt .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#mrvccxoglt .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#mrvccxoglt .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#mrvccxoglt .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#mrvccxoglt .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#mrvccxoglt .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#mrvccxoglt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Variable">Variable</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Mean">Mean</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="SD">SD</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Min">Min</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Max">Max</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Obs">Obs</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Variable" class="gt_row gt_left">Population</td>
+<td headers="Mean" class="gt_row gt_right">41.7377735</td>
+<td headers="SD" class="gt_row gt_right">151.2702976</td>
+<td headers="Min" class="gt_row gt_right">0.000801000</td>
+<td headers="Max" class="gt_row gt_right">1447.47009</td>
+<td headers="Obs" class="gt_row gt_right">186</td></tr>
+    <tr><td headers="Variable" class="gt_row gt_left">Area</td>
+<td headers="Mean" class="gt_row gt_right">69.6069247</td>
+<td headers="SD" class="gt_row gt_right">187.2412489</td>
+<td headers="Min" class="gt_row gt_right">0.000000000</td>
+<td headers="Max" class="gt_row gt_right">1637.68700</td>
+<td headers="Obs" class="gt_row gt_right">186</td></tr>
+    <tr><td headers="Variable" class="gt_row gt_left">GDP_per_capita</td>
+<td headers="Mean" class="gt_row gt_right">1.6158103</td>
+<td headers="SD" class="gt_row gt_right">2.5710359</td>
+<td headers="Min" class="gt_row gt_right">0.005770007</td>
+<td headers="Max" class="gt_row gt_right">18.31772</td>
+<td headers="Obs" class="gt_row gt_right">185</td></tr>
+    <tr><td headers="Variable" class="gt_row gt_left">PPP_per_capita</td>
+<td headers="Mean" class="gt_row gt_right">2.0833383</td>
+<td headers="SD" class="gt_row gt_right">2.0992134</td>
+<td headers="Min" class="gt_row gt_right">0.073314173</td>
+<td headers="Max" class="gt_row gt_right">11.34231</td>
+<td headers="Obs" class="gt_row gt_right">178</td></tr>
+    <tr><td headers="Variable" class="gt_row gt_left">HDI_2018</td>
+<td headers="Mean" class="gt_row gt_right">0.7134833</td>
+<td headers="SD" class="gt_row gt_right">0.1528503</td>
+<td headers="Min" class="gt_row gt_right">0.377000000</td>
+<td headers="Max" class="gt_row gt_right">0.95400</td>
+<td headers="Obs" class="gt_row gt_right">180</td></tr>
+    <tr><td headers="Variable" class="gt_row gt_left">Polity_Score</td>
+<td headers="Mean" class="gt_row gt_right">4.2594937</td>
+<td headers="SD" class="gt_row gt_right">6.1022919</td>
+<td headers="Min" class="gt_row gt_right">-10.000000000</td>
+<td headers="Max" class="gt_row gt_right">10.00000</td>
+<td headers="Obs" class="gt_row gt_right">158</td></tr>
+    <tr><td headers="Variable" class="gt_row gt_left">FH_Total</td>
+<td headers="Mean" class="gt_row gt_right">57.7135135</td>
+<td headers="SD" class="gt_row gt_right">29.8656244</td>
+<td headers="Min" class="gt_row gt_right">0.000000000</td>
+<td headers="Max" class="gt_row gt_right">100.00000</td>
+<td headers="Obs" class="gt_row gt_right">185</td></tr>
+  </tbody>
+  
+</table>
+</div>
+<p>他の操作について、ここ（<a href="https://www.jaysong.net/RBook/table.html">表の作成</a>）に参照してください。</p>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="第２回４月２０日rstudioでデータの操作と計算.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="第４回５月１１日関数を書く.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

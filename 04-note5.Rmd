@@ -5,7 +5,7 @@ editor_options:
 ---
 
 
-# 第５回（５月１１８日）：Markdown と Rmarkdown と 表の作成
+# 第５回（５月１８日）：Markdown と Rmarkdown と 表の作成
 
 ## Markdownとは
 
