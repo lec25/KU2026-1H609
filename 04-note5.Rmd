@@ -1,0 +1,75 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+
+# 第５回（５月１１８日）：Markdown と Rmarkdown と 表の作成
+
+## Markdownとは
+
+Markdown（マークダウン）は文章を記述するための記法（マークアップ言語）の一つです。
+
+Markdown（マークダウン）とは、メールを記述する時のように書きやすくて読みやすいプレーンテキストをある程度見栄えのするHTML文書へ変換できるフォーマットとしてジョン・グルーバーによって開発されました。
+
+以下の特徴があります。
+
+- 簡単で覚えやすい記述
+- 文章の構造を明示できる
+- Markdownそのままでも理解できる
+- 対応アプリを使うことでより快適に読み書きできる
+- 拡張子は「.md」
+
+Markdownで記述した文章はただのテキストなのでパーサ※によってHTMLに変換します。
+このとき、利用するパーサによって出力されるHTMLは若干異なります。
+また、利用しているcssによって見栄えも変わります。
+
+※注釈 パーサとは構造化された文書を解析し、別の構文に変換するプログラム
+
+
+こちらを参照してください：[https://qiita.com/Hase-pro/items/16379a0c83f2725e3a11](https://qiita.com/Hase-pro/items/16379a0c83f2725e3a11)
+
+## Rmarkdownとは
+
+こちらを参照してください
+
+[R Markdown入門]
+(https://kazutan.github.io/kazutanR/Rmd_intro.html#%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E4%BD%9C%E6%88%90%E3%81%AE%E3%83%90%E3%83%AA%E3%82%A8%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3)
+
+
+## 表の作成
+
+記述統計や推定結果を示す際には、図表が用いられることが多くあります。図については、`ggplot2`が最も広く利用されているパッケージです`（Base R`も依然として高い人気があります）。一方、表の作成については、現時点では主に二つの選択肢があります。一つは、長年利用されてきた`knitr`パッケージの`kable()`（=`kbl()`）と`kableExtra`パッケージを組み合わせる方法、もう一つは近年注目を集めているgtパッケージです。
+
+`gt`は“Grammar of Tables”の略であり、“Grammar of Graphics”を具現化した`ggplot2`の考え方に影響を受けています。つまり、一つの表を複数の要素に分解し、それぞれのレイヤーを積み重ねながら表を構築していくイメージです。`ggplot2`の考え方や使い方に慣れている読者であれば、`gt`にも比較的容易に慣れることができるでしょう。
+
+ただし、`gt`は現在も開発途上にあり、PDF出力との相性は、現時点（2025年1月15日；`gt version 0.11.1`）では必ずしも十分とは言えません。そのため、表をPDF形式で出力する場合には、`knitr`の`kable()`と`kableExtra`を組み合わせる方法を推奨します。
+
+また、以前はgt単体の機能は`kable()` + `kableExtra`と比較して限定的でしたが、近年では`gtExtras`の登場により、多くの機能を同様に実現できるようになっています。
+
+`gt`パッケージはいずれもHTML出力とLaTeX出力の両方に対応していますが、ここではHTML出力を中心に紹介します。LaTeX出力についても、引数を追加することで比較的容易に利用できるため、詳細は各パッケージの公式ドキュメントやヴィネット等を参照してください。
+
+### 表の出力
+それではまず、実習に使用するパッケージとデータを読み込でおこう。
+
+```{r, warning=FALSE, message=FALSE}
+pacman::p_load(tidyverse, gt, gtExtras, DT)
+
+df1 <- read_csv("data\\countries_desc1.csv")
+df2 <- read_csv("data\\countries_desc2.csv")
+df3 <- read_csv("data\\countries_desc3.csv")
+df4 <- read_csv("data\\countries_ppp.csv")
+df5 <- read_csv("data\\package_download.csv")
+```
+
+
+これまで使ってきたdf1を使ってHTML形式の表を出力してみよう。使用する関数は`gt()`であり、`data.frame`または`tibble`オブジェクト名が第1引数です。
+
+```{r}
+df1 |>
+    gt()
+```
+
+他の操作について、ここ（[表の作成](https://www.jaysong.net/RBook/table.html)）に参照してください。
+

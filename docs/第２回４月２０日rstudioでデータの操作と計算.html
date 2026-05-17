@@ -23,7 +23,7 @@
 <meta name="author" content="Yi Zhou" />
 
 
-<meta name="date" content="2026-05-09" />
+<meta name="date" content="2026-05-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -236,6 +236,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="第４回５月１１日関数を書く.html"><a href="第４回５月１１日関数を書く.html#%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%AE%9A%E7%BE%A9%E9%96%A2%E6%95%B0"><i class="fa fa-check"></i><b>4.3</b> ユーザー定義関数</a></li>
 <li class="chapter" data-level="4.4" data-path="第４回５月１１日関数を書く.html"><a href="第４回５月１１日関数を書く.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%A8%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AApackage"><i class="fa fa-check"></i><b>4.4</b> パッケージとライブラリ（package）</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="第５回５月１１８日markdown-と-rmarkdown-と-表の作成.html"><a href="第５回５月１１８日markdown-と-rmarkdown-と-表の作成.html"><i class="fa fa-check"></i><b>5</b> 第５回（５月１１８日）：Markdown と Rmarkdown と 表の作成</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="第５回５月１１８日markdown-と-rmarkdown-と-表の作成.html"><a href="第５回５月１１８日markdown-と-rmarkdown-と-表の作成.html#markdown%E3%81%A8%E3%81%AF"><i class="fa fa-check"></i><b>5.1</b> Markdownとは</a></li>
+<li class="chapter" data-level="5.2" data-path="第５回５月１１８日markdown-と-rmarkdown-と-表の作成.html"><a href="第５回５月１１８日markdown-と-rmarkdown-と-表の作成.html#rmarkdown%E3%81%A8%E3%81%AF"><i class="fa fa-check"></i><b>5.2</b> Rmarkdownとは</a></li>
+<li class="chapter" data-level="5.3" data-path="第５回５月１１８日markdown-と-rmarkdown-と-表の作成.html"><a href="第５回５月１１８日markdown-と-rmarkdown-と-表の作成.html#%E8%A1%A8%E3%81%AE%E4%BD%9C%E6%88%90"><i class="fa fa-check"></i><b>5.3</b> 表の作成</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="第５回５月１１８日markdown-と-rmarkdown-と-表の作成.html"><a href="第５回５月１１８日markdown-と-rmarkdown-と-表の作成.html#%E8%A1%A8%E3%81%AE%E5%87%BA%E5%8A%9B"><i class="fa fa-check"></i><b>5.3.1</b> 表の出力</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -1127,134 +1136,134 @@ R言語では、<code>NULL</code>（大文字）は予約語であり、デー�
 <span id="cb155-8"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb155-8" tabindex="-1"></a>)</span>
 <span id="cb155-9"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb155-9" tabindex="-1"></a>df</span></code></pre></div>
 <pre><code>##      ID Gender Score Score2 Passed
-## 1     1 Female    86     39    Yes
-## 2     2   Male    59     96    Yes
-## 3     3   Male    91     39     No
-## 4     4 Female    90     63     No
-## 5     5 Female    79     76     No
-## 6     6 Female    53     89     No
-## 7     7 Female    97     90     No
-## 8     8   Male    66     69     No
-## 9     9 Female    75     39     No
-## 10   10   Male    95     33    Yes
-## 11   11 Female    84     39    Yes
-## 12   12   Male    74     46    Yes
-## 13   13 Female    85     24     No
-## 14   14   Male    56     74     No
-## 15   15   Male    61    100     No
-## 16   16 Female    72     64    Yes
-## 17   17 Female    61     48    Yes
-## 18   18   Male    53     69    Yes
-## 19   19 Female    61     67    Yes
-## 20   20   Male    66     99    Yes
-## 21   21   Male    59     47     No
-## 22   22   Male    77     52     No
-## 23   23 Female    86     65     No
-## 24   24 Female    94     28    Yes
-## 25   25   Male    69    100    Yes
-## 26   26 Female    52     98    Yes
-## 27   27   Male    92     31    Yes
-## 28   28 Female    93     21    Yes
-## 29   29 Female    83     70    Yes
-## 30   30   Male    72     26     No
-## 31   31 Female    55     86     No
-## 32   32   Male    56     45    Yes
-## 33   33   Male    65     86     No
-## 34   34   Male    66     49    Yes
-## 35   35   Male    64     63    Yes
-## 36   36   Male    83     38    Yes
-## 37   37   Male    55     25    Yes
-## 38   38   Male    65     61     No
-## 39   39 Female    72     38     No
-## 40   40   Male    81     89    Yes
-## 41   41   Male    75     78     No
-## 42   42   Male    53     95    Yes
-## 43   43 Female    85     40    Yes
-## 44   44 Female    73     84     No
-## 45   45 Female    56     76     No
-## 46   46 Female    95     53     No
-## 47   47   Male   100     36     No
-## 48   48   Male    59     31     No
-## 49   49 Female    67     67    Yes
-## 50   50   Male    89     65     No
-## 51   51 Female    91     82    Yes
-## 52   52   Male    79     42    Yes
-## 53   53 Female    80     63     No
-## 54   54 Female    81     81    Yes
-## 55   55 Female    56     81    Yes
-## 56   56   Male    61     99    Yes
-## 57   57   Male    90     82     No
-## 58   58   Male    71     71     No
-## 59   59 Female    78     69    Yes
-## 60   60   Male    96     42    Yes
-## 61   61   Male    83     74     No
-## 62   62 Female    76     51    Yes
-## 63   63   Male    60     74    Yes
-## 64   64 Female    64     73    Yes
-## 65   65 Female    75     57     No
-## 66   66   Male    93     40     No
-## 67   67 Female    91     55     No
-## 68   68   Male    97     95    Yes
-## 69   69   Male    76     43    Yes
-## 70   70   Male    69     54    Yes
-## 71   71   Male    95     27     No
-## 72   72 Female    85     97     No
-## 73   73 Female    52     82    Yes
-## 74   74   Male    70     91    Yes
-## 75   75 Female    62     92     No
-## 76   76   Male    92     91     No
-## 77   77 Female    74     57    Yes
-## 78   78   Male    85     92     No
-## 79   79 Female    50     92    Yes
-## 80   80   Male    72     80    Yes
-## 81   81 Female    54     45    Yes
-## 82   82 Female    64     42    Yes
-## 83   83   Male    83     68    Yes
-## 84   84   Male    90     51     No
-## 85   85   Male    58     42    Yes
-## 86   86   Male    57     92    Yes
-## 87   87 Female    71     72     No
-## 88   88 Female    80     82    Yes
-## 89   89   Male    72     52     No
-## 90   90   Male    97     95    Yes
-## 91   91 Female    51     81     No
-## 92   92 Female    72     97    Yes
-## 93   93 Female    75     46    Yes
-## 94   94   Male    68     33     No
-## 95   95   Male    69     26    Yes
-## 96   96 Female    55     55     No
-## 97   97   Male    96     81     No
-## 98   98 Female    90     36     No
-## 99   99   Male    89     26    Yes
-## 100 100   Male    90     69    Yes</code></pre>
+## 1     1 Female    71     36    Yes
+## 2     2 Female    73     45     No
+## 3     3 Female    64     31    Yes
+## 4     4 Female    72     73     No
+## 5     5 Female    81     90     No
+## 6     6 Female    57     91     No
+## 7     7 Female    71     29    Yes
+## 8     8 Female    98     67     No
+## 9     9 Female    68     80     No
+## 10   10 Female    64     38     No
+## 11   11 Female    83     95    Yes
+## 12   12 Female    87     91    Yes
+## 13   13   Male    61     68    Yes
+## 14   14 Female    68     48     No
+## 15   15 Female    89     42    Yes
+## 16   16 Female    81     99     No
+## 17   17   Male    64     59     No
+## 18   18 Female    65     77    Yes
+## 19   19 Female    98     43    Yes
+## 20   20 Female    63     78    Yes
+## 21   21 Female    87     57    Yes
+## 22   22 Female    50     52    Yes
+## 23   23 Female    78     51    Yes
+## 24   24 Female    71     47    Yes
+## 25   25 Female    84     53     No
+## 26   26 Female    95     50     No
+## 27   27   Male    80     38    Yes
+## 28   28 Female    86     81    Yes
+## 29   29   Male    93     32    Yes
+## 30   30 Female    99     92    Yes
+## 31   31   Male    52     24     No
+## 32   32   Male    91     49    Yes
+## 33   33 Female    68     84    Yes
+## 34   34 Female    93     26    Yes
+## 35   35   Male    63     42     No
+## 36   36 Female    95     31     No
+## 37   37 Female    68     99     No
+## 38   38   Male    90     56    Yes
+## 39   39   Male    91     45     No
+## 40   40 Female    87     40    Yes
+## 41   41 Female    59     33     No
+## 42   42 Female    53     21     No
+## 43   43 Female    87     67     No
+## 44   44   Male    51     26     No
+## 45   45   Male    54     53     No
+## 46   46 Female    63     95    Yes
+## 47   47 Female    71     67    Yes
+## 48   48 Female    84     36    Yes
+## 49   49   Male    88     80     No
+## 50   50 Female    64     41     No
+## 51   51   Male    72     56     No
+## 52   52 Female    64     29    Yes
+## 53   53 Female    77     22     No
+## 54   54   Male    91     61     No
+## 55   55 Female    74     58    Yes
+## 56   56   Male   100     41     No
+## 57   57   Male    60     93    Yes
+## 58   58   Male    79     23     No
+## 59   59   Male    98     38    Yes
+## 60   60   Male    50     92    Yes
+## 61   61   Male    76     34    Yes
+## 62   62 Female    82     28     No
+## 63   63 Female    61     65     No
+## 64   64 Female    87     46     No
+## 65   65 Female    95     68    Yes
+## 66   66 Female    85     40     No
+## 67   67   Male    58     91    Yes
+## 68   68 Female    75     65    Yes
+## 69   69 Female    57     50    Yes
+## 70   70   Male    83     45     No
+## 71   71 Female    66     27    Yes
+## 72   72   Male    94    100    Yes
+## 73   73   Male    96     70     No
+## 74   74   Male    85     45    Yes
+## 75   75   Male    71     80     No
+## 76   76   Male    82     41     No
+## 77   77   Male    84     47     No
+## 78   78 Female    83     65    Yes
+## 79   79 Female    92     97    Yes
+## 80   80   Male    85     63     No
+## 81   81 Female    68     49    Yes
+## 82   82 Female    65     20     No
+## 83   83   Male    63     29    Yes
+## 84   84   Male    67     68     No
+## 85   85   Male    50     97    Yes
+## 86   86   Male    56     97     No
+## 87   87   Male    91     60    Yes
+## 88   88   Male    69     97    Yes
+## 89   89 Female    92     96    Yes
+## 90   90   Male    82     86    Yes
+## 91   91   Male    87     35     No
+## 92   92   Male    52     81     No
+## 93   93 Female    59     75    Yes
+## 94   94 Female    73     35    Yes
+## 95   95   Male   100     76     No
+## 96   96   Male    60     65     No
+## 97   97   Male    95     68    Yes
+## 98   98 Female    90     65    Yes
+## 99   99 Female    98     41     No
+## 100 100   Male    75     48     No</code></pre>
 <p>クロス集計：2つの変数を掛け合わせる場合</p>
 <div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb157-1" tabindex="-1"></a><span class="co"># 性別 × 合否のクロス集計</span></span>
 <span id="cb157-2"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb157-2" tabindex="-1"></a>cross_tab <span class="ot">&lt;-</span> <span class="fu">table</span>(df<span class="sc">$</span>Gender, df<span class="sc">$</span>Passed)</span>
 <span id="cb157-3"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb157-3" tabindex="-1"></a><span class="fu">print</span>(cross_tab)</span></code></pre></div>
 <pre><code>##         
 ##          No Yes
-##   Female 21  25
-##   Male   24  30</code></pre>
+##   Female 24  34
+##   Male   24  18</code></pre>
 <div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb159-1" tabindex="-1"></a><span class="co"># 割合（%）で表示する場合</span></span>
 <span id="cb159-2"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb159-2" tabindex="-1"></a><span class="fu">prop.table</span>(cross_tab, <span class="at">margin =</span> <span class="dv">1</span>) <span class="co"># 行方向の割合</span></span></code></pre></div>
 <pre><code>##         
 ##                 No       Yes
-##   Female 0.4565217 0.5434783
-##   Male   0.4444444 0.5555556</code></pre>
+##   Female 0.4137931 0.5862069
+##   Male   0.5714286 0.4285714</code></pre>
 </div>
 <div id="平均値と分散" class="section level3 hasAnchor" number="2.8.2">
 <h3><span class="header-section-number">2.8.2</span> 平均値と分散<a href="第２回４月２０日rstudioでデータの操作と計算.html#%E5%B9%B3%E5%9D%87%E5%80%A4%E3%81%A8%E5%88%86%E6%95%A3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb161-1" tabindex="-1"></a><span class="co"># Scoreの平均値</span></span>
 <span id="cb161-2"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb161-2" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>Score)</span></code></pre></div>
-<pre><code>## [1] 74.4</code></pre>
+<pre><code>## [1] 76.27</code></pre>
 <div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb163-1" tabindex="-1"></a><span class="co"># Scoreの分散と標準偏差</span></span>
 <span id="cb163-2"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb163-2" tabindex="-1"></a><span class="fu">var</span>(df<span class="sc">$</span>Score)</span></code></pre></div>
-<pre><code>## [1] 198.404</code></pre>
+<pre><code>## [1] 204.4617</code></pre>
 <div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb165-1" tabindex="-1"></a><span class="fu">sd</span>(df<span class="sc">$</span>Score)</span></code></pre></div>
-<pre><code>## [1] 14.0856</code></pre>
+<pre><code>## [1] 14.29901</code></pre>
 <div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb167-1" tabindex="-1"></a><span class="co">#　ScoreとScore2の共分散</span></span>
 <span id="cb167-2"><a href="第２回４月２０日rstudioでデータの操作と計算.html#cb167-2" tabindex="-1"></a><span class="fu">cov</span>(df<span class="sc">$</span>Score,df<span class="sc">$</span>Score2)</span></code></pre></div>
-<pre><code>## [1] -83.40808</code></pre>
+<pre><code>## [1] -11.33657</code></pre>
 </div>
 <div id="rによる" class="section level3 hasAnchor" number="2.8.3">
 <h3><span class="header-section-number">2.8.3</span> Rによる<a href="第２回４月２０日rstudioでデータの操作と計算.html#r%E3%81%AB%E3%82%88%E3%82%8B" class="anchor-section" aria-label="Anchor link to header"></a></h3>

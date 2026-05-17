@@ -75,3 +75,8 @@ rパッケージとは
 関連ツール
 ユーザー定義関数
 パッケージとライブラリpackage
+第５回５月１１８日markdown-と-rmarkdown-と-表の作成
+markdownとは
+rmarkdownとは
+表の作成
+表の出力
